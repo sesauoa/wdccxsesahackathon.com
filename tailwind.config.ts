@@ -11,6 +11,17 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        wdcc: {
+          blue: "#087df1",
+          white: "#ffffff",
+        },
+        sesa: {
+          navy: "#00112b",
+          teal: {
+            dark: "#49bfaa",
+            light: "#70c7b0",
+          },
+        },
       },
     },
   },

@@ -1,3 +1,5 @@
 export default function Home() {
-  return <div>WDCCxSESA</div>;
+  return (
+    <div>WDCC x SESA Hackathon</div>
+  );
 }

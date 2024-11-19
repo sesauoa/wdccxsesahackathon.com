@@ -91,13 +91,17 @@ export default function Navbar() {
           </button>
         </div>
         <ul className="menu p-4 text-base">
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/#about">About</Link></li>
-          <li><Link href="/#faqs">FAQs</Link></li>
-          <li><Link href="/#sponsors">Sponsors</Link></li>
-          {/* <li><Link href="/resources">Resources</Link></li> */}
-          <li><Link href="/past-winners">Past Winners</Link></li>
-          <li><Link href="/gallery">Gallery</Link></li>
+          {links.map(({ href, label }) => (
+            <li key={href}>
+              <Link
+                href={href}
+                className={`nav-link ${selectedLink === href ? "selected" : ""}`}
+                onClick={(event) => handleClick(href, event)}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
 

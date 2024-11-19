@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import CombinedLogos from "./CombinedLogos";
 import { useState } from "react";
 
@@ -15,12 +16,13 @@ export default function Navbar() {
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal hidden lg:flex text-base">
-            <li><a href="/">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#faqs">FAQs</a></li>
-            <li><a href="#sponsors">Sponsors</a></li>
-            <li><a href="/past-winners">Past Winners</a></li>
-            <li><a href="/gallery">Gallery</a></li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/#about">About</Link></li>
+            <li><Link href="/#faqs">FAQs</Link></li>
+            <li><Link href="/#sponsors">Sponsors</Link></li>
+            {/* <li><Link href="/resources">Resources</Link></li> */}
+            <li><Link href="/past-winners">Past Winners</Link></li>
+            <li><Link href="/gallery">Gallery</Link></li>
           </ul>
           <button
             className="btn btn-square btn-ghost lg:hidden"
@@ -46,9 +48,8 @@ export default function Navbar() {
 
       {/* Side Nav */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-sesa-navy text-white transform ${
-          isSideNavOpen ? "-translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 ease-in-out z-40`}
+        className={`fixed top-0 right-0 h-full w-64 bg-sesa-navy text-white transform ${isSideNavOpen ? "-translate-x-0" : "translate-x-full"
+          } transition-transform duration-300 ease-in-out z-40`}
       >
         <div className="p-4">
           <button
@@ -72,11 +73,13 @@ export default function Navbar() {
           </button>
         </div>
         <ul className="menu p-4 text-base">
-          <li><a>About</a></li>
-          <li><a>FAQs</a></li>
-          <li><a>Sponsors</a></li>
-          <li><a>Past Winners</a></li>
-          <li><a>Gallery</a></li>
+          <li><Link href="/">Home</Link></li>
+          <li><Link href="/#about">About</Link></li>
+          <li><Link href="/#faqs">FAQs</Link></li>
+          <li><Link href="/#sponsors">Sponsors</Link></li>
+          {/* <li><Link href="/resources">Resources</Link></li> */}
+          <li><Link href="/past-winners">Past Winners</Link></li>
+          <li><Link href="/gallery">Gallery</Link></li>
         </ul>
       </div>
 

@@ -1,15 +1,11 @@
 import About from "@/components/common/About";
-import FAQs from "@/components/common/FAQs";
 import Splash from "@/components/common/Splash";
-import Sponsors from "@/components/common/Sponsors";
 
 export default function Home() {
   return (
     <div>
       <Splash />
       <About />
-      <FAQs />
-      <Sponsors />
     </div>
   );
 }

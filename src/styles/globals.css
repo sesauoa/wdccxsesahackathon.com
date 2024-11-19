@@ -7,3 +7,17 @@
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
 }
+
+/* Navigation */
+.nav-link {
+  @apply text-white;
+}
+
+.nav-link:hover {
+  @apply text-sesa-teal-light;
+}
+
+.selected {
+  @apply bg-wdcc-blue-to-sesa-teal text-white;
+}
+

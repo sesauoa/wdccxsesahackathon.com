@@ -5,7 +5,13 @@ import CombinedLogos from "./CombinedLogos";
 import { useState } from "react";
 
 export default function Navbar() {
+  const [selectedLink, setSelectedLink] = useState("/");
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
+
+  function handleClick(link: string, event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
+    event.currentTarget.blur();
+    setSelectedLink(link);
+  }
 
   return (
     <div className="sticky top-0 z-50">
@@ -15,15 +21,55 @@ export default function Navbar() {
           <CombinedLogos />
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal hidden lg:flex text-base">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/#about">About</Link></li>
-            <li><Link href="/#faqs">FAQs</Link></li>
-            <li><Link href="/#sponsors">Sponsors</Link></li>
-            {/* <li><Link href="/resources">Resources</Link></li> */}
-            <li><Link href="/past-winners">Past Winners</Link></li>
-            <li><Link href="/gallery">Gallery</Link></li>
+          <ul className="menu menu-horizontal hidden lg:flex text-base space-x-3">
+            <li>
+              <Link
+                href="/"
+                className={`nav-link ${selectedLink === '/' ? 'selected' : ''}`}
+                onClick={(event) => handleClick('/', event)}>Home</Link>
+            </li>
+            <li>
+              <Link
+                href="/#about"
+                className={`nav-link ${selectedLink === '/#about' ? 'selected' : ''}`}
+                onClick={(event) => handleClick('/#about', event)}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/#faqs"
+                className={`nav-link ${selectedLink === '/#faqs' ? 'selected' : ''}`}
+                onClick={(event) => handleClick('/#faqs', event)}>
+                FAQs
+              </Link>
+            </li>
+            <li>
+            <Link
+                href="/#sponsors"
+                className={`nav-link ${selectedLink === '/#sponsors' ? 'selected' : ''}`}
+                onClick={(event) => handleClick('/#sponsors', event)}>
+                Sponsors
+              </Link>
+            </li>
+            <li>
+            <Link
+                href="/past-winners"
+                className={`nav-link ${selectedLink === '/past-winners' ? 'selected' : ''}`}
+                onClick={(event) => handleClick('/past-winners', event)}>
+                Past Winners
+              </Link>
+            </li>
+            <li>
+            <Link
+                href="/gallery"
+                className={`nav-link ${selectedLink === '/gallery' ? 'selected' : ''}`}
+                onClick={(event) => handleClick('/gallery', event)}>
+                Gallery
+              </Link>
+            </li>
           </ul>
+
           <button
             className="btn btn-square btn-ghost lg:hidden"
             onClick={() => setIsSideNavOpen(!isSideNavOpen)}

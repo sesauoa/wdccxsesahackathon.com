@@ -1,6 +1,6 @@
-# WDCCxSESA Hackthon Website!
+# WDCC x SESA Hackthon Website!
 
-This repository hosts the in progress codebase for WDCCxSESA Hackathon website! <br/>
+This repository hosts the in progress codebase for WDCC x SESA Hackathon website! <br/>
 
 ## Getting Started
 

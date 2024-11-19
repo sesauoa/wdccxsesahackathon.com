@@ -10,7 +10,7 @@ export default function Navbar() {
     <div>
       {/* Top Navbar */}
       <div className="navbar h-16 bg-sesa-navy sticky top-0 z-50">
-        <div className="flex-1">
+        <div className="flex-1 ml-10">
           <CombinedLogos />
         </div>
         <div className="flex-none">

@@ -11,8 +11,8 @@ export function CursorAnimation() {
     let tgY = 0;
 
     function move() {
-      curX += (tgX - curX) / 20;
-      curY += (tgY - curY) / 20;
+      curX += (tgX - curX) / 10;
+      curY += (tgY - curY) / 10;
       interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
       requestAnimationFrame(move);
     }
@@ -28,4 +28,6 @@ export function CursorAnimation() {
       window.removeEventListener('mousemove', () => {});
     };
   }, []);
+
+  return null;
 }

@@ -1,31 +1,29 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
 export default {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
         wdcc: {
-          blue: "#087df1",
-          white: "#ffffff",
+          blue: '#087df1',
+          white: '#ffffff',
         },
         sesa: {
-          navy: "#00112b",
+          navy: '#00112b',
           teal: {
-            dark: "#49bfaa",
-            light: "#70c7b0",
+            dark: '#49bfaa',
+            light: '#70c7b0',
           },
         },
       },
     },
   },
-  plugins: [
-    require("daisyui"),
-  ],
+  plugins: [require('daisyui')],
 } satisfies Config;

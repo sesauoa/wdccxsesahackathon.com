@@ -14,7 +14,7 @@
 }
 
 .nav-link:hover {
-  @apply text-sesa-teal-light;
+  @apply bg-slate-700;
 }
 
 .selected {

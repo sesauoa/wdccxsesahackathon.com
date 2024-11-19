@@ -16,9 +16,9 @@ export default function Navbar() {
         <div className="flex-none">
           <ul className="menu menu-horizontal hidden lg:flex text-base">
             <li><a href="/">Home</a></li>
-            <li><a href="/">About</a></li>
-            <li><a>FAQs</a></li>
-            <li><a>Sponsors</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
             <li><a href="/past-winners">Past Winners</a></li>
             <li><a href="/gallery">Gallery</a></li>
           </ul>

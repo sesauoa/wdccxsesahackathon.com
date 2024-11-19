@@ -7,9 +7,9 @@ export default function Navbar() {
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
 
   return (
-    <div>
+    <div className="sticky top-0 z-50">
       {/* Top Navbar */}
-      <div className="navbar h-16 bg-sesa-navy sticky top-0 z-50">
+      <div className="navbar h-16 bg-sesa-navy">
         <div className="flex-1 ml-10">
           <CombinedLogos />
         </div>

@@ -15,10 +15,11 @@ export default function Navbar() {
   }
 
   const links = [
-    { href: "/", label: "Home" },
+    { href: "/#home", label: "Home" },
     { href: "/#about", label: "About" },
     { href: "/#faqs", label: "FAQs" },
     { href: "/#sponsors", label: "Sponsors" },
+    // { href: "/#resources", label: "Resources" },
     { href: "/past-winners", label: "Past Winners" },
     { href: "/gallery", label: "Gallery" },
   ];

@@ -1,26 +1,75 @@
 "use client";
 
+import Link from "next/link";
 import CombinedLogos from "./CombinedLogos";
 import { useState } from "react";
 
 export default function Navbar() {
+  const [selectedLink, setSelectedLink] = useState("/");
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
 
+  function handleClick(link: string, event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
+    event.currentTarget.blur();
+    setSelectedLink(link);
+  }
+
   return (
-    <div>
+    <div className="sticky top-0 z-50">
       {/* Top Navbar */}
-      <div className="navbar h-16 bg-sesa-navy sticky top-0 z-50">
-        <div className="flex-1">
+      <div className="navbar h-16 bg-sesa-navy">
+        <div className="flex-1 ml-10">
           <CombinedLogos />
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal hidden lg:flex text-base">
-            <li><a>About</a></li>
-            <li><a>FAQs</a></li>
-            <li><a>Sponsors</a></li>
-            <li><a>Past Winners</a></li>
-            <li><a>Gallery</a></li>
+          <ul className="menu menu-horizontal hidden lg:flex text-base space-x-3">
+            <li>
+              <Link
+                href="/"
+                className={`nav-link ${selectedLink === '/' ? 'selected' : ''}`}
+                onClick={(event) => handleClick('/', event)}>Home</Link>
+            </li>
+            <li>
+              <Link
+                href="/#about"
+                className={`nav-link ${selectedLink === '/#about' ? 'selected' : ''}`}
+                onClick={(event) => handleClick('/#about', event)}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/#faqs"
+                className={`nav-link ${selectedLink === '/#faqs' ? 'selected' : ''}`}
+                onClick={(event) => handleClick('/#faqs', event)}>
+                FAQs
+              </Link>
+            </li>
+            <li>
+            <Link
+                href="/#sponsors"
+                className={`nav-link ${selectedLink === '/#sponsors' ? 'selected' : ''}`}
+                onClick={(event) => handleClick('/#sponsors', event)}>
+                Sponsors
+              </Link>
+            </li>
+            <li>
+            <Link
+                href="/past-winners"
+                className={`nav-link ${selectedLink === '/past-winners' ? 'selected' : ''}`}
+                onClick={(event) => handleClick('/past-winners', event)}>
+                Past Winners
+              </Link>
+            </li>
+            <li>
+            <Link
+                href="/gallery"
+                className={`nav-link ${selectedLink === '/gallery' ? 'selected' : ''}`}
+                onClick={(event) => handleClick('/gallery', event)}>
+                Gallery
+              </Link>
+            </li>
           </ul>
+
           <button
             className="btn btn-square btn-ghost lg:hidden"
             onClick={() => setIsSideNavOpen(!isSideNavOpen)}
@@ -45,9 +94,8 @@ export default function Navbar() {
 
       {/* Side Nav */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-sesa-navy text-white transform ${
-          isSideNavOpen ? "-translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 ease-in-out z-40`}
+        className={`fixed top-0 right-0 h-full w-64 bg-sesa-navy text-white transform ${isSideNavOpen ? "-translate-x-0" : "translate-x-full"
+          } transition-transform duration-300 ease-in-out z-40`}
       >
         <div className="p-4">
           <button
@@ -71,11 +119,13 @@ export default function Navbar() {
           </button>
         </div>
         <ul className="menu p-4 text-base">
-          <li><a>About</a></li>
-          <li><a>FAQs</a></li>
-          <li><a>Sponsors</a></li>
-          <li><a>Past Winners</a></li>
-          <li><a>Gallery</a></li>
+          <li><Link href="/">Home</Link></li>
+          <li><Link href="/#about">About</Link></li>
+          <li><Link href="/#faqs">FAQs</Link></li>
+          <li><Link href="/#sponsors">Sponsors</Link></li>
+          {/* <li><Link href="/resources">Resources</Link></li> */}
+          <li><Link href="/past-winners">Past Winners</Link></li>
+          <li><Link href="/gallery">Gallery</Link></li>
         </ul>
       </div>
 

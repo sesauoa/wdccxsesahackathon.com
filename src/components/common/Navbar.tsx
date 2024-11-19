@@ -13,61 +13,34 @@ export default function Navbar() {
     setSelectedLink(link);
   }
 
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "/#about", label: "About" },
+    { href: "/#faqs", label: "FAQs" },
+    { href: "/#sponsors", label: "Sponsors" },
+    { href: "/past-winners", label: "Past Winners" },
+    { href: "/gallery", label: "Gallery" },
+  ];
+
   return (
     <div className="sticky top-0 z-50">
-      {/* Top Navbar */}
       <div className="navbar h-16 bg-sesa-navy">
         <div className="flex-1 ml-10">
           <CombinedLogos />
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal hidden lg:flex text-base space-x-3">
-            <li>
-              <Link
-                href="/"
-                className={`nav-link ${selectedLink === '/' ? 'selected' : ''}`}
-                onClick={(event) => handleClick('/', event)}>Home</Link>
-            </li>
-            <li>
-              <Link
-                href="/#about"
-                className={`nav-link ${selectedLink === '/#about' ? 'selected' : ''}`}
-                onClick={(event) => handleClick('/#about', event)}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/#faqs"
-                className={`nav-link ${selectedLink === '/#faqs' ? 'selected' : ''}`}
-                onClick={(event) => handleClick('/#faqs', event)}>
-                FAQs
-              </Link>
-            </li>
-            <li>
-            <Link
-                href="/#sponsors"
-                className={`nav-link ${selectedLink === '/#sponsors' ? 'selected' : ''}`}
-                onClick={(event) => handleClick('/#sponsors', event)}>
-                Sponsors
-              </Link>
-            </li>
-            <li>
-            <Link
-                href="/past-winners"
-                className={`nav-link ${selectedLink === '/past-winners' ? 'selected' : ''}`}
-                onClick={(event) => handleClick('/past-winners', event)}>
-                Past Winners
-              </Link>
-            </li>
-            <li>
-            <Link
-                href="/gallery"
-                className={`nav-link ${selectedLink === '/gallery' ? 'selected' : ''}`}
-                onClick={(event) => handleClick('/gallery', event)}>
-                Gallery
-              </Link>
-            </li>
+            {links.map(({ href, label }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className={`nav-link ${selectedLink === href ? "selected" : ""}`}
+                  onClick={(event) => handleClick(href, event)}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
 
           <button
@@ -92,7 +65,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Side Nav */}
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-sesa-navy text-white transform ${isSideNavOpen ? "-translate-x-0" : "translate-x-full"
           } transition-transform duration-300 ease-in-out z-40`}

@@ -11,6 +11,7 @@ export default function Navbar() {
   function handleClick(link: string, event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     event.currentTarget.blur();
     setSelectedLink(link);
+    setIsSideNavOpen(false);
   }
 
   const links = [

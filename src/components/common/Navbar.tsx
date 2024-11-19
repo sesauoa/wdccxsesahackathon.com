@@ -15,11 +15,12 @@ export default function Navbar() {
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal hidden lg:flex text-base">
-            <li><a>About</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
             <li><a>FAQs</a></li>
             <li><a>Sponsors</a></li>
-            <li><a>Past Winners</a></li>
-            <li><a>Gallery</a></li>
+            <li><a href="/past-winners">Past Winners</a></li>
+            <li><a href="/gallery">Gallery</a></li>
           </ul>
           <button
             className="btn btn-square btn-ghost lg:hidden"

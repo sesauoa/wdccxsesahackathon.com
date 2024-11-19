@@ -1,15 +1,18 @@
-import About from "@/components/common/About";
-import FAQs from "@/components/common/FAQs";
-import Splash from "@/components/common/Splash";
-import Sponsors from "@/components/common/Sponsors";
-
 export default function Home() {
   return (
     <div>
-      <Splash />
-      <About />
-      <FAQs />
-      <Sponsors />
+      <div className="h-screen w-full p-20">
+        <h1 className="text-4xl font-bold">Splash</h1>
+      </div>
+      <div className="h-screen w-full p-20">
+        <h1 className="text-4xl font-bold">About</h1>
+      </div>
+      <div className="h-screen w-full p-20">
+        <h1 className="text-4xl font-bold">FAQs</h1>
+      </div>
+      <div className="h-screen w-full p-20">
+        <h1 className="text-4xl font-bold">Sponsors</h1>
+      </div>
     </div>
   );
 }

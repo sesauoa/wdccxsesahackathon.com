@@ -15,10 +15,11 @@ export default function Navbar() {
   }
 
   const links = [
-    { href: "/", label: "Home" },
+    { href: "/#home", label: "Home" },
     { href: "/#about", label: "About" },
     { href: "/#faqs", label: "FAQs" },
     { href: "/#sponsors", label: "Sponsors" },
+    // { href: "/#resources", label: "Resources" },
     { href: "/past-winners", label: "Past Winners" },
     { href: "/gallery", label: "Gallery" },
   ];
@@ -30,7 +31,7 @@ export default function Navbar() {
           <CombinedLogos />
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal hidden lg:flex text-base space-x-3">
+          <ul className="menu menu-horizontal hidden lg:flex text-base space-x-2">
             {links.map(({ href, label }) => (
               <li key={href}>
                 <Link
@@ -93,7 +94,7 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-        <ul className="menu p-4 text-base">
+        <ul className="menu p-4 text-base space-y-1">
           {links.map(({ href, label }) => (
             <li key={href}>
               <Link

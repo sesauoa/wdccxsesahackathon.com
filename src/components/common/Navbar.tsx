@@ -1,42 +1,45 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import CombinedLogos from "./CombinedLogos";
-import { useState } from "react";
+import Link from 'next/link';
+import CombinedLogos from './CombinedLogos';
+import { useState } from 'react';
 
 export default function Navbar() {
-  const [selectedLink, setSelectedLink] = useState("/");
+  const [selectedLink, setSelectedLink] = useState('/');
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
 
-  function handleClick(link: string, event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
+  function handleClick(
+    link: string,
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) {
     event.currentTarget.blur();
     setSelectedLink(link);
     setIsSideNavOpen(false);
   }
 
   const links = [
-    { href: "/#home", label: "Home" },
-    { href: "/#about", label: "About" },
-    { href: "/#faqs", label: "FAQs" },
-    { href: "/#sponsors", label: "Sponsors" },
+    { href: '/#home', label: 'Home' },
+    { href: '/#about', label: 'About' },
+    { href: '/#faqs', label: 'FAQs' },
+    { href: '/#sponsors', label: 'Sponsors' },
     // { href: "/#resources", label: "Resources" },
-    { href: "/past-winners", label: "Past Winners" },
-    { href: "/gallery", label: "Gallery" },
+    { href: '/past-winners', label: 'Past Winners' },
+    { href: '/gallery', label: 'Gallery' },
   ];
 
   return (
     <div className="sticky top-0 z-50">
       <div className="navbar h-16 bg-sesa-navy">
-        <div className="flex-1 ml-10">
+        <div className="ml-10 flex-1">
           <CombinedLogos />
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal hidden lg:flex text-base space-x-2">
+          <ul className="menu menu-horizontal hidden space-x-2 text-base lg:flex">
             {links.map(({ href, label }) => (
               <li key={href}>
                 <Link
                   href={href}
-                  className={`nav-link ${selectedLink === href ? "selected" : ""}`}
+                  className={`nav-link ${selectedLink === href ? 'selected' : ''}`}
                   onClick={(event) => handleClick(href, event)}
                 >
                   {label}
@@ -68,11 +71,12 @@ export default function Navbar() {
       </div>
 
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-sesa-navy text-white transform ${isSideNavOpen ? "-translate-x-0" : "translate-x-full"
-          } transition-transform duration-300 ease-in-out z-40`}
+        className={`fixed right-0 top-0 h-full w-64 transform bg-sesa-navy text-white ${
+          isSideNavOpen ? '-translate-x-0' : 'translate-x-full'
+        } z-40 transition-transform duration-300 ease-in-out`}
       >
-        <div className="py-2 px-2">
-          <div className="w-full  flex justify-end">
+        <div className="px-2 py-2">
+          <div className="flex w-full justify-end">
             <button
               className="btn btn-square btn-ghost"
               onClick={() => setIsSideNavOpen(false)}
@@ -94,12 +98,12 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-        <ul className="menu p-4 text-base space-y-1">
+        <ul className="menu space-y-1 p-4 text-base">
           {links.map(({ href, label }) => (
             <li key={href}>
               <Link
                 href={href}
-                className={`nav-link ${selectedLink === href ? "selected" : ""}`}
+                className={`nav-link ${selectedLink === href ? 'selected' : ''}`}
                 onClick={(event) => handleClick(href, event)}
               >
                 {label}
@@ -111,11 +115,10 @@ export default function Navbar() {
 
       {isSideNavOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-30"
+          className="fixed inset-0 z-30 bg-black bg-opacity-50"
           onClick={() => setIsSideNavOpen(false)}
         ></div>
       )}
     </div>
   );
 }
-

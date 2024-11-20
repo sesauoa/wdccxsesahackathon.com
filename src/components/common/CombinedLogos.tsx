@@ -1,21 +1,19 @@
-import wdccLogo from "../../../public/logos/clubs/wdcc.png";
-import sesaLogo from "../../../public/logos/clubs/sesa.svg";
+import wdccLogo from '../../../public/logos/clubs/wdcc.png';
+import sesaLogo from '../../../public/logos/clubs/sesa.svg';
 
 export default function CombinedLogos() {
   return (
     <div className="flex items-center">
       <a href="https://wdcc.co.nz" target="_blank" className="text-xl">
-        <img
-          src={wdccLogo.src} alt="WDCC Logo" className="h-7 mt-2 mr-1" />
+        <img src={wdccLogo.src} alt="WDCC Logo" className="mr-1 mt-2 h-7" />
       </a>
-      <div className="relative w-4 h-4 mx-3">
-        <div className="absolute w-full h-0.5 bg-white rotate-45 top-1/2 left-0 transform -translate-y-1/2"></div>
-        <div className="absolute w-full h-0.5 bg-white -rotate-45 top-1/2 left-0 transform -translate-y-1/2"></div>
+      <div className="relative mx-3 h-4 w-4">
+        <div className="absolute left-0 top-1/2 h-0.5 w-full -translate-y-1/2 rotate-45 transform bg-white"></div>
+        <div className="absolute left-0 top-1/2 h-0.5 w-full -translate-y-1/2 -rotate-45 transform bg-white"></div>
       </div>
       <a href="https://sesa.org.nz/" target="_blank" className="text-xl">
-        <img
-          src={sesaLogo.src} alt="SESA Logo" className="h-12" />
+        <img src={sesaLogo.src} alt="SESA Logo" className="h-12" />
       </a>
     </div>
-  )
+  );
 }

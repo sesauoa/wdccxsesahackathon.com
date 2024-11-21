@@ -1,0 +1,36 @@
+name: Check Build
+
+on:
+  pull_request:
+    branches:
+      - main 
+
+jobs:
+  build-check:
+    name: Build Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18 
+          cache: 'pnpm'
+
+    
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+     
+      - name: Install dependencies
+        run: pnpm install
+
+      
+      - name: Build application
+        run: pnpm build
+
+      
+      - name: Check build output
+        run: test -d .next && echo "Build successful!"

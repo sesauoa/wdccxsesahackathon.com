@@ -18,6 +18,11 @@ pnpm install
 pnpm run dev
 ```
 
+## Resources
+
+<div align="center">
+()[]
+</div>
 ## Technologies
 
 <div align="center">

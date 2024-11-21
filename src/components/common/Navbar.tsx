@@ -2,27 +2,72 @@
 
 import Link from "next/link";
 import CombinedLogos from "./CombinedLogos";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Navbar() {
-  const [selectedLink, setSelectedLink] = useState("/");
+  const [selectedLink, setSelectedLink] = useState("");
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
-
-  function handleClick(link: string, event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
-    event.currentTarget.blur();
-    setSelectedLink(link);
-    setIsSideNavOpen(false);
-  }
+  const isScrollingRef = useRef(false);
 
   const links = [
     { href: "/#home", label: "Home" },
     { href: "/#about", label: "About" },
     { href: "/#faqs", label: "FAQs" },
     { href: "/#sponsors", label: "Sponsors" },
-    // { href: "/#resources", label: "Resources" },
+    // { href: "/resources", label: "Resources" },
     { href: "/past-winners", label: "Past Winners" },
     { href: "/gallery", label: "Gallery" },
   ];
+
+  function handleClick(link: string) {
+    setIsSideNavOpen(false);
+    setSelectedLink(link);
+
+    if (link.includes("/#")) {
+      isScrollingRef.current = true;
+
+      const targetId = link.split("/#")[1];
+      const targetElement = targetId ? document.getElementById(targetId) : null;
+
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      setTimeout(() => {
+        isScrollingRef.current = false;
+      }, 500);
+    }
+  }
+
+  useEffect(() => {
+    setSelectedLink(window.location.pathname + window.location.hash);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (isScrollingRef.current) return;
+
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            if (id) {
+              setSelectedLink(`/#${id}`);
+              window.history.replaceState(null, "", `/#${id}`);
+            }
+          }
+        });
+      },
+      { threshold: 0.9 }
+    );
+
+    const sectionIds = links.map((link) => link.href.split("/#")[1]).filter(Boolean);
+    const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
+
+    sections.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="sticky top-0 z-50">
@@ -37,7 +82,7 @@ export default function Navbar() {
                 <Link
                   href={href}
                   className={`nav-link ${selectedLink === href ? "selected" : ""}`}
-                  onClick={(event) => handleClick(href, event)}
+                  onClick={() => handleClick(href)}
                 >
                   {label}
                 </Link>
@@ -100,7 +145,7 @@ export default function Navbar() {
               <Link
                 href={href}
                 className={`nav-link ${selectedLink === href ? "selected" : ""}`}
-                onClick={(event) => handleClick(href, event)}
+                onClick={() => handleClick(href)}
               >
                 {label}
               </Link>
@@ -118,4 +163,3 @@ export default function Navbar() {
     </div>
   );
 }
-

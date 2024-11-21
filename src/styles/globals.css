@@ -9,7 +9,8 @@
 }
 
 /* Navigation */
-.nav-link {
+.nav-link,
+.nav-link:focus {
   @apply text-white;
 }
 
@@ -68,7 +69,6 @@
   }
 }
 
-
 .gradient-bg {
   width: 100%;
   height: 100%;
@@ -83,16 +83,20 @@
     display: none;
   }
 
-
   .gradients-container {
-    filter: url(#goo) blur(40px) ;
+    filter: url(#goo) blur(40px);
     width: 100%;
     height: 100%;
   }
 
   .g1 {
     position: absolute;
-    background: radial-gradient(circle at center, rgb(var(--color1)) 0, rgba(var(--color1), 0)) no-repeat;
+    background: radial-gradient(
+        circle at center,
+        rgb(var(--color1)) 0,
+        rgba(var(--color1), 0)
+      )
+      no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -108,7 +112,12 @@
 
   .g2 {
     position: absolute;
-    background: radial-gradient(circle at center, rgb(var(--color2)) 0, rgba(var(--color2), 0)) no-repeat;
+    background: radial-gradient(
+        circle at center,
+        rgb(var(--color2)) 0,
+        rgba(var(--color2), 0)
+      )
+      no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -124,7 +133,12 @@
 
   .g3 {
     position: absolute;
-    background: radial-gradient(circle at center, rgb(var(--color1)) 0, rgba(var(--color1), 0)) no-repeat;
+    background: radial-gradient(
+        circle at center,
+        rgb(var(--color1)) 0,
+        rgba(var(--color1), 0)
+      )
+      no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -140,7 +154,12 @@
 
   .g4 {
     position: absolute;
-    background: radial-gradient(circle at center, rgb(var(--color2)) 0, rgba(var(--color2), 0)) no-repeat;
+    background: radial-gradient(
+        circle at center,
+        rgb(var(--color2)) 0,
+        rgba(var(--color2), 0)
+      )
+      no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -156,7 +175,12 @@
 
   .interactive {
     position: absolute;
-    background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
+    background: radial-gradient(
+        circle at center,
+        rgba(var(--color-interactive), 0.8) 0,
+        rgba(var(--color-interactive), 0) 50%
+      )
+      no-repeat;
     mix-blend-mode: var(--blending);
 
     width: 100%;

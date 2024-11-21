@@ -17,6 +17,11 @@
 
 ![image](https://github.com/user-attachments/assets/d75661c3-fce1-4e32-95ec-23d436f8161b)
 
+> [!Note]
+> Please add closes #{ticket number} as this lets you automatically close the ticket in github projects whenever your pr gets merged
+> ![image](https://github.com/user-attachments/assets/f6e45100-c170-46f2-93ae-446b87c5597a)
+
+
 ### Step 6. Wait for tests to pass & Anton or Tony to review the changes.
 
 ![image](https://github.com/user-attachments/assets/1b6c9b4d-d42e-4ef9-9c74-1629ae73378b)

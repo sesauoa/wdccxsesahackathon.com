@@ -2,28 +2,27 @@
 
 This repository hosts the in progress codebase for WDCC x SESA Hackathon website! <br/>
 
-## Getting Started
+## Getting Started (using powershell)
 
 ```bash
 # cloning the project
 git clone https://github.com/sesauoa/wdccxsesahackathon.com.git.
-
 # change directory
 cd .\wdccxsesahackathon.com\
-
+#install pnpm
+Invoke-WebRequest https://get.pnpm.io/install.ps1 -UseBasicParsing | Invoke-Expression
 # install dependencies
 pnpm install
-
 # run development server
 pnpm run dev
 ```
 
 ## Resources
 
-<div align="center">
-()[]
-</div>
-## Technologies
+[Github Projects](https://github.com/sesauoa/wdccxsesahackathon.com/projects?query=is%3Aopen)
+[File Structure](docs/STRUCTURE.md)
+[Git Practicies (for this project)](docs/STRUCTURE.md)
+
 
 <div align="center">
     <!-- Next js -->

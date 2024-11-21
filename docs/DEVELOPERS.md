@@ -16,11 +16,11 @@ To install run this command in powershell or look at the installer guide [here](
 Invoke-WebRequest https://get.pnpm.io/install.ps1 -UseBasicParsing | Invoke-Expression
 ```
 
-### [Prettier - Code formatter (even for tailwind classes!)](https://pnpm.io/)
+### [Prettier - Code formatter (even for tailwind classes!)](https://prettier.io/)
 
 Prettier is a code formatter which will standardize stuff like indentation and tailwind class location. Please install this vscode extension as it will make developing this project cleaner! :smile:
 
-To install go to vscode extensions and search for Prettier - Code Formatter & Prettier ESLint.
+To install go to vscode extensions and search for [Prettier - Code Formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) & [Prettier ESLint](https://marketplace.visualstudio.com/items?itemName=rvest.vs-code-prettier-eslint). (or just click on them)
 
 After that go to settings > default formatter and set it to prettier.
 
@@ -30,9 +30,7 @@ After that also turn on format on save.
 
 ![image](https://github.com/user-attachments/assets/6325c6f5-2977-4e10-9682-b5eca7588640)
 
-
 I've already set it up in the repository so no need to worry about that
-
 
 ## Additional software (optional)
 
@@ -44,10 +42,9 @@ Git lens is an extension which allows you to see who made what code so you can a
 
 ![image](https://github.com/user-attachments/assets/634f1dfe-71af-419a-81fb-8ff9ccc43fcb)
 
-
 ### [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
 
-React snippets allow you to quickly write React boilerplate code, so you don't need to write it from scratch everytime you want to make a new component. 
+React snippets allow you to quickly write React boilerplate code, so you don't need to write it from scratch everytime you want to make a new component.
 
 Just type `rafc` for components or `rafce` for pages in a new tsx file and you're all set. (just ask me if you need help)
 
@@ -56,12 +53,12 @@ Just type `rafc` for components or `rafce` for pages in a new tsx file and you'r
 Hopefully you have an icon theme installed it makes navigating folders a lot easier!
 ![image](https://github.com/user-attachments/assets/99910faa-639f-462c-aaf2-9ca7a121fcc4)
 
-
 ## Creating Components
 
 ### 1. Naming Conventions
 
 Component Names: Use PascalCase for component names (including their file name). Each word starts with an uppercase letter.
+
 ```tsx
 // Correct
 const MyComponent = () => { ... };
@@ -73,6 +70,8 @@ const myComponent = () => { ... };
 The exception to this is nextJS files such as `layout.tsx` and `page.tsx` etc which are required to be formatted like that to be read correctly.
 
 ### 2. Exporting components (export default vs just export)
+
+**Export default**
 
 Use `export default` when it is a section or page. Or when you know you're only going to be exporting one thing from that file e.g
 
@@ -88,7 +87,9 @@ export default test;
 
 This was generated from using `RAFCE` from the react snippet plugin.
 
-Use just `export` when making components or a file that will contain multiple exports like a data file or const file e.g.
+**Export**
+
+Use `export` when making components or a file that will contain multiple exports like a data file or const file e.g.
 
 ```tsx
 import React from 'react';
@@ -111,6 +112,10 @@ This was generated from using `RAFC` from the react snippet plugin.
 ### 3. File Structure
 
 Check [file structure](./STRUCTURE.md)
+
+### 4. Git Practicies
+
+After developing please check out our [Git Practicies!](./GIT.md)
 
 # Questions
 

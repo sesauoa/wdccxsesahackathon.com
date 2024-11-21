@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import '@/styles/globals.css';
-import Navbar from '@/components/common/Navbar';
+import Navbar from '@/components/common/StaticNavbar';
 import Footer from '@/components/common/Footer';
 import { CursorAnimation } from '@/utils/CursorAnimation';
 
@@ -35,8 +35,17 @@ export default function RootLayout({
           <svg xmlns="http://www.w3.org/2000/svg">
             <defs>
               <filter id="goo">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                <feGaussianBlur
+                  in="SourceGraphic"
+                  stdDeviation="10"
+                  result="blur"
+                />
+                <feColorMatrix
+                  in="blur"
+                  mode="matrix"
+                  values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                  result="goo"
+                />
                 <feBlend in="SourceGraphic" in2="goo" />
               </filter>
             </defs>

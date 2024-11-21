@@ -4,8 +4,6 @@ This repository hosts the in progress codebase for WDCC x SESA Hackathon website
 
 ## Getting Started (using powershell)
 
-## Getting Started (using powershell)
-
 ```bash
 # cloning the project
 git clone https://github.com/sesauoa/wdccxsesahackathon.com.git.
@@ -28,6 +26,8 @@ pnpm run dev
 ### [File Structure](docs/STRUCTURE.md)
 
 ### [Git Practicies (for this project)](docs/GIT.md)
+
+### [Developer Guide (for this project)](docs/DEVELOPERS.md)
 
 <div align="center">
     <!-- Next js -->

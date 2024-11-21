@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import CombinedLogos from './CombinedLogos';
 
 export default function StaticNavbar() {
   const pathname = usePathname();
@@ -19,7 +20,7 @@ export default function StaticNavbar() {
     <div className="sticky top-0 z-50 bg-sesa-navy">
       <div className="navbar h-16">
         <div className="flex-1 ml-10">
-          <span className="text-xl text-white font-bold">Logo</span>
+          <CombinedLogos />
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal hidden lg:flex text-base space-x-2">

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
+import CombinedLogos from './CombinedLogos';
 
 export default function IntersectionNavbar() {
   const [selectedLink, setSelectedLink] = useState('');
@@ -34,7 +35,10 @@ export default function IntersectionNavbar() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const id = entry.target.getAttribute('id');
-            if (id) setSelectedLink(`/#${id}`);
+            if (id) {
+              setSelectedLink(`/#${id}`);
+              window.history.replaceState(null, '', `/#${id}`);
+            }
           }
         });
       },
@@ -54,18 +58,16 @@ export default function IntersectionNavbar() {
       const target = document.getElementById(sectionId);
       if (target) {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        setSelectedLink(href);
       }
-    } else {
-      setSelectedLink(href);
     }
+    console.log(selectedLink);
   };
 
   return (
     <div className="sticky top-0 z-50 bg-sesa-navy">
       <div className="navbar h-16">
         <div className="flex-1 ml-10">
-          <span className="text-xl text-white font-bold">Logo</span>
+          <CombinedLogos />
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal hidden lg:flex text-base space-x-2">

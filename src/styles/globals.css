@@ -9,7 +9,8 @@
 }
 
 /* Navigation */
-.nav-link {
+.nav-link,
+.nav-link:focus {
   @apply text-white;
 }
 

@@ -7,6 +7,7 @@ This repository hosts the in progress codebase for WDCC x SESA Hackathon website
 ```bash
 # cloning the project
 git clone https://github.com/sesauoa/wdccxsesahackathon.com.git.
+
 # change directory
 cd .\wdccxsesahackathon.com\
 
@@ -15,6 +16,7 @@ Invoke-WebRequest https://get.pnpm.io/install.ps1 -UseBasicParsing | Invoke-Expr
 
 # install dependencies
 pnpm install
+
 # run development server
 pnpm run dev
 ```
@@ -29,6 +31,7 @@ pnpm run dev
 
 ### [Developer Guide (for this project)](docs/DEVELOPERS.md)
 
+## Technologies used
 <div align="center">
     <!-- Next js -->
     <img src="https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"/>
@@ -38,6 +41,8 @@ pnpm run dev
     <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/>
      <!-- TailwindCSS -->
     <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
+     <!-- Framer motion -->
+    <img src="https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer&logoColor=blue"/>
 </div>
 
 <div align="center">

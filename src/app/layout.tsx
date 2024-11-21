@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import '@/styles/globals.css';
-import Navbar from '@/components/common/StaticNavbar';
+import Navbar from '@/components/common/Navbar';
 import Footer from '@/components/common/Footer';
 import { CursorAnimation } from '@/utils/CursorAnimation';
 import { Blobs } from '@/components/common/Blobs';

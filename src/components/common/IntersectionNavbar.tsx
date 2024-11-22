@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import CombinedLogos from './CombinedLogos';
+import HamburgerMenu from './HamburgerMenu';
 
 export default function IntersectionNavbar() {
   const [selectedLink, setSelectedLink] = useState('');
@@ -60,7 +61,6 @@ export default function IntersectionNavbar() {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
-    console.log(selectedLink);
   };
 
   return (
@@ -83,6 +83,11 @@ export default function IntersectionNavbar() {
               </li>
             ))}
           </ul>
+          <HamburgerMenu
+            links={links}
+            selectedLink={selectedLink}
+            handleLinkClick={handleLinkClick}
+          />
         </div>
       </div>
     </div>

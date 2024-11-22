@@ -19,7 +19,7 @@ export default function HamburgerMenu({
   return (
     <div>
       <button
-        className="btn btn-square btn-ghost lg:hidden"
+        className="btn btn-square btn-ghost lg:hidden nav-link"
         onClick={() => setIsSideNavOpen(!isSideNavOpen)}
       >
         <svg
@@ -45,7 +45,7 @@ export default function HamburgerMenu({
         <div className="py-2 px-2">
           <div className="w-full flex justify-end">
             <button
-              className="btn btn-square btn-ghost"
+              className="btn btn-square btn-ghost nav-link"
               onClick={() => setIsSideNavOpen(false)}
             >
               <svg

@@ -23,7 +23,7 @@ export default function StaticNavbar() {
           <CombinedLogos />
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal hidden lg:flex text-base space-x-2">
+          <ul className="menu menu-horizontal hidden space-x-2 text-base lg:flex">
             {links.map(({ href, label }) => (
               <li key={href}>
                 <Link

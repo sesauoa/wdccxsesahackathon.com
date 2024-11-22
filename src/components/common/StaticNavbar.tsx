@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import CombinedLogos from './CombinedLogos';
+import HamburgerMenu from './HamburgerMenu';
 
 export default function StaticNavbar() {
   const pathname = usePathname();
@@ -19,7 +20,7 @@ export default function StaticNavbar() {
   return (
     <div className="sticky top-0 z-50 bg-sesa-navy">
       <div className="navbar h-16">
-        <div className="ml-10 flex-1">
+        <div className="flex-1 ml-10">
           <CombinedLogos />
         </div>
         <div className="flex-none">
@@ -35,6 +36,11 @@ export default function StaticNavbar() {
               </li>
             ))}
           </ul>
+          <HamburgerMenu
+            links={links}
+            selectedLink={pathname}
+            handleLinkClick={(href) => window.location.assign(href)}
+          />
         </div>
       </div>
     </div>

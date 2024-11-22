@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
+import CombinedLogos from './CombinedLogos';
 
 export default function IntersectionNavbar() {
   const [selectedLink, setSelectedLink] = useState('');
@@ -64,11 +65,11 @@ export default function IntersectionNavbar() {
   return (
     <div className="sticky top-0 z-50 bg-sesa-navy">
       <div className="navbar h-16">
-        <div className="flex-1 ml-10">
-          <span className="text-xl text-white font-bold">Logo</span>
+        <div className="ml-10 flex-1">
+          <CombinedLogos />
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal hidden lg:flex text-base space-x-2">
+          <ul className="menu menu-horizontal hidden space-x-2 text-base lg:flex">
             {links.map(({ href, label }) => (
               <li key={href}>
                 <Link

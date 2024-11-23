@@ -11,7 +11,7 @@ export type Team = {
 const pastWinners: Team[] = [
   {
     year: 2024,
-    place: '🏆 1st',
+    place: '🏆 1st Place',
     teamName: 'Team Alpha',
     image: '/winners/2024-1st.png',
     description:
@@ -21,7 +21,7 @@ const pastWinners: Team[] = [
   },
   {
     year: 2024,
-    place: '🥈 2nd',
+    place: '🥈 2nd Place',
     teamName: 'Team Beta',
     image: '/winners/2024-1st.png',
     description:
@@ -32,7 +32,7 @@ const pastWinners: Team[] = [
 
   {
     year: 2024,
-    place: '🥉 3rd',
+    place: '🥉 3rd Place',
     teamName: 'Team Gamma',
     image: '/winners/2024-1st.png',
     description:

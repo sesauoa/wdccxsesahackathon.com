@@ -18,6 +18,4 @@ export const H3: React.FC<TypograpgyProps> = ({ children, className }) => {
   return <div className={cn('text-3xl font-bold', className)}>{children}</div>;
 };
 
-export const P: React.FC<TypograpgyProps> = ({ children, className }) => {
-  return <div className={cn('text-2xl', className)}>{children}</div>;
-};
+//feel free to add more common styles here.

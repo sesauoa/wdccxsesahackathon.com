@@ -1,5 +1,4 @@
 import CombinedLogos from './CombinedLogos';
-import { P } from './Typography';
 
 export default function Footer() {
   return (
@@ -23,7 +22,7 @@ export default function Footer() {
             sesa.org.nz
           </a>
         </div>
-        <P>Copyright © {new Date().getFullYear()} - All rights reserved.</P>
+        <p>Copyright © {new Date().getFullYear()} - All rights reserved.</p>
       </aside>
     </footer>
   );

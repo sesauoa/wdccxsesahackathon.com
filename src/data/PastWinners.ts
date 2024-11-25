@@ -136,7 +136,7 @@ const pastWinners: YearlyWinners[] = [
       },
     ],
   },
-  // Add other years here (e.g., 2023, 2022, 2021)
+  // Need to add other years.
 ];
 
 export default pastWinners;

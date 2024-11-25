@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import pastWinners from '@/data/PastWinners';
 
-// WinnerDetails Component
+// Parses and properly formats and outputs the data from PastWinners.ts
 function WinnerDetails({
   place,
   teamName,
@@ -49,7 +49,7 @@ function WinnerDetails({
   );
 }
 
-// WinnerImage Component
+// Formats the images provided from the PastWinners.ts import.
 function WinnerImage({ image, alt }: { image: string; alt: string }) {
   return (
     <img
@@ -62,10 +62,10 @@ function WinnerImage({ image, alt }: { image: string; alt: string }) {
 
 // Main PastWinnersPage Component
 export default function PastWinnersPage() {
-  const [selectedYear, setSelectedYear] = useState(2024); // Default year selection
+  const [selectedYear, setSelectedYear] = useState(2024); // Default year selection. Update to most recent year.
   const yearData = pastWinners.find((year) => year.year === selectedYear);
 
-  if (!yearData) return <p>No data available for this year.</p>;
+  if (!yearData) return <p>No data available for this year.</p>; //Might want to look into this to handle invalid inputs (shouldn't be any invalid inputs).
 
   const { orderedWinners, specialAwards } = yearData;
 
@@ -78,7 +78,7 @@ export default function PastWinnersPage() {
 
       {/* Content Section */}
       <div className="mx-auto flex max-w-screen-2xl flex-grow">
-        {/* Sidebar */}
+        {/* Section for the date scroller. At the moment, uses a temporary format. */}
         <aside className="flex-shrink-2 w-full">
           <ul className="space-y-2">
             {pastWinners.map((year) => (

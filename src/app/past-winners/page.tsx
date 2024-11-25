@@ -122,9 +122,12 @@ export default function PastWinnersPage() {
                 <h2 className="text-3xl font-bold">Special Awards</h2>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                   {specialAwards.map((winner, index) => (
-                    <div key={index} className="flex flex-col items-center">
-                      <WinnerImage image={winner.image} alt={winner.teamName} />
+                    <div
+                      key={index}
+                      className="flex flex-col items-center gap-8"
+                    >
                       <WinnerDetails {...winner} />
+                      <WinnerImage image={winner.image} alt={winner.teamName} />
                     </div>
                   ))}
                 </div>

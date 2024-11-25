@@ -1,8 +1,9 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import pastWinners from '@/data/PastWinners';
 
+// WinnerDetails Component
 function WinnerDetails({
   place,
   teamName,
@@ -48,46 +49,57 @@ function WinnerDetails({
   );
 }
 
+// WinnerImage Component
 function WinnerImage({ image, alt }: { image: string; alt: string }) {
   return (
-    <div className="w-full">
-      <img
-        src={image}
-        alt={alt}
-        className="w-full rounded-3xl object-cover object-center shadow-lg"
-      />
-    </div>
+    <img
+      src={image}
+      alt={alt}
+      className="w-full rounded-3xl object-cover object-center shadow-lg"
+    />
   );
 }
 
+// Main PastWinnersPage Component
 export default function PastWinnersPage() {
-  const orderedWinners = pastWinners.slice(0, 3);
-  const specialAwards = pastWinners.slice(3);
+  const [selectedYear, setSelectedYear] = useState(2024); // Default year selection
+  const yearData = pastWinners.find((year) => year.year === selectedYear);
+
+  if (!yearData) return <p>No data available for this year.</p>;
+
+  const { orderedWinners, specialAwards } = yearData;
 
   return (
     <div className="flex min-h-screen p-8 text-white">
-      {/* Sidebar */}
-      <div className="w-64 flex-shrink-0">
+      {/* Styling for the years in the left sidebar */}
+      <aside className="w-64 flex-shrink-0">
         <h1 className="mb-8 text-left text-4xl font-bold">Past Winners</h1>
-      </div>
+        <ul className="space-y-2">
+          {pastWinners.map((year) => (
+            <li key={year.year}>
+              <button
+                onClick={() => setSelectedYear(year.year)}
+                className={`w-full rounded-lg p-2 text-left ${
+                  year.year === selectedYear
+                    ? 'bg-blue-500 text-white'
+                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                }`}
+              >
+                {year.year}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </aside>
 
       {/* Main Content */}
-      <div className="mt-16 flex-grow">
+      <main className="mt-16 flex-grow">
         <div className="flex flex-col space-y-8">
-          {/* Ordered Winners (1st, 2nd, 3rd) */}
+          {/* Ordered Winners */}
           {orderedWinners.map((winner, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-start md:flex-row md:space-x-8"
-            >
+            <div key={index} className="flex flex-col md:flex-row md:space-x-8">
               <div className="md:w-2/4">
-                <WinnerDetails
-                  place={winner.place}
-                  teamName={winner.teamName}
-                  description={winner.description}
-                  appLink={winner.appLink}
-                  github={winner.github}
-                />
+                <WinnerDetails {...winner} />
               </div>
               <div className="md:w-2/4">
                 <WinnerImage image={winner.image} alt={winner.teamName} />
@@ -95,55 +107,22 @@ export default function PastWinnersPage() {
             </div>
           ))}
 
-          {/* Special Awards Heading */}
-          <h2 className="text-left text-3xl font-bold">Special Awards</h2>
-
-          {/* Special Awards Section */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {specialAwards.map((winner, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center space-y-4 text-center"
-              >
-                {/* Image */}
-                <WinnerImage image={winner.image} alt={winner.teamName} />
-
-                {/* Details */}
-                <div>
-                  <h2 className="text-[16px] font-bold">
-                    {winner.place} - {winner.teamName}
-                  </h2>
-                  <p className="text-white-300 mb-4 text-[14px]">
-                    {winner.description}
-                  </p>
-                  <div className="flex flex-col space-y-2">
-                    {winner.appLink && (
-                      <a
-                        href={winner.appLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-300 underline hover:text-blue-400"
-                      >
-                        🔗 Deployed Application
-                      </a>
-                    )}
-                    {winner.github && (
-                      <a
-                        href={winner.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-300 underline hover:text-blue-400"
-                      >
-                        🔗 GitHub Repo
-                      </a>
-                    )}
+          {/* Special Awards */}
+          {specialAwards.length > 0 && (
+            <>
+              <h2 className="text-3xl font-bold">Special Awards</h2>
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+                {specialAwards.map((winner, index) => (
+                  <div key={index} className="flex flex-col items-center">
+                    <WinnerImage image={winner.image} alt={winner.teamName} />
+                    <WinnerDetails {...winner} />
                   </div>
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </>
+          )}
         </div>
-      </div>
+      </main>
     </div>
   );
 }

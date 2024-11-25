@@ -29,7 +29,7 @@ function WinnerDetails({
             href={appLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-300 underline hover:text-blue-400"
+            className="text-white-300 underline hover:text-blue-400"
           >
             🔗 Deployed Application
           </a>
@@ -39,7 +39,7 @@ function WinnerDetails({
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-300 underline hover:text-blue-400"
+            className="text-white-300 underline hover:text-blue-400"
           >
             🔗 GitHub Repo
           </a>
@@ -55,7 +55,7 @@ function WinnerImage({ image, alt }: { image: string; alt: string }) {
     <img
       src={image}
       alt={alt}
-      className="w-full rounded-3xl object-cover object-center shadow-lg"
+      className="h-3/4 w-full rounded-3xl object-cover object-center shadow-lg"
     />
   );
 }

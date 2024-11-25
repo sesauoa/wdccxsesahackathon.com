@@ -58,7 +58,7 @@ const pastWinners: YearlyWinners[] = [
       {
         place: '🎨 Best Design',
         teamName: 'Team Epsilon',
-        image: '/winners/2024-1st.png',
+        image: '/winners/example2.jpg',
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.',
         appLink: '#',
@@ -90,7 +90,7 @@ const pastWinners: YearlyWinners[] = [
       {
         place: '🥈 2nd Place',
         teamName: 'Team Beta',
-        image: '/winners/2024-1st.png',
+        image: '/winners/example1.jpg',
         description:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.',
         appLink: '#',

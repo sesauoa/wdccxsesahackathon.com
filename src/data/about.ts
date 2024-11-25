@@ -6,7 +6,7 @@ export const AboutUs =
     teams: "10+",
     sponsors: "5+",
     prizes: "$1.6k+",
-    duration: "48 hours",
+    duration: "48",
   };
 
   

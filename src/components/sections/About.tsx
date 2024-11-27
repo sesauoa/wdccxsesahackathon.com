@@ -1,11 +1,11 @@
 import React from 'react';
-import { H1 } from '../common/Typography';
+import { H1, Section } from '../common/Typography';
 
 const About = () => {
   return (
-    <section id="about" className="h-screen w-full p-20">
+    <Section id="about">
       <H1>About</H1>
-    </section>
+    </Section>
   );
 };
 

@@ -26,6 +26,9 @@ export default {
       backgroundImage: {
         'wdcc-blue-to-sesa-teal': 'linear-gradient(to right, #087df1, #49bfaa)',
       },
+      width: {
+        '30': '30%',
+      },
     },
   },
   plugins: [require('daisyui')],

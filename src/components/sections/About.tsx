@@ -1,53 +1,54 @@
 import React from 'react';
+import { H1 } from '../common/Typography';
 import { AboutUs, EventStats } from '@/data/about';
 
 const About = () => {
   return (
     <section
       id="about"
-      className="relative flex h-auto w-full flex-col items-center justify-center"
+      className="relative flex h-screen w-full flex-col items-center justify-center"
     >
-      <div className="text-[clamp(1.5rem,1.2391rem+1.3043vw,2.25rem)] font-bold leading-normal tracking-[0.12vw]">
+      <H1 className="leading-normal tracking-[0.12vw] lg:absolute lg:left-[10vw] lg:top-[8.5vw] xl:top-[10vw]">
         About
-      </div>
-      <div className="pb-3 text-lg font-light leading-normal md:text-xl">
+      </H1>
+      <div className="w-[80vw] pb-3 text-lg text-xl font-light leading-normal lg:absolute lg:left-[10vw] lg:top-[14vw] lg:w-[35vw]">
         {AboutUs}
       </div>
 
-      <div className="mx-auto flex w-4/5 flex-row flex-wrap items-center justify-center gap-[3.5vw] pt-3">
-        <div className="relative flex flex-col items-center">
-          <div className="text-2xl font-semibold md:text-4xl">
-            {EventStats.hackers}
+        <div className="lg:w-30 mx-auto flex w-[40vw] flex-row flex-wrap items-center justify-center gap-[3.5vw] gap-y-3 pt-3 lg:absolute lg:right-[10vw] lg:top-[12vw]">
+          <div className="relative flex flex-col items-center">
+            <H1>{EventStats.hackers}</H1>
+            <div className="font-medium md:text-lg">hackers</div>
           </div>
-          <div className="font-medium md:text-lg">hackers</div>
-        </div>
-        <div className="relative flex flex-col items-center">
-          <div className="text-2xl font-semibold md:text-4xl">
-            {EventStats.teams}
+          <div className="relative flex flex-col items-center">
+            <H1>{EventStats.teams}</H1>
+            <div className="font-medium md:text-lg">teams</div>
           </div>
-          <div className="font-medium md:text-lg">teams</div>
-        </div>
-        <div className="relative flex flex-col items-center">
-          <div className="text-2xl font-semibold md:text-4xl">
-            {EventStats.sponsors}
+          <div className="relative flex flex-col items-center">
+            <H1>{EventStats.sponsors}</H1>
+            <div className="font-medium md:text-lg">sponsors</div>
           </div>
-          <div className="font-medium md:text-lg">sponsors</div>
-        </div>
 
-        <div className="relative flex flex-col items-center">
-          <div className="text-2xl font-semibold md:text-4xl">
-            {EventStats.prizes}
+          <div className="relative flex flex-col items-center">
+            <H1>{EventStats.prizes}</H1>
+            <div className="font-medium md:text-lg">in prizes</div>
           </div>
-          <div className="font-medium md:text-lg">in prizes</div>
-        </div>
-        <div className="relative flex flex-col items-center">
-          <div className="text-2xl font-semibold md:text-4xl">
-            {EventStats.duration}
+          <div className="relative flex flex-col items-center">
+            <H1>{EventStats.duration}</H1>
+            <div className="font-medium md:text-lg">hours</div>
           </div>
-          <div className="font-medium md:text-lg">hours</div>
         </div>
-      </div>
     </section>
+  );
+};
+
+/* Reusable Stat Card Component */
+const StatCard = ({ value, label }) => {
+  return (
+    <div className="flex flex-col items-center justify-center rounded-lg bg-white bg-opacity-20 p-6 shadow-md backdrop-blur-md hover:scale-105 hover:bg-opacity-30 transition-transform duration-200">
+      <H1 className="text-4xl font-bold text-white">{value}</H1>
+      <div className="mt-2 text-lg font-medium capitalize">{label}</div>
+    </div>
   );
 };
 

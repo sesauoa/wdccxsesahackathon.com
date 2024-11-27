@@ -37,7 +37,10 @@ export const Section: React.FC<ReactProps> = ({
   ...props
 }) => {
   return (
-    <section className={cn('w-full px-8 py-20 md:p-20', className)} {...props}>
+    <section
+      className={cn('h-screen w-full px-8 py-20 md:p-20', className)}
+      {...props}
+    >
       {children}
     </section>
   );

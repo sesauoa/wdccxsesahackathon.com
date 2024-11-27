@@ -4,11 +4,11 @@ import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import CombinedLogos from './CombinedLogos';
 import HamburgerMenu from './HamburgerMenu';
-
+import { useLenisUtils } from '@/lib/LenisScroll';
 export default function IntersectionNavbar() {
   const [selectedLink, setSelectedLink] = useState('');
   const observerRef = useRef<IntersectionObserver | null>(null);
-
+  const { handleScrollTo } = useLenisUtils();
   const links = [
     { href: '/#home', label: 'Home' },
     { href: '/#about', label: 'About' },
@@ -58,7 +58,7 @@ export default function IntersectionNavbar() {
       const sectionId = href.split('/#')[1];
       const target = document.getElementById(sectionId);
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        handleScrollTo(target);
       }
     }
   };
@@ -66,7 +66,7 @@ export default function IntersectionNavbar() {
   return (
     <div className="sticky top-0 z-50 bg-sesa-navy">
       <div className="navbar h-16">
-        <div className="flex-1 ml-10">
+        <div className="ml-10 flex-1">
           <CombinedLogos />
         </div>
         <div className="flex-none">

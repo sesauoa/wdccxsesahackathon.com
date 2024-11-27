@@ -5,6 +5,7 @@ import Navbar from '@/components/common/Navbar';
 import Footer from '@/components/common/Footer';
 import { CursorAnimation } from '@/utils/CursorAnimation';
 import { Blobs } from '@/components/common/Blobs';
+import LenisScroll from '@/lib/LenisScroll';
 
 const geistSans = localFont({
   src: '../fonts/GeistVF.woff',
@@ -32,13 +33,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Blobs />
-        <div className="relative z-10">
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
-        <CursorAnimation />
+        <LenisScroll>
+          <Blobs />
+          <div className="relative z-10">
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
+          <CursorAnimation />
+        </LenisScroll>
       </body>
     </html>
   );

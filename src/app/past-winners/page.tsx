@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import pastWinners from '@/data/PastWinners';
+import { H1, H2 } from '@/components/common/Typography';
 
 // Parses and properly formats and outputs the data from PastWinners.ts
 function WinnerDetails({
@@ -19,9 +20,9 @@ function WinnerDetails({
 }) {
   return (
     <div>
-      <h2 className="mb-4 text-[30px] font-bold">
+      <H2 className="mb-4">
         {place} - {teamName}
-      </h2>
+      </H2>
       <p className="mb-4 text-white">{description}</p>
       <div className="flex flex-col space-y-2">
         {appLink && (
@@ -73,7 +74,7 @@ export default function PastWinnersPage() {
     <div className="mx-auto flex min-h-screen max-w-screen-2xl flex-col p-8 text-white">
       {/* Title Section */}
       <header className="mb-8">
-        <h1 className="text-left text-4xl font-bold">Past Winners</h1>
+        <H1>Past Winners</H1>
       </header>
 
       {/* Content Section */}
@@ -119,7 +120,7 @@ export default function PastWinnersPage() {
             {/* Special Awards */}
             {specialAwards.length > 0 && (
               <>
-                <h2 className="text-3xl font-bold">Special Awards</h2>
+                <H2>Special Awards</H2>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                   {specialAwards.map((winner, index) => (
                     <div

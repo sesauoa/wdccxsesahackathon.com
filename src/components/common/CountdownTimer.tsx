@@ -17,6 +17,7 @@ export default function CountdownTimer() {
     useEffect(() => {
 
     const target = new Date("12/31/2024 23:59:59");
+    // const target = new Date("11/28/2024 12:31:00");
 
     const interval = setInterval(() => {
     const now = new Date();
@@ -61,7 +62,7 @@ export default function CountdownTimer() {
         <div className="countdown-timer">
 
     {hackathonTime ? (
-        <h1>Hackathon Time!</h1>
+        <h1 className="head1">Hackathon Time!</h1>
         
     ) : (
         

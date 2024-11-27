@@ -15,7 +15,7 @@
     border-radius: 5px;
   }
   
-  .timer-segment {
+  .timer-segment{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -26,13 +26,23 @@
     font-size: 4rem;
     font-family: Inter;
     font-weight: bold;
+    line-height: 1;
   }
   
-  .diver {
+  .divider {
     padding: 0 2rem;
   }
   
   .label {
     font-size: 2rem;
+    font-family: Inter;
+  }
+
+  .head1 {
+    text-align: center;
+    font-size: 6rem;
+    font-weight: bold;
+    font-family: Inter;
+
   }
 

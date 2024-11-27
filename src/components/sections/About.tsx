@@ -42,14 +42,5 @@ const About = () => {
   );
 };
 
-/* Reusable Stat Card Component */
-const StatCard = ({ value, label }) => {
-  return (
-    <div className="flex flex-col items-center justify-center rounded-lg bg-white bg-opacity-20 p-6 shadow-md backdrop-blur-md hover:scale-105 hover:bg-opacity-30 transition-transform duration-200">
-      <H1 className="text-4xl font-bold text-white">{value}</H1>
-      <div className="mt-2 text-lg font-medium capitalize">{label}</div>
-    </div>
-  );
-};
 
 export default About;

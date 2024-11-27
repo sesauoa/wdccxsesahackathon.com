@@ -6,6 +6,8 @@ import Footer from '@/components/common/Footer';
 import { CursorAnimation } from '@/utils/CursorAnimation';
 import { Blobs } from '@/components/common/Blobs';
 
+import CountdownTimer from '@/components/common/CountdownTimer';
+
 const geistSans = localFont({
   src: '../fonts/GeistVF.woff',
   variable: '--font-geist-sans',
@@ -35,6 +37,7 @@ export default function RootLayout({
         <Blobs />
         <div className="relative z-10">
           <Navbar />
+          <CountdownTimer />
           {children}
           <Footer />
         </div>

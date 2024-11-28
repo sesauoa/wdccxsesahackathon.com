@@ -1,67 +1,55 @@
-import React, { useEffect, useRef } from 'react';
-
+import React, { useRef } from 'react';
+import AwardsScroller from './AwardsScroller';
 interface DateScrollerProps {
   pastWinners: { year: number }[];
   selectedYear: number;
   setSelectedYear: (year: number) => void;
+  showAwards: boolean;
 }
 
 const DateScroller: React.FC<DateScrollerProps> = ({
   pastWinners,
   selectedYear,
   setSelectedYear,
+  showAwards,
 }) => {
-  const listItemRefs = useRef<(HTMLLIElement | null)[]>([]);
+  const ulRef = useRef<HTMLUListElement>(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const year = entry.target.getAttribute('data-year');
-            if (year !== null) {
-              setSelectedYear(Number(year));
-            }
-          }
-        });
-      },
-      { threshold: 0.5 } // Adjust the threshold as needed
-    );
-
-    listItemRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
-    return () => {
-      listItemRefs.current.forEach((ref) => {
-        if (ref) observer.unobserve(ref);
+  const handleClick = (year: number, index: number) => {
+    setSelectedYear(year);
+    if (ulRef.current && ulRef.current.children[index]) {
+      ulRef.current.children[index].scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
       });
-    };
-  }, [pastWinners, setSelectedYear]);
-
+    }
+  };
   return (
     <aside>
       <ul>
         {pastWinners.map((year, index) => (
           <li
             key={year.year}
-            ref={(el) => {
-              listItemRefs.current[index] = el;
-            }}
+            ref={(el) => {}}
             data-year={year.year}
             className="mb-0.5"
           >
             <button
-              onClick={() => setSelectedYear(year.year)}
+              onClick={() => handleClick(year.year, index)}
               className={`w-full rounded-lg p-2 py-0 text-left text-sm ${
                 year.year === selectedYear
-                  ? 'bg-blue-500 text-white'
+                  ? 'origin-left scale-150 transform bg-blue-500 text-white'
                   : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-              } transform hover:scale-150`}
+              } transform hover:origin-left hover:scale-150`}
               style={{ appearance: 'none', border: 'none', background: 'none' }}
             >
               {year.year}
             </button>
+            {showAwards && year.year === selectedYear && (
+              <div className="ml-2">
+                <AwardsScroller />
+              </div>
+            )}
           </li>
         ))}
       </ul>

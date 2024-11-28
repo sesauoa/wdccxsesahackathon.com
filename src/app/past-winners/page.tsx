@@ -84,6 +84,7 @@ export default function PastWinnersPage() {
           pastWinners={pastWinners}
           selectedYear={selectedYear}
           setSelectedYear={setSelectedYear}
+          showAwards={true}
         />
         {/* Main Content */}
         <main className="ml-8 flex-grow">
@@ -92,6 +93,7 @@ export default function PastWinnersPage() {
             {orderedWinners.map((winner, index) => (
               <div
                 key={index}
+                id={`${winner.place.charAt(3)}`}
                 className="flex flex-col md:flex-row md:space-x-8"
               >
                 <div className="md:w-2/4">
@@ -106,7 +108,9 @@ export default function PastWinnersPage() {
             {/* Special Awards */}
             {specialAwards.length > 0 && (
               <>
-                <h2 className="text-3xl font-bold">Special Awards</h2>
+                <h2 id="S" className="text-3xl font-bold">
+                  Special Awards
+                </h2>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                   {specialAwards.map((winner, index) => (
                     <div

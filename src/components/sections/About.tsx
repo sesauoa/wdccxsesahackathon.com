@@ -1,10 +1,10 @@
 import React from 'react';
-import { H1 } from '../common/Typography';
+import { H1, Section } from '../common/Typography';
 import { AboutUs, EventStats } from '@/data/About';
 
 const About = () => {
   return (
-    <section
+    <Section
       id="about"
       className="relative flex h-screen w-full flex-col items-center justify-center"
     >
@@ -38,7 +38,7 @@ const About = () => {
           <h2 className="font-medium md:text-lg">hours</h2>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

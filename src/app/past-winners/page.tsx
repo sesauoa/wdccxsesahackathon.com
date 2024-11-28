@@ -93,7 +93,7 @@ export default function PastWinnersPage() {
             {orderedWinners.map((winner, index) => (
               <div
                 key={index}
-                id={`${winner.place.charAt(3)}`}
+                id={`${winner.place.charAt(3)}`} // This is a bit of a hacky way to get the anchor links to work. Might want to look into a better way to do this. But it essentially sets the id to 1, 2, 3 depending on the place
                 className="flex flex-col md:flex-row md:space-x-8"
               >
                 <div className="md:w-2/4">
@@ -108,7 +108,7 @@ export default function PastWinnersPage() {
             {/* Special Awards */}
             {specialAwards.length > 0 && (
               <>
-                <h2 id="S" className="text-3xl font-bold">
+                <h2 id="Special Awards" className="text-3xl font-bold">
                   Special Awards
                 </h2>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-3">

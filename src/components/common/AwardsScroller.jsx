@@ -33,7 +33,7 @@ const AwardsScroller = () => {
       </button>
       <button
         onClick={() => handleScrollToSection('S')}
-        className={`truncate text-left ${selectedButton === 'S' ? 'text-white' : 'text-xs text-gray-300'}`}
+        className={`truncate text-left ${selectedButton === 'Special-awards' ? 'text-white' : 'text-xs text-gray-300'}`}
       >
         🌟 Special Awards
       </button>

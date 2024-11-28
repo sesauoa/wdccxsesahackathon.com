@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { H1 } from '../common/Typography';
 import { AboutUs, EventStats } from '@/data/about';
 
@@ -39,6 +40,15 @@ const About = () => {
           </div>
         </div>
     </section>
+=======
+import { H1, Section } from '../common/Typography';
+
+const About = () => {
+  return (
+    <Section id="about">
+      <H1>About</H1>
+    </Section>
+>>>>>>> chore/23-standardize-components
   );
 };
 

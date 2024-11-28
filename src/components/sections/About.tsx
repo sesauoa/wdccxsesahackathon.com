@@ -6,7 +6,7 @@ const About = () => {
   return (
     <Section
       id="about"
-      className="relative flex h-screen w-full flex-col items-center justify-center"
+      className="relative flex flex-col items-center justify-center"
     >
       <H1 className="leading-normal tracking-[0.12vw] lg:absolute lg:left-[10vw] lg:top-[8.5vw] xl:top-[10vw]">
         About

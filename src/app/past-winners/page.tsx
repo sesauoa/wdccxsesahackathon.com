@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import pastWinners from '@/data/PastWinners';
+import DateScroller from '@/components/common/DateScroller';
 
 // Parses and properly formats and outputs the data from PastWinners.ts
 function WinnerDetails({
@@ -79,25 +80,11 @@ export default function PastWinnersPage() {
       {/* Content Section */}
       <div className="mx-auto flex max-w-screen-2xl flex-grow">
         {/* Section for the date scroller. At the moment, uses a temporary format. */}
-        <aside className="flex-shrink-2 w-full">
-          <ul className="space-y-2">
-            {pastWinners.map((year) => (
-              <li key={year.year}>
-                <button
-                  onClick={() => setSelectedYear(year.year)}
-                  className={`w-full rounded-lg p-2 text-left ${
-                    year.year === selectedYear
-                      ? 'bg-blue-500 text-white'
-                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-                  }`}
-                >
-                  {year.year}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </aside>
-
+        <DateScroller
+          pastWinners={pastWinners}
+          selectedYear={selectedYear}
+          setSelectedYear={setSelectedYear}
+        />
         {/* Main Content */}
         <main className="ml-8 flex-grow">
           <div className="flex flex-col space-y-8">

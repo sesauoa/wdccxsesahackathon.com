@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import {target} from '@/data/TargetDate';
-
+import { target } from "@/data/TargetDate";
 
 export default function CountdownTimer() {
   const [hackathonTime, setHackathonTime] = useState(false);
@@ -12,9 +11,6 @@ export default function CountdownTimer() {
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    // const target = new Date("12/31/2024 23:59:59");
-    // const target = new Date("11/28/2024 18:27:00");
-
     const interval = setInterval(() => {
       const now = new Date();
       const difference = target.getTime() - now.getTime();
@@ -27,9 +23,7 @@ export default function CountdownTimer() {
       );
       setHours(h);
 
-      const m = Math.floor(
-        (difference % (1000 * 60 * 60)) / (1000 * 60)
-      );
+      const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
       setMinutes(m);
 
       const s = Math.floor((difference % (1000 * 60)) / 1000);
@@ -49,27 +43,27 @@ export default function CountdownTimer() {
       {hackathonTime ? (
         <h1 className="text-6xl font-bold text-center">Hackathon Time!</h1>
       ) : (
-          <div className="flex items-center">
-            <div className="flex flex-col items-center mx-4">
-              <span className="text-7xl font-bold leading-none">{days}</span>
-              <span className="text-xl leading-none">Days</span>
-            </div>
-            <span className="text-7xl font-bold mx-4 leading-none">:</span>
-            <div className="flex flex-col items-center mx-4">
-              <span className="text-7xl font-bold leading-none">{hours}</span>
-              <span className="text-xl leading-none">Hours</span>
-            </div>
-            <span className="text-7xl font-bold mx-4 leading-none">:</span>
-            <div className="flex flex-col items-center mx-4">
-              <span className="text-7xl font-bold leading-none">{minutes}</span>
-              <span className="text-xl leading-none">Minutes</span>
-            </div>
-            <span className="text-7xl font-bold mx-4 leading-none">:</span>
-            <div className="flex flex-col items-center mx-4">
-              <span className="text-7xl font-bold leading-none">{seconds}</span>
-              <span className="text-xl leading-none">Seconds</span>
-            </div>
+        <div className="flex flex-wrap items-center justify-center gap-4 md:flex-nowrap">
+          <div className="flex flex-col items-center">
+            <span className="text-5xl font-bold md:text-7xl leading-none">{days}</span>
+            <span className="text-base md:text-xl leading-none">Days</span>
           </div>
+          <span className="text-5xl md:text-7xl font-bold leading-none">:</span>
+          <div className="flex flex-col items-center">
+            <span className="text-5xl font-bold md:text-7xl leading-none">{hours}</span>
+            <span className="text-base md:text-xl leading-none">Hours</span>
+          </div>
+          <span className="text-5xl md:text-7xl font-bold leading-none">:</span>
+          <div className="flex flex-col items-center">
+            <span className="text-5xl font-bold md:text-7xl leading-none">{minutes}</span>
+            <span className="text-base md:text-xl leading-none">Minutes</span>
+          </div>
+          <span className="text-5xl md:text-7xl font-bold leading-none">:</span>
+          <div className="flex flex-col items-center">
+            <span className="text-5xl font-bold md:text-7xl leading-none">{seconds}</span>
+            <span className="text-base md:text-xl leading-none">Seconds</span>
+          </div>
+        </div>
       )}
     </div>
   );

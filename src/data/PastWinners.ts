@@ -18,7 +18,7 @@ const pastWinners: YearlyWinners[] = [
     year: 2024,
     orderedWinners: [
       {
-        place: '🏆 1st Place',
+        place: '🥇 1st Place',
         teamName: 'Team Alpha',
         image: '/winners/2024-1st.png',
         description:
@@ -79,7 +79,7 @@ const pastWinners: YearlyWinners[] = [
     year: 2023,
     orderedWinners: [
       {
-        place: '🏆 1st Place',
+        place: '🥇 1st Place',
         teamName: 'Team Alpha',
         image: '/winners/2024-1st.png',
         description:

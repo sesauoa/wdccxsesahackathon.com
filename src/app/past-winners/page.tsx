@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import pastWinners from '@/data/PastWinners';
 import { H1, H2 } from '@/components/common/Typography';
+import Image from 'next/image';
 
 // Parses and properly formats and outputs the data from PastWinners.ts
 function WinnerDetails({
@@ -53,7 +54,7 @@ function WinnerDetails({
 // Formats the images provided from the PastWinners.ts import.
 function WinnerImage({ image, alt }: { image: string; alt: string }) {
   return (
-    <img
+    <Image
       src={image}
       alt={alt}
       className="h-3/4 w-full rounded-3xl object-cover object-center shadow-lg"

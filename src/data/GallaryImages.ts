@@ -5,14 +5,12 @@ export type Image = {
 
 export type ImageCollection = {
   year: number;
-  theme: string;
   images: Image[];
 }
 
 const galleryImages: ImageCollection[] = [
   {
     year: 2024,
-    theme: '',
     images: [
       {
         image: '/images/IMG_1849.JPG',

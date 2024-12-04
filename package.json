@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "calendar-link": "^2.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.17",
     "next": "15.0.3",

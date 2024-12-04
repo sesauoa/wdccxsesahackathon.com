@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { target } from "@/data/TargetDate";
+import { google} from "calendar-link";
+import { event } from "@/data/Calendar";
+
 
 export default function CountdownTimer() {
   const [hackathonTime, setHackathonTime] = useState(false);
@@ -9,6 +12,11 @@ export default function CountdownTimer() {
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
+  
+  const googleUrl = google(event); 
+
+  console.log(googleUrl);
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -40,6 +48,8 @@ export default function CountdownTimer() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-white">
+      <h1 className="flex flex-col text-2xl">AUG 2-3, 2025</h1>
+      
       {hackathonTime ? (
         <h1 className="text-6xl font-bold text-center">Hackathon Time!</h1>
       ) : (
@@ -65,6 +75,17 @@ export default function CountdownTimer() {
           </div>
         </div>
       )}
+
+
+      <button 
+      className="bg-white border rounded px-4 py-3 font-bold text-black mt-10 ;"
+      onClick={() => window.open(googleUrl, "_blank")}>
+        Add to Google Calendar
+      </button>
+
     </div>
+
+
+
   );
 }

@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import pastWinners from '@/data/PastWinners';
 import { H1, H2 } from '@/components/common/Typography';
 
+import Image from 'next/image';
+
 // Parses and properly formats and outputs the data from PastWinners.ts
 function WinnerDetails({
   place,
@@ -53,10 +55,11 @@ function WinnerDetails({
 // Formats the images provided from the PastWinners.ts import.
 function WinnerImage({ image, alt }: { image: string; alt: string }) {
   return (
-    <img
+    <Image
       src={image}
       alt={alt}
-      className="h-3/4 w-full rounded-3xl object-cover object-center shadow-lg"
+      layout="fill"
+      className="w-full rounded-3xl object-cover object-center shadow-lg"
     />
   );
 }
@@ -80,7 +83,7 @@ export default function PastWinnersPage() {
       {/* Content Section */}
       <div className="mx-auto flex max-w-screen-2xl flex-grow">
         {/* Section for the date scroller. At the moment, uses a temporary format. */}
-        <aside className="flex-shrink-2 w-full">
+        <aside className="flex-shrink-2 w-[40vw]">
           <ul className="space-y-2">
             {pastWinners.map((year) => (
               <li key={year.year}>
@@ -111,7 +114,7 @@ export default function PastWinnersPage() {
                 <div className="md:w-2/4">
                   <WinnerDetails {...winner} />
                 </div>
-                <div className="md:w-2/4">
+                <div className="relative md:w-2/4">
                   <WinnerImage image={winner.image} alt={winner.teamName} />
                 </div>
               </div>
@@ -125,10 +128,15 @@ export default function PastWinnersPage() {
                   {specialAwards.map((winner, index) => (
                     <div
                       key={index}
-                      className="flex flex-col items-center gap-8"
+                      className="relative flex flex-col items-center gap-8"
                     >
                       <WinnerDetails {...winner} />
-                      <WinnerImage image={winner.image} alt={winner.teamName} />
+                      <div className="relative h-[15vw] w-full">
+                        <WinnerImage
+                          image={winner.image}
+                          alt={winner.teamName}
+                        />
+                      </div>
                     </div>
                   ))}
                 </div>

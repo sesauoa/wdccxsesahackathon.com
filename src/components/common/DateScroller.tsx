@@ -5,6 +5,8 @@ interface DateScrollerProps {
   selectedYear: number;
   setSelectedYear: (year: number) => void;
   showAwards: boolean;
+  winnerPlace: string;
+  setWinnerPlace: (place: string) => void;
 }
 
 const DateScroller: React.FC<DateScrollerProps> = ({
@@ -12,6 +14,8 @@ const DateScroller: React.FC<DateScrollerProps> = ({
   selectedYear,
   setSelectedYear,
   showAwards,
+  winnerPlace,
+  setWinnerPlace,
 }) => {
   const ulRef = useRef<HTMLUListElement>(null);
 
@@ -25,7 +29,7 @@ const DateScroller: React.FC<DateScrollerProps> = ({
     }
   };
   return (
-    <aside>
+    <aside className="sticky top-20">
       <ul>
         {pastWinners.map((year, index) => (
           <li
@@ -41,13 +45,20 @@ const DateScroller: React.FC<DateScrollerProps> = ({
                   ? 'origin-left scale-150 transform bg-blue-500 text-white'
                   : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
               } transform hover:origin-left hover:scale-150`}
-              style={{ appearance: 'none', border: 'none', background: 'none' }}
+              style={{
+                appearance: 'none',
+                border: 'none',
+                background: 'none',
+              }}
             >
               {year.year}
             </button>
             {showAwards && year.year === selectedYear && (
               <div className="ml-2">
-                <AwardsScroller />
+                <AwardsScroller
+                  winnerPlace={winnerPlace}
+                  setWinnerPlace={setWinnerPlace}
+                />
               </div>
             )}
           </li>

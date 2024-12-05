@@ -1,8 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import pastWinners from '@/data/PastWinners';
 import DateScroller from '@/components/common/DateScroller';
+import { log } from 'console';
 
 // Parses and properly formats and outputs the data from PastWinners.ts
 function WinnerDetails({
@@ -20,7 +21,7 @@ function WinnerDetails({
 }) {
   return (
     <div>
-      <h2 className="mb-4 text-[30px] font-bold">
+      <h2 className="mb-4">
         {place} - {teamName}
       </h2>
       <p className="mb-4 text-white">{description}</p>
@@ -63,6 +64,7 @@ function WinnerImage({ image, alt }: { image: string; alt: string }) {
 
 // Main PastWinnersPage Component
 export default function PastWinnersPage() {
+  const [winnerPlace, setWinnerPlace] = useState(''); // Default place selection. Update to current place.
   const [selectedYear, setSelectedYear] = useState(2024); // Default year selection. Update to most recent year.
   const yearData = pastWinners.find((year) => year.year === selectedYear);
 
@@ -70,22 +72,79 @@ export default function PastWinnersPage() {
 
   const { orderedWinners, specialAwards } = yearData;
 
+  const winnerRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    console.log('useEffect is running');
+
+    const observerOptions = {
+      root: null,
+      threshold: 0,
+      rootMargin: '0px 0px -90% 0px', // Adjust as needed
+    };
+
+    const observerCallback: IntersectionObserverCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const place = entry.target.getAttribute('data-place');
+          if (place) {
+            if (place.charAt(0) === 's') {
+              console.log(place.charAt(0));
+              setWinnerPlace('S');
+            } else {
+              setWinnerPlace(place.charAt(3));
+              console.log('Place', place.charAt(3));
+            }
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+
+    winnerRefs.current.forEach((ref, idx) => {
+      console.log(`Ref ${idx}:`, ref);
+      if (ref) {
+        observer.observe(ref);
+      } else {
+        console.warn(`Ref at index ${idx} is null`);
+      }
+    });
+    console.log('winnerRefs.current:', winnerRefs.current);
+
+    return () => {
+      winnerRefs.current.forEach((ref) => {
+        if (ref) {
+          observer.unobserve(ref);
+        }
+      });
+    };
+  }, [orderedWinners, specialAwards]);
+
   return (
     <div className="mx-auto flex min-h-screen max-w-screen-2xl flex-col p-8 text-white">
       {/* Title Section */}
       <header className="mb-8">
-        <h1 className="text-left text-4xl font-bold">Past Winners</h1>
+        <h1>Past Winners</h1>
       </header>
 
       {/* Content Section */}
       <div className="mx-auto flex max-w-screen-2xl flex-grow">
         {/* Section for the date scroller. At the moment, uses a temporary format. */}
-        <DateScroller
-          pastWinners={pastWinners}
-          selectedYear={selectedYear}
-          setSelectedYear={setSelectedYear}
-          showAwards={true}
-        />
+        <div className="parent-container">
+          <DateScroller
+            pastWinners={pastWinners}
+            selectedYear={selectedYear}
+            setSelectedYear={setSelectedYear}
+            showAwards={true}
+            winnerPlace={winnerPlace}
+            setWinnerPlace={setWinnerPlace}
+          />
+        </div>
+
         {/* Main Content */}
         <main className="ml-8 flex-grow">
           <div className="flex flex-col space-y-8">
@@ -93,8 +152,12 @@ export default function PastWinnersPage() {
             {orderedWinners.map((winner, index) => (
               <div
                 key={index}
-                id={`${winner.place.charAt(3)}`} // This is a bit of a hacky way to get the anchor links to work. Might want to look into a better way to do this. But it essentially sets the id to 1, 2, 3 depending on the place
-                className="flex flex-col md:flex-row md:space-x-8"
+                id={`${winner.place.charAt(3)}`}
+                ref={(el) => {
+                  if (el) winnerRefs.current[index] = el;
+                }}
+                data-place={winner.place}
+                className="winner-section flex flex-col md:flex-row md:space-x-8"
               >
                 <div className="md:w-2/4">
                   <WinnerDetails {...winner} />
@@ -107,10 +170,15 @@ export default function PastWinnersPage() {
 
             {/* Special Awards */}
             {specialAwards.length > 0 && (
-              <>
-                <h2 id="Special Awards" className="text-3xl font-bold">
-                  Special Awards
-                </h2>
+              <div
+                id="S"
+                ref={(el) => {
+                  if (el) winnerRefs.current[orderedWinners.length] = el;
+                }}
+                data-place="special-awards"
+                className="winner-section"
+              >
+                <h2>Special Awards</h2>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
                   {specialAwards.map((winner, index) => (
                     <div
@@ -122,7 +190,7 @@ export default function PastWinnersPage() {
                     </div>
                   ))}
                 </div>
-              </>
+              </div>
             )}
           </div>
         </main>

@@ -14,6 +14,9 @@ importers:
       framer-motion:
         specifier: ^11.11.17
         version: 11.11.17(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)
+      lenis:
+        specifier: ^1.1.16
+        version: 1.1.16(react@19.0.0-rc-66855b96-20241106)
       next:
         specifier: 15.0.3
         version: 15.0.3(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)
@@ -23,6 +26,9 @@ importers:
       react-dom:
         specifier: 19.0.0-rc-66855b96-20241106
         version: 19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106)
+      react-feather:
+        specifier: ^2.0.10
+        version: 2.0.10(react@19.0.0-rc-66855b96-20241106)
       tailwind-merge:
         specifier: ^2.5.4
         version: 2.5.4
@@ -1134,6 +1140,17 @@ packages:
     resolution: {integrity: sha512-MbjN408fEndfiQXbFQ1vnd+1NoLDsnQW41410oQBXiyXDMYH5z505juWa4KUE1LqxRC7DgOgZDbKLxHIwm27hA==}
     engines: {node: '>=0.10'}
 
+  lenis@1.1.16:
+    resolution: {integrity: sha512-bGS8IxJW3x310gTwFylgYU6bGzeVnTALmgyLP8RZ9DFSYC/hN3fi+urCWspr5otljbDAGF4ND2GKCFtemAd45Q==}
+    peerDependencies:
+      react: '>=17.0.0'
+      vue: '>=3.0.0'
+    peerDependenciesMeta:
+      react:
+        optional: true
+      vue:
+        optional: true
+
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
@@ -1443,6 +1460,11 @@ packages:
     resolution: {integrity: sha512-D25vdaytZ1wFIRiwNU98NPQ/upS2P8Co4/oNoa02PzHbh8deWdepjm5qwZM/46OdSiGv4WSWwxP55RO9obqJEQ==}
     peerDependencies:
       react: 19.0.0-rc-66855b96-20241106
+
+  react-feather@2.0.10:
+    resolution: {integrity: sha512-BLhukwJ+Z92Nmdcs+EMw6dy1Z/VLiJTzEQACDUEnWMClhYnFykJCGWQx+NmwP/qQHGX/5CzQ+TGi8ofg2+HzVQ==}
+    peerDependencies:
+      react: '>=16.8.6'
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -2972,6 +2994,10 @@ snapshots:
     dependencies:
       language-subtag-registry: 0.3.23
 
+  lenis@1.1.16(react@19.0.0-rc-66855b96-20241106):
+    optionalDependencies:
+      react: 19.0.0-rc-66855b96-20241106
+
   levn@0.4.1:
     dependencies:
       prelude-ls: 1.2.1
@@ -3208,6 +3234,11 @@ snapshots:
     dependencies:
       react: 19.0.0-rc-66855b96-20241106
       scheduler: 0.25.0-rc-66855b96-20241106
+
+  react-feather@2.0.10(react@19.0.0-rc-66855b96-20241106):
+    dependencies:
+      prop-types: 15.8.1
+      react: 19.0.0-rc-66855b96-20241106
 
   react-is@16.13.1: {}
 

@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { WinnerDetails, WinnerImage } from './WinnerComponents';
-
+import { WinnerDetails } from './WinnerComponents';
+import Image from 'next/image';
 export default function OrderedWinner({
   place,
   teamName,
@@ -19,21 +19,22 @@ export default function OrderedWinner({
   image: string;
 }) {
   return (
-    <div className="flex flex-col items-center overflow-hidden pb-16 lg:min-h-fit lg:min-w-fit lg:flex-row lg:items-start lg:space-x-8 lg:pb-20">
-      {/* Details */}
-      <div className="lg:w-2/4">
-        <WinnerDetails
-          place={place}
-          teamName={teamName}
-          description={description}
-          appLink={appLink}
-          github={github}
+    <div className="flex h-screen w-full flex-col items-center overflow-hidden pb-16 lg:flex-row lg:gap-4 lg:pb-20">
+      <WinnerDetails
+        place={place}
+        teamName={teamName}
+        description={description}
+        appLink={appLink}
+        github={github}
+      />
+      <div className="flex w-full items-center justify-center">
+        <Image
+          src={image}
+          alt={teamName}
+          width={2000}
+          height={2000}
+          className="rounded-3xl shadow-lg"
         />
-      </div>
-
-      {/* Image */}
-      <div className="md:h-2/4 md:w-2/4 lg:size-full lg:pb-8">
-        <WinnerImage image={image} alt={teamName} />
       </div>
     </div>
   );

@@ -1,8 +1,7 @@
 'use client';
 
 import React from 'react';
-import { WinnerImage } from './WinnerComponents';
-
+import Image from 'next/image';
 export default function SpecialAward({
   place,
   teamName,
@@ -52,8 +51,13 @@ export default function SpecialAward({
         </div>
       </div>
 
-      {/* Image */}
-      <WinnerImage image={image} alt={teamName} />
+      <Image
+        src={image}
+        alt={teamName}
+        width={500}
+        height={500}
+        className="rounded-3xl object-cover object-center shadow-lg"
+      />
     </div>
   );
 }

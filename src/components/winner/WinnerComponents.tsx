@@ -14,11 +14,11 @@ export function WinnerDetails({
   github?: string;
 }) {
   return (
-    <div className="pb-4">
-      <h2 className="mb-4 text-[30px] font-bold">
+    <div className="w-1/2 pb-4">
+      <h2 className="mb-4 text-4xl font-bold">
         {place} - {teamName}
       </h2>
-      <p className="mb-4 text-white">{description}</p>
+      <p className="mb-4 text-3xl text-white">{description}</p>
       <div className="flex flex-col space-y-2">
         {appLink && (
           <a
@@ -42,15 +42,5 @@ export function WinnerDetails({
         )}
       </div>
     </div>
-  );
-}
-
-export function WinnerImage({ image, alt }: { image: string; alt: string }) {
-  return (
-    <img
-      src={image}
-      alt={alt}
-      className="rounded-3xl object-cover object-center shadow-lg"
-    />
   );
 }

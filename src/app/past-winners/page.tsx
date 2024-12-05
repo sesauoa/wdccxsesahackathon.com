@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import pastWinners from '@/data/PastWinners';
+import pastWinners from '@/data/pastWinners';
 import { H1, H2 } from '@/components/common/Typography';
 
 // Parses and properly formats and outputs the data from PastWinners.ts

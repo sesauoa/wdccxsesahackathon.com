@@ -32,6 +32,7 @@ pnpm run dev
 ### [Developer Guide (for this project)](docs/DEVELOPERS.md)
 
 ## Technologies used
+
 <div align="center">
     <!-- Next js -->
     <img src="https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"/>

@@ -20,7 +20,7 @@ export default function StaticNavbar() {
   return (
     <div className="sticky top-0 z-50 bg-sesa-navy">
       <div className="navbar h-16">
-        <div className="flex-1 ml-10">
+        <div className="ml-10 flex-1">
           <CombinedLogos />
         </div>
         <div className="flex-none">

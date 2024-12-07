@@ -14,11 +14,11 @@ export function WinnerDetails({
   github?: string;
 }) {
   return (
-    <div className="w-1/2 pb-4">
-      <h2 className="mb-4 text-4xl font-bold">
+    <div>
+      <h2 className="mb-4 text-3xl font-bold">
         {place} - {teamName}
       </h2>
-      <p className="mb-4 text-3xl text-white">{description}</p>
+      <p className="mb-4 text-xl text-white">{description}</p>
       <div className="flex flex-col space-y-2">
         {appLink && (
           <a
@@ -27,7 +27,7 @@ export function WinnerDetails({
             rel="noopener noreferrer"
             className="text-blue-300 underline hover:text-blue-400"
           >
-            🔗 Deployed Application
+            🔗 GitHub Repo
           </a>
         )}
         {github && (
@@ -37,7 +37,7 @@ export function WinnerDetails({
             rel="noopener noreferrer"
             className="text-blue-300 underline hover:text-blue-400"
           >
-            🔗 GitHub Repo
+            🔗 Deployed Application
           </a>
         )}
       </div>

@@ -5,6 +5,7 @@ export type Team = {
   description: string;
   appLink: string;
   github: string;
+  members: string;
 };
 
 export type YearlyWinners = {
@@ -25,6 +26,8 @@ const pastWinners: YearlyWinners[] = [
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.',
         appLink: '#',
         github: '#',
+        members:
+          'John Smith, John Smith, John Smith, John Smith, John Smith, John Smith',
       },
       {
         place: '🥈 2nd Place',
@@ -34,6 +37,8 @@ const pastWinners: YearlyWinners[] = [
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.',
         appLink: '#',
         github: '#',
+        members:
+          'John Smith, John Smith, John Smith, John Smith, John Smith, John Smith',
       },
       {
         place: '🥉 3rd Place',
@@ -43,6 +48,8 @@ const pastWinners: YearlyWinners[] = [
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.',
         appLink: '#',
         github: '#',
+        members:
+          'John Smith, John Smith, John Smith, John Smith, John Smith, John Smith',
       },
     ],
     specialAwards: [
@@ -54,6 +61,8 @@ const pastWinners: YearlyWinners[] = [
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.',
         appLink: '#',
         github: '#',
+        members:
+          'John Smith, John Smith, John Smith, John Smith, John Smith, John Smith',
       },
       {
         place: '🎨 Best Design',
@@ -63,6 +72,8 @@ const pastWinners: YearlyWinners[] = [
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.',
         appLink: '#',
         github: '#',
+        members:
+          'John Smith, John Smith, John Smith, John Smith, John Smith, John Smith',
       },
       {
         place: '🎭 Most Entertaining',
@@ -72,6 +83,8 @@ const pastWinners: YearlyWinners[] = [
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.',
         appLink: '#',
         github: '#',
+        members:
+          'John Smith, John Smith, John Smith, John Smith, John Smith, John Smith',
       },
     ],
   },
@@ -86,6 +99,8 @@ const pastWinners: YearlyWinners[] = [
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.',
         appLink: '#',
         github: '#',
+        members:
+          'John Smith, John Smith, John Smith, John Smith, John Smith, John Smith',
       },
       {
         place: '🥈 2nd Place',
@@ -95,6 +110,8 @@ const pastWinners: YearlyWinners[] = [
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.',
         appLink: '#',
         github: '#',
+        members:
+          'John Smith, John Smith, John Smith, John Smith, John Smith, John Smith',
       },
       {
         place: '🥉 3rd Place',
@@ -104,6 +121,8 @@ const pastWinners: YearlyWinners[] = [
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.',
         appLink: '#',
         github: '#',
+        members:
+          'John Smith, John Smith, John Smith, John Smith, John Smith, John Smith',
       },
     ],
     specialAwards: [
@@ -115,6 +134,8 @@ const pastWinners: YearlyWinners[] = [
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.',
         appLink: '#',
         github: '#',
+        members:
+          'John Smith, John Smith, John Smith, John Smith, John Smith, John Smith',
       },
       {
         place: '🎨 Best Design',
@@ -124,6 +145,8 @@ const pastWinners: YearlyWinners[] = [
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.',
         appLink: '#',
         github: '#',
+        members:
+          'John Smith, John Smith, John Smith, John Smith, John Smith, John Smith',
       },
       {
         place: '🎭 Most Entertaining',
@@ -133,6 +156,8 @@ const pastWinners: YearlyWinners[] = [
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.',
         appLink: '#',
         github: '#',
+        members:
+          'John Smith, John Smith, John Smith, John Smith, John Smith, John Smith',
       },
     ],
   },

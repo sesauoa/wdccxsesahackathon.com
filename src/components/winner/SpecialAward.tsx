@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { WinnerDetails } from './WinnerComponents';
 export default function SpecialAward({
   place,
   teamName,
@@ -9,6 +10,7 @@ export default function SpecialAward({
   appLink,
   github,
   image,
+  members,
 }: {
   place: string;
   teamName: string;
@@ -16,48 +18,35 @@ export default function SpecialAward({
   appLink?: string;
   github?: string;
   image: string;
+  members: string;
 }) {
   return (
-    <div className="flex flex-col items-center justify-between space-y-4 pb-5 text-center">
-      {/* Details */}
-      <div>
-        <h2 className="text-left text-2xl font-bold">
-          {place} - {teamName}
-        </h2>
-        <p className="text-white-300 mb-4 text-left text-[14px]">
-          {description}
-        </p>
-        <div className="flex flex-col space-y-2">
-          {appLink && (
-            <a
-              href={appLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-left text-blue-300 underline hover:text-blue-400"
-            >
-              🔗 Deployed Application
-            </a>
-          )}
-          {github && (
-            <a
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-left text-blue-300 underline hover:text-blue-400"
-            >
-              🔗 GitHub Repo
-            </a>
-          )}
+    <div className="flex-1 flex-shrink-0 flex-col justify-center space-y-4 pb-5 text-left">
+      <div className="flex flex-col justify-between gap-4">
+        <div className="flex">
+          <WinnerDetails
+            place={place}
+            teamName={teamName}
+            description={description}
+            appLink={appLink}
+            github={github}
+          />
+        </div>
+        <div className="flex flex-col">
+          <Image
+            src={image}
+            alt={teamName}
+            layout="responsive"
+            width={16}
+            height={9}
+            className="rounded-3xl shadow-lg"
+          />
+          <div className="w-[75%] self-center">
+            <h3 className="text-center text-lg font-bold">{teamName}</h3>
+            <p className="text-center">{members}</p>
+          </div>
         </div>
       </div>
-
-      <Image
-        src={image}
-        alt={teamName}
-        width={500}
-        height={500}
-        className="rounded-3xl object-cover object-center shadow-lg"
-      />
     </div>
   );
 }

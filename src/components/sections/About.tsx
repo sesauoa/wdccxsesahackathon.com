@@ -1,5 +1,5 @@
 import React from 'react';
-import { H1, Section } from '../common/Typography';
+import { H1, Section, StatHeading } from '../common/Typography';
 import { AboutUs, EventStats } from '@/data/About';
 
 const About = () => {
@@ -15,28 +15,13 @@ const About = () => {
         {AboutUs}
       </p>
 
-      <div className="mx-auto flex w-[40vw] flex-row flex-wrap items-center justify-center gap-[3.5vw] gap-y-3 pt-3 lg:absolute lg:right-[10vw] lg:top-[12vw] lg:w-1/5">
-        <div className="relative flex flex-col items-center">
-          <H1>{EventStats.hackers}</H1>
-          <h2 className="font-medium md:text-lg">hackers</h2>
-        </div>
-        <div className="relative flex flex-col items-center">
-          <H1>{EventStats.teams}</H1>
-          <h2 className="font-medium md:text-lg">teams</h2>
-        </div>
-        <div className="relative flex flex-col items-center">
-          <H1>{EventStats.sponsors}</H1>
-          <h2 className="font-medium md:text-lg">sponsors</h2>
-        </div>
-
-        <div className="relative flex flex-col items-center">
-          <H1>{EventStats.prizes}</H1>
-          <h2 className="font-medium md:text-lg">in prizes</h2>
-        </div>
-        <div className="relative flex flex-col items-center">
-          <H1>{EventStats.duration}</H1>
-          <h2 className="font-medium md:text-lg">hours</h2>
-        </div>
+      <div className="mx-auto flex w-[50vw] flex-row flex-wrap items-center justify-center gap-[3.5vw] gap-y-3 pt-3 lg:absolute lg:right-[10vw] lg:top-[12vw] lg:w-[30vw]">
+        {EventStats.map((stat, index) => (
+          <div key={index} className="relative flex flex-col items-center">
+            <StatHeading>{stat.data}</StatHeading>
+            <h2 className="font-medium md:text-lg">{stat.heading}</h2>
+          </div>
+        ))}
       </div>
     </Section>
   );

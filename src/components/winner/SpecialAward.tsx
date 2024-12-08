@@ -22,7 +22,7 @@ export default function SpecialAward({
 }) {
   return (
     <div className="flex-1 flex-shrink-0 flex-col justify-center space-y-4 pb-5 text-left">
-      <div className="flex flex-col justify-between gap-4">
+      <div className="flex h-full flex-col justify-between gap-4">
         <div className="flex">
           <WinnerDetails
             place={place}

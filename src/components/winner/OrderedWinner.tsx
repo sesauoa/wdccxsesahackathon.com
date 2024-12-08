@@ -21,9 +21,9 @@ export default function OrderedWinner({
   members: string;
 }) {
   return (
-    <div className="flex h-screen w-full items-center overflow-hidden">
-      <div className="flex flex-col md:flex-row md:gap-4">
-        <div className="flex w-[75%]">
+    <div className="flex h-fit w-full overflow-hidden py-4 md:h-screen md:items-center md:py-0">
+      <div className="flex flex-col gap-4 md:flex-row">
+        <div className="flex w-[100%] md:w-[75%]">
           <WinnerDetails
             place={place}
             teamName={teamName}

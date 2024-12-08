@@ -22,14 +22,14 @@ export default function PastWinnersPage() {
           {pastWinners.map(({ year, orderedWinners, specialAwards }) => (
             <div key={year} className="mb-12">
               <div className="sticky top-16 block w-full backdrop-blur-sm md:hidden">
-                <h2 className="text-4xl font-bold">{year}</h2>
+                <h2 className="mt-8 text-4xl font-bold">{year}</h2>
               </div>
               {orderedWinners.map((winner, index) => (
                 <OrderedWinner key={index} {...winner} />
               ))}
               {specialAwards.length > 0 && (
-                <div className="flex h-screen flex-col justify-center">
-                  <div className="flex gap-8">
+                <div className="flex h-fit justify-center md:h-screen md:flex-col">
+                  <div className="flex flex-col gap-8 py-4 md:flex-row md:py-0">
                     {specialAwards.map((winner, index) => (
                       <SpecialAward key={index} {...winner} />
                     ))}

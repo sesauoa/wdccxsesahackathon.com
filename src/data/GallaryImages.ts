@@ -20,38 +20,24 @@ const galleryImages: ImageCollection[] = [
         image: '/images/IMG_2094.JPG',
         alt: '',
       },
+      {
+        image: '/images/IMG_2094.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/IMG_2094.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/IMG_2094.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/IMG_2094.JPG',
+        alt: '',
+      },
     ],
   },
-  // {
-  //   year: 2023,
-  //   theme: '',
-  //   images: [
-  //     {
-  //       image: '/images/IMG_2094.JPG',
-  //       alt: ''
-  //     }
-  //   ]
-  // },
-  // {
-  //   year: 2022,
-  //   theme: '',
-  //   images: [
-  //     {
-  //       image: '',
-  //       alt: ''
-  //     }
-  //   ]
-  // },
-  // {
-  //   year: 2021,
-  //   theme: '',
-  //   images: [
-  //     {
-  //       image: '',
-  //       alt: ''
-  //     }
-  //   ]
-  // },
 ];
 
 export default galleryImages;

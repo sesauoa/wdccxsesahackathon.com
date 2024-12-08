@@ -30,6 +30,18 @@ export const H3: React.FC<ReactProps> = ({ children, className, ...props }) => {
   );
 };
 
+export const StatHeading: React.FC<ReactProps> = ({
+  children,
+  className,
+  ...props
+}) => {
+  return (
+    <h1 className={cn('text-5xl font-bold', className)} {...props}>
+      {children}
+    </h1>
+  );
+};
+
 // Section Component
 export const Section: React.FC<ReactProps> = ({
   children,

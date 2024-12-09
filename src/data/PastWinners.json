@@ -6,7 +6,7 @@
           {
             "title": "1st",
             "teamName": "Git Kermit",
-            "photo": "image",
+            "photo": "https://drive.google.com/file/d/17wTS8VkDRlayfCAu7yW-uJTFVmJocc5O/view?usp=sharing",
             "teamMembers": [
               "Cory Brown",
               "Kevin Cao",
@@ -29,7 +29,7 @@
           {
             "title": "2nd",
             "teamName": "Java Skunk",
-            "photo": "image",
+            "photo": "https://drive.google.com/file/d/1Xz_kb_48ng3kq-ytXFekiCQzhria9WS-/view?usp=sharing",
             "teamMembers": [
               "Jason Huang",
               "Chris Valenzuela",
@@ -52,7 +52,7 @@
           {
             "title": "3rd",
             "teamName": "Kappachungus",
-            "photo": "image",
+            "photo": "https://drive.google.com/drive/u/0/folders/1wxWjkKRM-Da83XMXYS6RjyVDHZLY0uCD",
             "teamMembers": [
               "Ryan Yoon",
               "Joshua Morley",
@@ -75,7 +75,7 @@
           {
             "title": "Most Overengineered",
             "teamName": "Exception Handlers",
-            "photo": "image",
+            "photo": "https://drive.google.com/file/d/1qnTZhm1SA0YtJAWOPVjAD7w7knD4R3Tl/view?usp=sharing",
             "teamMembers": [
               "Aref Osman",
               "Alex Brown",
@@ -98,7 +98,7 @@
           {
             "title": "Best Design",
             "teamName": "Git Kermit",
-            "photo": "image",
+            "photo": "https://drive.google.com/file/d/1JZ3q3rcBanW4miQBIO7hgzcLxWv78oN7/view?usp=sharing",
             "teamMembers": [
               "Cory Brown",
               "Kevin Cao",
@@ -121,7 +121,7 @@
           {
             "title": "Most Entertaining",
             "teamName": "print(“hello world”)",
-            "photo": "image",
+            "photo": "https://drive.google.com/file/d/1De7XEsQujk_3farFEHBuUcTVDuptUA7d/view?usp=sharing",
             "teamMembers": [
               "Andre Camerino",
               "Evan Au",
@@ -149,7 +149,7 @@
           {
             "title": "1st",
             "teamName": ":)",
-            "photo": "WDCC_SESA_HACKATHON_2023_IMG0767.jpg",
+            "photo": "https://drive.google.com/file/d/1Mp0397oYXP_euKEHlHrW_7qwUf4StQSw/view",
             "teamMembers": [
               "Raymond Luo",
               "Tony Lu",
@@ -173,7 +173,7 @@
           {
             "title": "2nd",
             "teamName": "Hackathon Smashers",
-            "photo": "WDCC_SESA_HACKATHON_2023_IMG0762.jpg",
+            "photo": "https://drive.google.com/file/d/1P9NFAqoaHkKzV1MQ-t6t1pDNItS4Kjrh/view",
             "teamMembers": [
               "Kian Merchant",
               "Vadim Berezin",
@@ -195,7 +195,7 @@
           {
             "title": "3rd",
             "teamName": "Hackathon Smackathon",
-            "photo": "WDCC_SESA_HACKATHON_2023_IMG0759.jpg",
+            "photo": "https://drive.google.com/file/d/1WfdIv4wfYoggTKrcakgWaM17o-_UjtMM/view",
             "teamMembers": [
               "Matthew Tao",
               "Jack Freeth",
@@ -219,7 +219,7 @@
           {
             "title": "Most Overengineered",
             "teamName": "Tron",
-            "photo": "WDCC_SESA_HACKATHON_2023_IMG0767.jpg",
+            "photo": "https://drive.google.com/file/d/1XgympL1QyAkspp3-snyG9iSRj2lau_dn/view",
             "teamMembers": [
               "James Zeng",
               "Celine Bui",
@@ -241,7 +241,7 @@
           {
             "title": "Best Design",
             "teamName": "Pro (?) Hackers",
-            "photo": "WDCC_SESA_HACKATHON_2023_IMG0767.jpg",
+            "photo": "https://drive.google.com/file/d/1fi036IjEDxlSeDXo8aFCmPuXKJ43DJoF/view",
             "teamMembers": [
               "Arvindh Kumar",
               "Enrique Jugo",
@@ -263,7 +263,7 @@
           {
             "title": "Most Entertaining",
             "teamName": "Compsisters",
-            "photo": "WDCC_SESA_HACKATHON_2023_IMG0767.jpg",
+            "photo": "https://drive.google.com/file/d/1Y6an5xY2io8ST6ebRCIY2dYEzXePP-jE/view",
             "teamMembers": [
               "Cheryl Yu",
               "Puja Nory",
@@ -408,7 +408,7 @@
           {
             "title": "1st",
             "teamName": "Dumboss",
-            "photo": "HACKATHON-181.jpg",
+            "photo": "https://drive.google.com/file/d/1djdzavHLnwkj-A-jhHk5oQx8P6C3WHVI/view",
             "teamMembers": [
               "Beverley Sun",
               "Matt Moran",
@@ -427,7 +427,7 @@
           {
             "title": "2nd",
             "teamName": "BitGud",
-            "photo": "HACKATHON-183.jpg",
+            "photo": "https://drive.google.com/file/d/1-JNhgbDjxwr9CWxFI18ddGbj018QRB9s/view",
             "teamMembers": [
               "Bob Liou",
               "Taylor Tran",
@@ -450,7 +450,7 @@
           {
             "title": "3rd",
             "teamName": "Krayon",
-            "photo": "HACKATHON-179.jpg",
+            "photo": "https://drive.google.com/file/d/1vuCuTf-t3Ns6Lo4r_B0eNbu6hX767Efl/view",
             "teamMembers": [
               "Ryan Tan",
               "Sunny Feng",
@@ -470,7 +470,7 @@
           {
             "title": "Most Overengineered",
             "teamName": "Diskordo",
-            "photo": "HACKATHON-182.jpg",
+            "photo": "https://drive.google.com/file/d/1Gt1rx9rCMxZ7RQzEX3wK6r5_hSp93PdX/view",
             "teamMembers": [
               "Jennifer Lowe",
               "Hiruna Jayamanne",
@@ -491,7 +491,7 @@
           {
             "title": "Best Design",
             "teamName": "MeowMeowMeow",
-            "photo": "HACKATHON-184.jpg",
+            "photo": "https://drive.google.com/file/d/1JOuoZf-R44fYKJgxmo8cGxAF_ubrvVqs/view",
             "teamMembers": [
               "Jack Ma",
               "Rhys Heaven-Smith",

@@ -13,7 +13,7 @@ export default function PastWinnersPage() {
       </header>
       <main className="flex flex-row gap-8">
         {/* Sidebar Section */}
-        <div className="hidden w-1/6 md:block">
+        <div className="hidden w-1/6 lg:block">
           {/* Placeholder for sidebar content */}
         </div>
 
@@ -21,15 +21,15 @@ export default function PastWinnersPage() {
         <div className="flex-1">
           {pastWinners.map(({ year, orderedWinners, specialAwards }) => (
             <div key={year} className="mb-12">
-              <div className="sticky top-16 block w-full backdrop-blur-sm md:hidden">
+              <div className="sticky top-16 block w-full backdrop-blur-sm lg:hidden">
                 <h2 className="mt-8 text-4xl font-bold">{year}</h2>
               </div>
               {orderedWinners.map((winner, index) => (
                 <OrderedWinner key={index} {...winner} />
               ))}
               {specialAwards.length > 0 && (
-                <div className="flex h-fit justify-center md:h-screen md:flex-col">
-                  <div className="flex flex-col gap-8 py-4 md:flex-row md:py-0">
+                <div className="flex h-fit justify-center lg:h-screen lg:flex-col">
+                  <div className="flex flex-col gap-8 py-4 lg:flex-row lg:py-0">
                     {specialAwards.map((winner, index) => (
                       <SpecialAward key={index} {...winner} />
                     ))}

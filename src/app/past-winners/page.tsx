@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import pastWinners from '@/data/PastWinners';
 import OrderedWinner from '@/components/winner/OrderedWinner';
 import SpecialAward from '@/components/winner/SpecialAward';

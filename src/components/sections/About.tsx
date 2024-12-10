@@ -17,17 +17,44 @@ const About = () => {
         <p className="w-[80vw] pb-3 text-xl font-light leading-normal lg:absolute lg:left-[10vw] lg:top-[14vw] lg:w-[35vw]">
           {AboutUs}
         </p>
-        <motion.div className="" animate={{ x: 100 }}>
-          hello from anton
-        </motion.div>
-        <div className="mx-auto flex w-[50vw] flex-row flex-wrap items-center justify-center gap-[3.5vw] gap-y-3 pt-3 lg:absolute lg:right-[10vw] lg:top-[12vw] lg:w-[30vw]">
+
+        <motion.div
+          className="mx-auto flex w-[50vw] flex-row flex-wrap items-center justify-center gap-[3.5vw] gap-y-3 pt-3 lg:absolute lg:right-[10vw] lg:top-[10vw] lg:w-[30vw]"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { opacity: 0, x: 100 },
+            visible: {
+              opacity: 1,
+              x: 0,
+              transition: {
+                duration: 1,
+              },
+            },
+          }}
+        >
           {EventStats.map((stat, index) => (
-            <div key={index} className="relative flex flex-col items-center">
+            <motion.div
+              key={index}
+              className="relative flex flex-col items-center"
+              variants={{
+                hidden: { opacity: 0, x: 50 },
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                  transition: {
+                    duration: 1,
+                    delay: index * 0.2,
+                  },
+                },
+              }}
+            >
               <StatHeading>{stat.data}</StatHeading>
               <h2 className="font-medium md:text-lg">{stat.heading}</h2>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </Section>
     </>
   );

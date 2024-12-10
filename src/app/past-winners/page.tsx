@@ -76,14 +76,21 @@ export default function PastWinnersPage() {
       </header>
       <main className="flex flex-row gap-8">
         {/* Sidebar Section */}
-        <div className="hidden w-1/6 lg:block">
-          {/* Placeholder for sidebar content */}
+        <div className="hidden w-1/6 flex-shrink-0 lg:block">
+          <DateScroller
+            pastWinners={pastWinners}
+            selectedYear={selectedYear}
+            setSelectedYear={setSelectedYear}
+            showAwards={true}
+            winnerPlace={winnerPlace}
+            setWinnerPlace={setWinnerPlace}
+          />
         </div>
 
         {/* Main Content Section */}
         <div className="flex-1">
           {pastWinners.map(({ year, orderedWinners, specialAwards }) => (
-            <div key={year} className="mb-12">
+            <div key={year} id={`year-${year}`} className="mb-12">
               <div className="sticky top-16 block w-full backdrop-blur-sm lg:hidden">
                 <h2 className="mt-8 text-4xl font-bold">{year}</h2>
               </div>

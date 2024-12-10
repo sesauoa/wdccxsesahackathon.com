@@ -22,7 +22,7 @@ export default function OrderedWinner({
 }) {
   return (
     <div className="flex h-fit w-full overflow-hidden py-4 lg:h-screen lg:items-center lg:py-0">
-      <div className="flex flex-col gap-4 lg:flex-row">
+      <div className="flex flex-col gap-4 lg:flex-row" id={`${place} `}>
         <div className="flex w-[100%] lg:w-[75%]">
           <WinnerDetails
             place={place}

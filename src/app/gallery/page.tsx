@@ -7,10 +7,13 @@ import '@/styles/gallery.css';
 export default function GalleryPage() {
   return (
     <div className="gallery-page">
-      <header className="mb-8">
+      <div className="gallery-header">
         <H1>Gallery</H1>
-      </header>
-      <Gallery />
+      </div>
+      <div className="gallery">
+        <Gallery year={2024} />
+        <Gallery year={2023} />
+      </div>
     </div>
 
   );

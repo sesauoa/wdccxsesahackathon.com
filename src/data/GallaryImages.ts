@@ -38,6 +38,35 @@ const galleryImages: ImageCollection[] = [
       },
     ],
   },
+  {
+    year: 2023,
+    images: [
+      {
+        image: '/images/IMG_1849.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/IMG_2094.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/IMG_2094.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/IMG_2094.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/IMG_2094.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/IMG_2094.JPG',
+        alt: '',
+      },
+    ],
+  },
 ];
 
 export default galleryImages;

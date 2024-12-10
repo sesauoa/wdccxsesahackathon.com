@@ -1,37 +1,39 @@
 'use client';
 
-import React, { useState } from 'react';
-import { H1, Section } from '../common/Typography';
+import React from 'react';
+import { H1 } from '../common/Typography';
 import yearImages from '@/data/GallaryImages';
-import { img } from 'framer-motion/client';
 import '@/styles/gallery.css';
 
+type GalleryProps = {
+  year: number;
+};
 
-const Gallery = () => {
-  const [selectedYear, setSelectedYear] = useState(2024); // Default year selection. Update to most recent year.
-  const yearGallery = yearImages.find((year) => year.year === selectedYear);
+const Gallery: React.FC<GalleryProps> = ({ year }) => {
+  const yearGallery = yearImages.find((collection) => collection.year === year);
 
-  if (!yearGallery) return <p>No data available for this year.</p>; //Might want to look into this to handle invalid inputs (shouldn't be any invalid inputs).
+  if (!yearGallery) {
+    return <p>No data available for this year.</p>; // Handle cases where the year doesn't match any data
+  }
 
-  const { year, images } = yearGallery;
-
+  const { images } = yearGallery;
 
   return (
-    <div className='gallery-component'>
-      {yearImages.map((collection) => (
-        <div className="img-grid">
-          {collection.images.map((image, index) => (
-            <div className='gallery-img-wrapper'>
-              <img
-                key={index}
-                src={image.image}
-                alt={image.alt}
-                className='gallery-image'
-              />
-            </div>
-          ))}
-        </div>
-      ))}
+    <div className="gallery-component">
+      <div className="year-display">
+        <H1>{year}</H1>
+      </div>
+      <div className="img-grid">
+        {images.map((image, index) => (
+          <div key={index} className="gallery-img-wrapper">
+            <img
+              src={image.image}
+              alt={image.alt || `Image for ${year}`}
+              className="gallery-image"
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

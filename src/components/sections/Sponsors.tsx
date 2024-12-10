@@ -1,27 +1,18 @@
 import React from 'react';
 import { H1, Section } from '../common/Typography';
-import { SponsorScroller } from '../sponsors/SponsorScroller';
-import { SponsorCarousel } from '../sponsors/SponsorCarousel';
+
 import { TechSponsors } from '@/data/Sponsors';
-import Image from 'next/image';
+import Marquee from '../Marquee';
 const Sponsors = () => {
   return (
-    <Section id="sponsors">
+    <Section id="sponsors" className="relative">
       <H1>Sponsors</H1>
-      <SponsorCarousel>
-        {TechSponsors.map((sponsor, index) => (
-          <Image
-            key={index}
-            src={sponsor.src}
-            width={400}
-            height={400}
-            alt={sponsor.name}
-            style={{
-              objectFit: 'contain',
-            }}
-          />
-        ))}
-      </SponsorCarousel>
+      <Marquee
+        images={TechSponsors}
+        from={0}
+        to={'-100%'}
+        className="absolute top-1/2 w-full -translate-y-1/2 transform"
+      />
     </Section>
   );
 };

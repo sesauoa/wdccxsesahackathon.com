@@ -12,7 +12,19 @@ export const TechSponsors = [
     src: '/logos/sponsors/sandfield.png',
   },
   {
-    name: 'Atlassian',
-    src: '/logos/sponsors/atlassian.png',
+    name: 'Potentia',
+    src: '/logos/sponsors/potentia.png',
+  },
+  {
+    name: 'Serato',
+    src: '/logos/sponsors/serato.png',
+  },
+  {
+    name: 'Red Bull',
+    src: '/logos/sponsors/red-bull.png',
+  },
+  {
+    name: 'indomie',
+    src: '/logos/sponsors/indomie.png',
   },
 ];

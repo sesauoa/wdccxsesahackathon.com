@@ -3,11 +3,12 @@
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import CombinedLogos from './CombinedLogos';
-
+import HamburgerMenu from './HamburgerMenu';
+import { useLenisUtils } from '@/lib/LenisScroll';
 export default function IntersectionNavbar() {
   const [selectedLink, setSelectedLink] = useState('');
   const observerRef = useRef<IntersectionObserver | null>(null);
-
+  const { handleScrollTo } = useLenisUtils();
   const links = [
     { href: '/#home', label: 'Home' },
     { href: '/#about', label: 'About' },
@@ -35,7 +36,10 @@ export default function IntersectionNavbar() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const id = entry.target.getAttribute('id');
-            if (id) setSelectedLink(`/#${id}`);
+            if (id) {
+              setSelectedLink(`/#${id}`);
+              window.history.replaceState(null, '', `/#${id}`);
+            }
           }
         });
       },
@@ -54,11 +58,8 @@ export default function IntersectionNavbar() {
       const sectionId = href.split('/#')[1];
       const target = document.getElementById(sectionId);
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        setSelectedLink(href);
+        handleScrollTo(target);
       }
-    } else {
-      setSelectedLink(href);
     }
   };
 
@@ -82,6 +83,11 @@ export default function IntersectionNavbar() {
               </li>
             ))}
           </ul>
+          <HamburgerMenu
+            links={links}
+            selectedLink={selectedLink}
+            handleLinkClick={handleLinkClick}
+          />
         </div>
       </div>
     </div>

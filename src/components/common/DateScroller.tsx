@@ -19,13 +19,13 @@ const DateScroller: React.FC<DateScrollerProps> = ({
 }) => {
   const ulRef = useRef<HTMLUListElement>(null);
 
-  const handleClick = (year: number, index: number) => {
+  const handleClick = (year: number) => {
     setSelectedYear(year);
-    if (ulRef.current && ulRef.current.children[index]) {
-      ulRef.current.children[index].scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-      });
+
+    // Scroll to the corresponding year section in the main content
+    const section = document.getElementById(`year-${year}`);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
   return (
@@ -39,7 +39,7 @@ const DateScroller: React.FC<DateScrollerProps> = ({
             className="mb-0.5"
           >
             <button
-              onClick={() => handleClick(year.year, index)}
+              onClick={() => handleClick(year.year)}
               className={`w-full rounded-lg p-2 py-0 text-left text-sm ${
                 year.year === selectedYear
                   ? 'origin-left scale-150 transform bg-blue-500 text-white'

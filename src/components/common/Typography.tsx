@@ -36,7 +36,7 @@ export const StatHeading: React.FC<ReactProps> = ({
   ...props
 }) => {
   return (
-    <h1 className={cn('text-5xl font-bold', className)} {...props}>
+    <h1 className={cn('text-7xl font-bold', className)} {...props}>
       {children}
     </h1>
   );

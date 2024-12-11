@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
-import pastWinners from '@/data/PastWinners';
+import React from 'react';
+import pastWinners from '@/data/pastWinners';
+import { H1 } from '@/components/common/Typography';
 import OrderedWinner from '@/components/winner/OrderedWinner';
 import SpecialAward from '@/components/winner/SpecialAward';
 
@@ -9,7 +10,7 @@ export default function PastWinnersPage() {
   return (
     <div className="mx-auto flex min-h-screen max-w-screen-2xl flex-col p-8 text-white">
       <header>
-        <h1 className="text-5xl font-bold">Past Winners</h1>
+        <H1>Past Winners</H1>
       </header>
       <main className="flex flex-row gap-8">
         {/* Sidebar Section */}

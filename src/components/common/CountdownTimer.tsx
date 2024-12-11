@@ -61,26 +61,38 @@ export default function CountdownTimer() {
 
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-4 md:flex-nowrap">
+    <div className="flex flex-col items-center justify-center min-h-screen p-4">
+
+    <h1 className="text-3xl h-0">
+      AUG 2-3, 2025
+    </h1>
+
+    <div className="flex flex-wrap items-center justify-center gap-4 h-40 ">
+      
       {timeUnits.map((unit, index) => (
         <React.Fragment key={unit.label}>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center h-16">
             <span className="text-5xl font-bold md:text-7xl leading-none">{unit.value}</span>
-            <span className="text-base md:text-xl leading-none">{unit.label}</span>
+            <span className="text-base md:text-xl leading-tight">{unit.label}</span>
           </div>
           {index < timeUnits.length - 1 && (
-            <span className="text-5xl md:text-7xl font-bold leading-none">:</span>
+            <span className="text-5xl md:text-7xl font-bold leading-none ">:</span>
           )}
         </React.Fragment>
       ))}
       
+      </div>
       
   <button 
-    className="bg-white border rounded px-4 py-3 font-bold text-black mt-10 ;"
+    className="bg-white border rounded px-4 py-3 font-bold text-black mt-10 "
     onClick={() => window.open(googleUrl, "_blank")}>
       Add to Google Calendar
     </button>
     </div>
+
+
+
+      
 
   );
 }

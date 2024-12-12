@@ -56,6 +56,7 @@ const DateScroller: React.FC<DateScrollerProps> = ({
             {showAwards && year.year === selectedYear && (
               <div className="ml-2">
                 <AwardsScroller
+                  selectedYear={selectedYear}
                   winnerPlace={winnerPlace}
                   setWinnerPlace={setWinnerPlace}
                 />

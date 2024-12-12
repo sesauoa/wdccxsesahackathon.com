@@ -11,6 +11,7 @@ export default function OrderedWinner({
   github,
   image,
   members,
+  year,
 }: {
   place: string;
   teamName: string;
@@ -19,10 +20,14 @@ export default function OrderedWinner({
   github?: string;
   image: string;
   members: string;
+  year: number;
 }) {
   return (
-    <div className="flex h-fit w-full overflow-hidden py-4 lg:h-screen lg:items-center lg:py-0">
-      <div className="flex flex-col gap-4 lg:flex-row" id={`${place} `}>
+    <div
+      id={`${year} ${place} `}
+      className="flex h-fit w-full overflow-hidden py-4 lg:h-screen lg:items-center lg:py-0"
+    >
+      <div className="flex flex-col gap-4 lg:flex-row">
         <div className="flex w-[100%] lg:w-[75%]">
           <WinnerDetails
             place={place}

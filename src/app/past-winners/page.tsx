@@ -7,6 +7,7 @@ import DateScroller from '@/components/common/DateScroller';
 import { log } from 'console';
 import OrderedWinner from '@/components/winner/OrderedWinner';
 import SpecialAward from '@/components/winner/SpecialAward';
+import { parse } from 'path';
 
 export default function PastWinnersPage() {
   const [winnerPlace, setWinnerPlace] = useState(''); // Default place selection. Update to current place.
@@ -33,13 +34,11 @@ export default function PastWinnersPage() {
         if (entry.isIntersecting) {
           const place = entry.target.getAttribute('data-place');
           if (place) {
-            if (place.charAt(0) === 's') {
-              console.log(place.charAt(0));
-              setWinnerPlace('S');
-            } else {
-              setWinnerPlace(place.charAt(3));
-              console.log('Place', place.charAt(3));
-            }
+            setWinnerPlace(place);
+            console.log('place:', place);
+
+            const year = place.slice(0, 4);
+            setSelectedYear(parseInt(year));
           }
         }
       });
@@ -95,10 +94,30 @@ export default function PastWinnersPage() {
                 <h2 className="mt-8 text-4xl font-bold">{year}</h2>
               </div>
               {orderedWinners.map((winner, index) => (
-                <OrderedWinner key={index} {...winner} />
+                <div
+                  key={index}
+                  data-place={`${year} ${winner.place}`}
+                  ref={(el) => {
+                    if (el) {
+                      winnerRefs.current.push(el);
+                    }
+                  }}
+                  className="winner-section"
+                >
+                  <OrderedWinner {...winner} year={year} />
+                </div>
               ))}
               {specialAwards.length > 0 && (
-                <div className="flex h-fit justify-center lg:h-screen lg:flex-col">
+                <div
+                  id={`${year} special-awards`}
+                  data-place={`${year} special-awards`}
+                  ref={(el) => {
+                    if (el) {
+                      winnerRefs.current.push(el);
+                    }
+                  }}
+                  className="flex h-fit justify-center lg:h-screen lg:flex-col"
+                >
                   <div className="flex flex-col gap-8 py-4 lg:flex-row lg:py-0">
                     {specialAwards.map((winner, index) => (
                       <SpecialAward key={index} {...winner} />

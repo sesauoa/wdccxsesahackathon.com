@@ -1,61 +1,58 @@
+import { log } from 'console';
 import React, { useState } from 'react';
 
 interface AwardsScrollerProps {
   winnerPlace: string;
+  selectedYear: number;
 
   setWinnerPlace: (place: string) => void;
 }
 
+interface Award {
+  id: string;
+  label: string;
+  emoji: string;
+}
+
+const awards: Award[] = [
+  { id: '🥇 1st Place', label: '1st Place', emoji: '🏆' },
+  { id: '🥈 2nd Place', label: '2nd Place', emoji: '🥈' },
+  { id: '🥉 3rd Place', label: '3rd Place', emoji: '🥉' },
+  { id: 'special-awards', label: 'Special Awards', emoji: '🌟' },
+];
+
 const AwardsScroller: React.FC<AwardsScrollerProps> = ({
   winnerPlace,
   setWinnerPlace,
+  selectedYear,
 }) => {
+  console.log(winnerPlace);
+
   const handleScrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
-    setWinnerPlace(sectionId); // Update the selected button
+    setWinnerPlace(sectionId);
   };
-
-  if (winnerPlace === 'S') {
-    console.log('Special Awards');
-  }
 
   return (
     <div className="flex flex-col overflow-hidden text-ellipsis whitespace-nowrap text-xs">
-      <button
-        onClick={() => handleScrollToSection('1')}
-        className={`text-left ${
-          winnerPlace === '1' ? 'text-white' : 'text-xs text-gray-300'
-        }`}
-      >
-        🏆 1st Place
-      </button>
-      <button
-        onClick={() => handleScrollToSection('2')}
-        className={`text-left ${
-          winnerPlace === '2' ? 'text-white' : 'text-xs text-gray-300'
-        }`}
-      >
-        🥈 2nd Place
-      </button>
-      <button
-        onClick={() => handleScrollToSection('3')}
-        className={`truncate text-left ${
-          winnerPlace === '3' ? 'text-white' : 'text-xs text-gray-300'
-        }`}
-      >
-        🏆 3rd Place
-      </button>
-      <button
-        onClick={() => handleScrollToSection('S')}
-        className={`truncate text-left ${
-          winnerPlace === 'S' ? 'text-white' : 'text-xs text-gray-300'
-        }`}
-      >
-        🌟 Special Awards
-      </button>
+      {awards.map(({ id, label, emoji }) => {
+        return (
+          <button
+            key={id}
+            onClick={() => handleScrollToSection(`${selectedYear} ${id}`)}
+            className={`text-left ${
+              winnerPlace === `${selectedYear} ${id}`
+                ? 'text-white'
+                : 'text-xs text-gray-300'
+            } truncate`}
+          >
+            {emoji} {label}
+          </button>
+        );
+      })}
     </div>
   );
 };

@@ -13,6 +13,8 @@ export default function GalleryPage() {
       <div className="gallery">
         <Gallery year={2024} />
         <Gallery year={2023} />
+        <Gallery year={2022} />
+        <Gallery year={2021} />
       </div>
     </div>
 

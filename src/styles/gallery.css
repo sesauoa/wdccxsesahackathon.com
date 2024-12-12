@@ -6,12 +6,14 @@
 }
 
 .gallery-header {
-  margin-left: 30px;
-  margin-top: 15px;
+  margin-left: 15px;
+  margin-top: 5px;
   /* background-color: green; */
 }
 
 .gallery-component {
+  margin-top: 5px;
+  margin-bottom: 25px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -19,25 +21,29 @@
   gap: 20px;
   width: 100%;
   height: 100%;
+  /* background-color: blueviolet; */
+
 }
 
-.year-scroller {
+.year-display {
   padding: 10px;
-  margin-right: 35px;
-  margin-left: 35px;
+  margin-right: 2%;
+  margin-left: 2%;
 }
 
 .img-grid {
+  /*For changing number of columns:*/
   display: flex;
   flex-wrap: wrap;
 
-  /*For unchanging number of columns:*/
+  /*For fixed number of columns:*/
   /* display: grid;
   grid-template-columns: repeat(3, 1fr); */
 
   flex: 1 1 100%;
   width: 100%;
   box-sizing: border-box;
+  /* background-color: red; */
 }
 
 .gallery-img-wrapper {

@@ -21,8 +21,6 @@ export default function PastWinnersPage() {
   const winnerRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    console.log('useEffect is running');
-
     const observerOptions = {
       root: null,
       threshold: 0,

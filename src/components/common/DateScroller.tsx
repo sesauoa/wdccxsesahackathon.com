@@ -29,7 +29,7 @@ const DateScroller: React.FC<DateScrollerProps> = ({
     }
   };
   return (
-    <aside className="sticky top-20">
+    <aside className="sticky top-36">
       <ul>
         {pastWinners.map((year, index) => (
           <li

@@ -80,6 +80,15 @@
   svg {
     display: none;
   }
+  .scroll-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+
+  .scroll-item {
+    scroll-snap-align: start;
+  }
 
   .gradients-container {
     filter: url(#goo) blur(40px);

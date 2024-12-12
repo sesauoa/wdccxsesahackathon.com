@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { FORM_URL } from "../../data/registrationdata";
-import faqInfo from "@/data/Faqs";
+import faqInfo from "@/data/faqs";
 
 export default function Registration() {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);

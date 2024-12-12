@@ -1,6 +1,6 @@
 import React from 'react';
 import { H1, Section } from '../common/Typography';
-import { AboutUs, EventStats } from '@/data/About';
+import { AboutUs, EventStats } from '@/data/about';
 
 const About = () => {
   return (
@@ -11,7 +11,7 @@ const About = () => {
       <H1 className="leading-normal tracking-[0.12vw] lg:absolute lg:left-[10vw] lg:top-[8.5vw] xl:top-[10vw]">
         About
       </H1>
-      <p className="w-[80vw] pb-3 text-lg text-xl font-light leading-normal lg:absolute lg:left-[10vw] lg:top-[14vw] lg:w-[35vw]">
+      <p className="w-[80vw] pb-3 text-xl font-light leading-normal lg:absolute lg:left-[10vw] lg:top-[14vw] lg:w-[35vw]">
         {AboutUs}
       </p>
 

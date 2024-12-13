@@ -4,6 +4,7 @@ import React from 'react';
 import { H1 } from '../common/Typography';
 import yearImages from '@/data/GallaryImages';
 import '@/styles/gallery.css';
+import Image from 'next/image';
 
 type GalleryProps = {
   year: number;
@@ -26,9 +27,11 @@ const Gallery: React.FC<GalleryProps> = ({ year }) => {
       <div className="img-grid">
         {images.map((image, index) => (
           <div key={index} className="gallery-img-wrapper">
-            <img
+            <Image
               src={image.image}
               alt={image.alt || `Image for ${year}`}
+              width={500}
+              height={500}
               className="gallery-image"
             />
           </div>

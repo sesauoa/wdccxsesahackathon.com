@@ -1,11 +1,11 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import pastWinners from '@/data/pastWinners';
 import { H1 } from '@/components/common/Typography';
 import OrderedWinner from '@/components/winner/OrderedWinner';
 import SpecialAward from '@/components/winner/SpecialAward';
-import { parse } from 'path';
+import DateScroller from '@/components/common/DateScroller';
 
 export default function PastWinnersPage() {
   const [winnerPlace, setWinnerPlace] = useState(''); // Default place selection. Update to current place.

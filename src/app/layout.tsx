@@ -29,18 +29,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-wdcc-blue-to-sesa-teal">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <LenisScroll>
-          <Blobs />
           <div className="relative z-10">
             <Navbar />
             {children}
             <Footer />
           </div>
-          <CursorAnimation />
         </LenisScroll>
       </body>
     </html>

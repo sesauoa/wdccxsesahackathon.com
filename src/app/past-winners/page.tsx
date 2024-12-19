@@ -5,42 +5,38 @@ import pastWinners from '@/data/pastWinners';
 import { H1 } from '@/components/common/Typography';
 import OrderedWinner from '@/components/winner/OrderedWinner';
 import SpecialAward from '@/components/winner/SpecialAward';
+import { WinnerCard } from './_components/WinnerCard';
 
 export default function PastWinnersPage() {
   return (
-    <div className="mx-auto flex min-h-screen max-w-screen-2xl flex-col p-8 text-white">
-      <header>
-        <H1>Past Winners</H1>
-      </header>
-      <main className="flex flex-row gap-8">
-        {/* Sidebar Section */}
-        <div className="hidden w-1/6 lg:block">
-          {/* Placeholder for sidebar content */}
+    <div className="mx-auto flex min-h-screen max-w-screen-xl flex-col p-8 text-white">
+      <H1 className="mb-10">Past Winners</H1>
+      <div>
+        <H1 className="mb-10">2024</H1>
+        <div className="mb-4 flex justify-between gap-4 max-lg:flex-col">
+          <WinnerCard image="/images/2022/WDCC_SESA_HACKATHON_2022_IMG0033.jpg" />
+          <WinnerCard image="/images/2022/WDCC_SESA_HACKATHON_2022_IMG0033.jpg" />
+          <WinnerCard image="/images/2022/WDCC_SESA_HACKATHON_2022_IMG0033.jpg" />
         </div>
-
-        {/* Main Content Section */}
-        <div className="flex-1">
-          {pastWinners.map(({ year, orderedWinners, specialAwards }) => (
-            <div key={year} className="mb-12">
-              <div className="sticky top-16 block w-full backdrop-blur-sm lg:hidden">
-                <h2 className="mt-8 text-4xl font-bold">{year}</h2>
-              </div>
-              {orderedWinners.map((winner, index) => (
-                <OrderedWinner key={index} {...winner} />
-              ))}
-              {specialAwards.length > 0 && (
-                <div className="flex h-fit justify-center lg:h-screen lg:flex-col">
-                  <div className="flex flex-col gap-8 py-4 lg:flex-row lg:py-0">
-                    {specialAwards.map((winner, index) => (
-                      <SpecialAward key={index} {...winner} />
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
+        <div className="mb-4 flex justify-between gap-4">
+          <WinnerCard image="/images/2022/WDCC_SESA_HACKATHON_2022_IMG0033.jpg" />
+          <WinnerCard image="/images/2022/WDCC_SESA_HACKATHON_2022_IMG0033.jpg" />
+          <WinnerCard image="/images/2022/WDCC_SESA_HACKATHON_2022_IMG0033.jpg" />
         </div>
-      </main>
+      </div>
+      <div>
+        <H1 className="mb-10">2023</H1>
+        <div className="mb-4 flex justify-between gap-4 max-lg:flex-col">
+          <WinnerCard image="/images/2022/WDCC_SESA_HACKATHON_2022_IMG0033.jpg" />
+          <WinnerCard image="/images/2022/WDCC_SESA_HACKATHON_2022_IMG0033.jpg" />
+          <WinnerCard image="/images/2022/WDCC_SESA_HACKATHON_2022_IMG0033.jpg" />
+        </div>
+        <div className="mb-4 flex justify-between gap-4">
+          <WinnerCard image="/images/2022/WDCC_SESA_HACKATHON_2022_IMG0033.jpg" />
+          <WinnerCard image="/images/2022/WDCC_SESA_HACKATHON_2022_IMG0033.jpg" />
+          <WinnerCard image="/images/2022/WDCC_SESA_HACKATHON_2022_IMG0033.jpg" />
+        </div>
+      </div>
     </div>
   );
 }

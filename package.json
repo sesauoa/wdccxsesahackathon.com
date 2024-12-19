@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "calendar-link": "^2.7.0",
     "clsx": "^2.1.1",
     "lenis": "^1.1.16",
     "motion": "^11.13.1",

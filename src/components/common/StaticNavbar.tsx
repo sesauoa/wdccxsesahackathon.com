@@ -15,6 +15,7 @@ export default function StaticNavbar() {
     { href: '/#sponsors', label: 'Sponsors' },
     { href: '/past-winners', label: 'Past Winners' },
     { href: '/gallery', label: 'Gallery' },
+    { href: '/registration', label: 'Registration' },
   ];
 
   return (

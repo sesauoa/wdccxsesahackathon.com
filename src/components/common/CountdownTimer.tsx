@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { useEffect, useMemo, useState } from "react";
-import { target } from "@/data/TargetDate";
-import { google} from "calendar-link";
-import { event } from "@/data/Calendar";
-import React from "react";
+import { useEffect, useMemo, useState } from 'react';
+import { target } from '@/data/TargetDate';
+import { google } from 'calendar-link';
+import { event } from '@/data/Calendar';
+import React from 'react';
 
 interface TimeLeft {
   days: number;
@@ -13,10 +13,8 @@ interface TimeLeft {
   seconds: number;
 }
 
-
 export default function CountdownTimer() {
   const [hackathonTime, setHackathonTime] = useState(false);
-
 
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
@@ -32,10 +30,7 @@ export default function CountdownTimer() {
     { label: 'Seconds', value: timeLeft.seconds },
   ];
 
-  
-  const googleUrl = useMemo(() => google(event), [event]); 
-
-
+  const googleUrl = useMemo(() => google(event), [event]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -53,47 +48,41 @@ export default function CountdownTimer() {
       const s = Math.floor((difference % (1000 * 60)) / 1000);
 
       setTimeLeft({ days: d, hours: h, minutes: m, seconds: s });
-
     }, 1000);
 
     return () => clearInterval(interval);
   }, []);
 
-
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4">
+    <div className="flex min-h-screen flex-col items-center justify-center p-4">
+      <h1 className="h-0 text-3xl">AUG 2-3, 2025</h1>
 
-    <h1 className="text-3xl h-0">
-      AUG 2-3, 2025
-    </h1>
-
-    <div className="flex flex-wrap items-center justify-center gap-4 h-40 ">
-      
-      {timeUnits.map((unit, index) => (
-        <React.Fragment key={unit.label}>
-          <div className="flex flex-col items-center h-16">
-            <span className="text-5xl font-bold md:text-7xl leading-none">{unit.value}</span>
-            <span className="text-base md:text-xl leading-tight">{unit.label}</span>
-          </div>
-          {index < timeUnits.length - 1 && (
-            <span className="text-5xl md:text-7xl font-bold leading-none ">:</span>
-          )}
-        </React.Fragment>
-      ))}
-      
+      <div className="flex h-40 flex-wrap items-center justify-center gap-4">
+        {timeUnits.map((unit, index) => (
+          <React.Fragment key={unit.label}>
+            <div className="flex h-16 flex-col items-center">
+              <span className="text-5xl font-bold leading-none md:text-7xl">
+                {unit.value}
+              </span>
+              <span className="text-base leading-tight md:text-xl">
+                {unit.label}
+              </span>
+            </div>
+            {index < timeUnits.length - 1 && (
+              <span className="text-5xl font-bold leading-none md:text-7xl">
+                :
+              </span>
+            )}
+          </React.Fragment>
+        ))}
       </div>
-      
-  <button 
-    className="bg-white border rounded px-4 py-3 font-bold text-black mt-10 "
-    onClick={() => window.open(googleUrl, "_blank")}>
-      Add to Google Calendar
-    </button>
+
+      <button
+        className="mt-10 rounded border bg-white px-4 py-3 font-bold text-black"
+        onClick={() => window.open(googleUrl, '_blank')}
+      >
+        Add to Google Calendar
+      </button>
     </div>
-
-
-
-      
-
   );
 }
-

@@ -1,4 +1,3 @@
-
 import { H1 } from '@/components/common/Typography';
 import yearImages from '@/data/GallaryImages';
 import Gallery from '@/components/sections/Gallery';
@@ -17,6 +16,5 @@ export default function GalleryPage() {
         <Gallery year={2021} />
       </div>
     </div>
-
   );
 }

@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { FORM_URL } from "../../data/registrationdata";
-import faqInfo from "@/data/faqs";
+import { FORM_URL } from '../../data/registrationdata';
+import faqInfo from '@/data/faqs';
 
 export default function Registration() {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
@@ -12,17 +12,17 @@ export default function Registration() {
   };
 
   return (
-    <div className="min-h-screen w-full p-20 flex flex-col items-center">
+    <div className="flex min-h-screen w-full flex-col items-center p-20">
       <div className="w-full max-w-6xl">
-        <h1 className="text-4xl font-bold mb-8 text-left">Registration</h1>
+        <h1 className="mb-8 text-left text-4xl font-bold">Registration</h1>
       </div>
-      <div className="w-full flex justify-center">
+      <div className="flex w-full justify-center">
         <div className="w-full max-w-6xl px-4 sm:px-6">
           <iframe
             src={FORM_URL}
             width="100%"
             height="1000px"
-            className="w-full max-w-3xl mx-auto border rounded-lg bg-white shadow-md"
+            className="mx-auto w-full max-w-3xl rounded-lg border bg-white shadow-md"
             title="Registration Form"
           >
             Loading…

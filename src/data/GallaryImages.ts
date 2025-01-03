@@ -1,12 +1,12 @@
 export type Image = {
   image: string;
   alt: string;
-}
+};
 
 export type ImageCollection = {
   year: number;
   images: Image[];
-}
+};
 
 const galleryImages: ImageCollection[] = [
   {
@@ -65,8 +65,6 @@ const galleryImages: ImageCollection[] = [
         image: '/images/2023/WDCC_SESA_HACKATHON_2023_IMG0492.jpg',
         alt: '',
       },
-
-
     ],
   },
   {
@@ -96,7 +94,6 @@ const galleryImages: ImageCollection[] = [
         image: '/images/2022/WDCC_SESA_HACKATHON_2022_IMG0209.jpg',
         alt: '',
       },
-
     ],
   },
   {

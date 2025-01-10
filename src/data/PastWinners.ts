@@ -19,7 +19,7 @@ const pastWinners: YearlyWinners[] = [
     year: 2024,
     orderedWinners: [
       {
-        place: '🥇 1st Place',
+        place: '1st Place',
         teamName: 'Team Alpha',
         image: '/winners/2024-1st.png',
         description:
@@ -30,7 +30,7 @@ const pastWinners: YearlyWinners[] = [
           'John Smith, John Smith, John Smith, John Smith, John Smith, John Smith',
       },
       {
-        place: '🥈 2nd Place',
+        place: '2nd Place',
         teamName: 'Team Beta',
         image: '/winners/2024-1st.png',
         description:
@@ -41,7 +41,7 @@ const pastWinners: YearlyWinners[] = [
           'John Smith, John Smith, John Smith, John Smith, John Smith, John Smith',
       },
       {
-        place: '🥉 3rd Place',
+        place: '3rd Place',
         teamName: 'Team Gamma',
         image: '/winners/2024-1st.png',
         description:
@@ -54,7 +54,7 @@ const pastWinners: YearlyWinners[] = [
     ],
     specialAwards: [
       {
-        place: '⚙ Most Overengineered',
+        place: 'Most Overengineered',
         teamName: 'Team Delta',
         image: '/winners/2024-1st.png',
         description:
@@ -65,7 +65,7 @@ const pastWinners: YearlyWinners[] = [
           'John Smith, John Smith, John Smith, John Smith, John Smith, John Smith',
       },
       {
-        place: '🎨 Best Design',
+        place: 'Best Design',
         teamName: 'Team Epsilon',
         image: '/winners/example2.jpg',
         description:
@@ -76,7 +76,7 @@ const pastWinners: YearlyWinners[] = [
           'John Smith, John Smith, John Smith, John Smith, John Smith, John Smith',
       },
       {
-        place: '🎭 Most Entertaining',
+        place: 'Most Entertaining',
         teamName: 'Team Zeta',
         image: '/winners/2024-1st.png',
         description:
@@ -92,7 +92,7 @@ const pastWinners: YearlyWinners[] = [
     year: 2023,
     orderedWinners: [
       {
-        place: '🥇 1st Place',
+        place: '1st Place',
         teamName: 'Team Alpha',
         image: '/winners/2024-1st.png',
         description:
@@ -103,7 +103,7 @@ const pastWinners: YearlyWinners[] = [
           'John Smith, John Smith, John Smith, John Smith, John Smith, John Smith',
       },
       {
-        place: '🥈 2nd Place',
+        place: '2nd Place',
         teamName: 'Team Beta',
         image: '/winners/example1.jpg',
         description:
@@ -114,7 +114,7 @@ const pastWinners: YearlyWinners[] = [
           'John Smith, John Smith, John Smith, John Smith, John Smith, John Smith',
       },
       {
-        place: '🥉 3rd Place',
+        place: '3rd Place',
         teamName: 'Team Gamma',
         image: '/winners/2024-1st.png',
         description:
@@ -127,7 +127,7 @@ const pastWinners: YearlyWinners[] = [
     ],
     specialAwards: [
       {
-        place: '⚙ Most Overengineered',
+        place: 'Most Overengineered',
         teamName: 'Team Delta',
         image: '/winners/2024-1st.png',
         description:
@@ -138,7 +138,7 @@ const pastWinners: YearlyWinners[] = [
           'John Smith, John Smith, John Smith, John Smith, John Smith, John Smith',
       },
       {
-        place: '🎨 Best Design',
+        place: 'Best Design',
         teamName: 'Team Epsilon',
         image: '/winners/2024-1st.png',
         description:
@@ -149,7 +149,7 @@ const pastWinners: YearlyWinners[] = [
           'John Smith, John Smith, John Smith, John Smith, John Smith, John Smith',
       },
       {
-        place: '🎭 Most Entertaining',
+        place: 'Most Entertaining',
         teamName: 'Team Zeta',
         image: '/winners/2024-1st.png',
         description:

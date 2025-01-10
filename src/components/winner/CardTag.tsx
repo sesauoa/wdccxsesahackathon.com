@@ -1,0 +1,29 @@
+import React from 'react';
+
+interface CardTagProps {
+  year: number;
+  category: string;
+}
+
+export function CardTag({ year, category }: CardTagProps) {
+  return (
+    <div className="flex w-full gap-4 py-2">
+      <div className="rounded-lg bg-teal-500 px-2 py-1 font-bold text-white drop-shadow-xl">
+        {year}
+      </div>
+      <div
+        className={`rounded-lg px-2 py-1 font-bold text-white drop-shadow-xl ${
+          category === '1st Place'
+            ? 'bg-yellow-400'
+            : category === '2nd Place'
+              ? 'bg-gray-300'
+              : category === '3rd Place'
+                ? 'bg-yellow-600'
+                : 'bg-teal-500'
+        }`}
+      >
+        {category}
+      </div>
+    </div>
+  );
+}

@@ -19,7 +19,7 @@ export default function HamburgerMenu({
   return (
     <div>
       <button
-        className="btn btn-square btn-ghost lg:hidden nav-link"
+        className="nav-link btn btn-square btn-ghost lg:hidden"
         onClick={() => setIsSideNavOpen(!isSideNavOpen)}
       >
         <svg
@@ -38,14 +38,14 @@ export default function HamburgerMenu({
         </svg>
       </button>
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-sesa-navy text-white transform ${
+        className={`fixed right-0 top-0 h-full w-64 transform bg-sesa-navy text-white ${
           isSideNavOpen ? '-translate-x-0' : 'translate-x-full'
-        } transition-transform duration-300 ease-in-out z-40`}
+        } z-40 transition-transform duration-300 ease-in-out`}
       >
-        <div className="py-2 px-2">
-          <div className="w-full flex justify-end">
+        <div className="px-2 py-2">
+          <div className="flex w-full justify-end">
             <button
-              className="btn btn-square btn-ghost nav-link"
+              className="nav-link btn btn-square btn-ghost"
               onClick={() => setIsSideNavOpen(false)}
             >
               <svg
@@ -65,7 +65,7 @@ export default function HamburgerMenu({
             </button>
           </div>
         </div>
-        <ul className="menu p-4 text-base space-y-1">
+        <ul className="menu space-y-1 p-4 text-base">
           {links.map(({ href, label }) => (
             <li key={href}>
               <Link
@@ -84,7 +84,7 @@ export default function HamburgerMenu({
       </div>
       {isSideNavOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-30"
+          className="fixed inset-0 z-30 bg-black bg-opacity-50"
           onClick={() => setIsSideNavOpen(false)}
         ></div>
       )}

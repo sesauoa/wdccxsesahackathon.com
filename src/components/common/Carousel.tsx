@@ -27,7 +27,7 @@ const Carousel: React.FC<CarouselProps> = ({
   };
 
   return (
-    <div className="relative mx-auto w-full max-w-4xl ">
+    <div className="relative mx-auto w-full max-w-4xl">
       {/* Carousel Content */}
       <div className="rounded-4xl overflow-hidden shadow-lg">
         <div

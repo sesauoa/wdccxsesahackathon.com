@@ -16,6 +16,7 @@ export default function IntersectionNavbar() {
     { href: '/#sponsors', label: 'Sponsors' },
     { href: '/past-winners', label: 'Past Winners' },
     { href: '/gallery', label: 'Gallery' },
+    { href: '/registration', label: 'Registration' },
   ];
 
   useEffect(() => {
@@ -64,7 +65,7 @@ export default function IntersectionNavbar() {
   };
 
   return (
-    <div className="sticky top-0 z-50 bg-sesa-navy">
+    <div className="sticky top-0 z-50 w-full bg-sesa-navy">
       <div className="navbar h-16">
         <div className="ml-10 flex-1">
           <CombinedLogos />

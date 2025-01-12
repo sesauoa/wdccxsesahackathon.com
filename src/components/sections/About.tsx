@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { H1, Section, StatHeading } from '../common/Typography';
-import { AboutUs, EventStats } from '@/data/About';
+import { AboutUs, EventStats } from '@/data/about';
 import { motion } from 'motion/react';
 const About = () => {
   return (

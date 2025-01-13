@@ -23,7 +23,7 @@ export function WinnerCard({
   year,
 }: WinnerCardProps) {
   return (
-    <div className="flex w-1/3 flex-col rounded-xl bg-black bg-opacity-20 p-8">
+    <div className="flex w-full flex-col rounded-xl bg-black bg-opacity-20 p-8">
       <div className="flex w-full">
         <Image
           src={image}

@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import pastWinners from '@/data/PastWinners';
+import pastWinners from '@/data/pastWinners';
+import { H1 } from '@/components/common/Typography';
+import { motion } from 'motion/react';
 import { filterWinners, getAllFilteredWinners } from '@/utils/WinnerUtils';
 import { FilterButtons } from '@/components/winner/FilterButtons';
 import { WinnersGroup } from '@/components/winner/WinnersGroup';
@@ -40,7 +41,7 @@ export default function PastWinnersPage() {
   return (
     <div className="mx-auto flex min-h-screen max-w-screen-2xl flex-col p-8 text-white">
       <header>
-        <h1 className="text-4xl font-bold">Past Winners</h1>
+        <H1 className="text-4xl font-bold">Past Winners</H1>
         <div className="mt-8">
           <FilterButtons
             years={years}

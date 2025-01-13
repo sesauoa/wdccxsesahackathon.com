@@ -20,6 +20,7 @@ export function WinnerCard({
   appLink,
   github,
   image,
+  members,
   year,
 }: WinnerCardProps) {
   return (
@@ -35,13 +36,15 @@ export function WinnerCard({
         />
       </div>
 
+      <div className='text-center py-2'> {members}</div>
+
       <CardTag year={year} category={place} />
 
       <div className="flex w-full flex-col">
         <h2 className="mb-4 text-2xl font-bold">{teamName}</h2>
         <p className="text-md mb-4 font-bold text-white">{description}</p>
         <div className="flex flex-col space-y-2">
-          {appLink && (
+          {appLink == '' && (
             <a
               href={appLink}
               target="_blank"
@@ -51,7 +54,7 @@ export function WinnerCard({
               🔗 GitHub Repo
             </a>
           )}
-          {github && (
+          {github == '' && (
             <a
               href={github}
               target="_blank"

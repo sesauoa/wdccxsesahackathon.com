@@ -20,7 +20,7 @@ export default function PastWinnersPage() {
   const allFilteredWinners = getAllFilteredWinners(filteredWinners);
 
   const years = [...new Set(pastWinners.map((winner) => winner.year))];
-  const places = ['1st Place', '2nd Place', '3rd Place', 'Special Category'];
+  const places = ['1st Place', '2nd Place', '3rd Place', 'Other'];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -41,7 +41,7 @@ export default function PastWinnersPage() {
     <div className="mx-auto flex min-h-screen max-w-screen-2xl flex-col p-8 text-white">
       <header>
         <h1 className="text-4xl font-bold">Past Winners</h1>
-        <div className="mt-4 flex flex-wrap gap-4">
+        <div className="mt-8">
           <FilterButtons
             years={years}
             places={places}
@@ -55,7 +55,7 @@ export default function PastWinnersPage() {
 
       <main className="flex flex-row gap-8">
         <div className="flex-1">
-          {selectedPlace && selectedPlace !== 'Special Category' ? (
+          {selectedPlace && selectedPlace !== 'Other' ? (
             <motion.div
               key={`${selectedYear}-${selectedPlace}`} // Unique key for the flat grid
               variants={containerVariants}

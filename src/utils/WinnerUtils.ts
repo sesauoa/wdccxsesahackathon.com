@@ -5,7 +5,7 @@ export const filterWinners = (
   selectedYear: number | null,
   selectedPlace: string | null
 ) => {
-  if (selectedPlace === 'Special Category') {
+  if (selectedPlace === 'Other') {
     return pastWinners
       .filter(({ year }) => (selectedYear ? year === selectedYear : true))
       .map(({ year, specialAwards }) => ({

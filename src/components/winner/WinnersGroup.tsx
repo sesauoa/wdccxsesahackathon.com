@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { WinnerCard } from './WinnerCard';
 
 interface WinnersGroupProps {
@@ -28,7 +28,7 @@ export const WinnersGroup: React.FC<WinnersGroupProps> = ({
       </div>
 
       <motion.div
-        key={`${year}-${selectedYear}-${selectedPlace}`} // Ensure unique key based on filters
+        key={`${year}-${selectedYear}-${selectedPlace}`}
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -36,7 +36,7 @@ export const WinnersGroup: React.FC<WinnersGroupProps> = ({
       >
         {orderedWinners.map((winner, index) => (
           <motion.div
-            key={`winner-${year}-${index}-${selectedYear}-${selectedPlace}`} // Ensure unique key for each winner
+            key={`winner-${year}-${index}-${selectedYear}-${selectedPlace}`}
             variants={cardVariants}
           >
             <WinnerCard year={year} {...winner} />
@@ -44,7 +44,7 @@ export const WinnersGroup: React.FC<WinnersGroupProps> = ({
         ))}
         {specialAwards.map((award, index) => (
           <motion.div
-            key={`award-${year}-${index}-${selectedYear}-${selectedPlace}`} // Ensure unique key for each award
+            key={`award-${year}-${index}-${selectedYear}-${selectedPlace}`}
             variants={cardVariants}
           >
             <WinnerCard year={year} {...award} />

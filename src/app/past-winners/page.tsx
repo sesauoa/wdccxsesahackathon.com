@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useState } from 'react';
 import pastWinners from '@/data/pastWinners';
 import { H1 } from '@/components/common/Typography';

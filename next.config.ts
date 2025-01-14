@@ -4,12 +4,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
 
   output: 'export',
-  basePath: '/wdccxsesahackathon.com',
-  assetPrefix: '/wdccxsesahackathon.com/',
-
-  images: {
-    unoptimized: true,
-  },
+  basePath: process.env.BASE_PATH || '',
 };
 
 export default nextConfig;

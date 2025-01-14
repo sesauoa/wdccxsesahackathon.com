@@ -1,40 +1,51 @@
-name: Deploy with Pull Request
-
+name: deploy-to-github-pages
 on:
   push:
     branches:
       - main
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      
-      - name: Set up Node
-        uses: actions/setup-node@v2
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
+        uses: ./.github/workflows/setup-node
+
+      - name: Setup Pages ⚙️
+        uses: actions/configure-pages@v4
         with:
-          node-version: '14'
+          static_site_generator: next
 
-      - name: Install dependencies
-        run: npm install
+      - name: Build with Next.js 🏗️
+        run: npx next build
 
-      - name: Build the project
-        run: npm run build
-      
+      - name: Upload artifact 📡
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
     needs: build
+
     steps:
-      - name: Deploy to GitHub Pages (Production)
-        uses: actions/deploy-pages@v2
-        with:
-          publish_dir: ./out
-          publish_branch: production
-          
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
+      - name: Publish to GitHub Pages 🚀
+        id: deployment
+        uses: actions/deploy-pages@v4

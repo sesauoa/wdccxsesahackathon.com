@@ -1,10 +1,9 @@
 name: Deploy with Pull Request
 
 on:
-  pull_request:
-    branches: 
+  push:
+    branches:
       - main
-      - production
 
 jobs:
   build:

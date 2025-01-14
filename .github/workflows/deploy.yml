@@ -10,7 +10,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: false
 
 jobs:
@@ -18,21 +18,37 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
-        uses: ./.github/workflows/setup-node
-
-      - name: Setup Pages ⚙️
-        uses: actions/configure-pages@v4
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
         with:
-          static_site_generator: next
+          version: 9
 
-      - name: Build with Next.js 🏗️
-        run: npx next build
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'pnpm'
 
-      - name: Upload artifact 📡
+      - name: Cache pnpm dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.pnpm-store
+            node_modules
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build Next.js project
+        run: pnpm run build
+
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
@@ -46,6 +62,6 @@ jobs:
     needs: build
 
     steps:
-      - name: Publish to GitHub Pages 🚀
+      - name: Publish to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

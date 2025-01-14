@@ -37,7 +37,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
+          cache: pnpm
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -73,9 +73,9 @@ jobs:
       - name: Notify - Pending manual approval
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
-          publish_branch: production  # Ensure production is a separate branch for manual approval
+          publish_branch: production # Ensure production is a separate branch for manual approval
 
   # Deployment job after manual approval
   deploy:

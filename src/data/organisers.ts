@@ -2,7 +2,7 @@ const organsiers = [
   {
     name: 'Chris Valenzuela',
     role: 'WDCC Co-President',
-    image: null,
+    image: "/images/2024/IMG_1849.jpg",
     club: 'WDCC',
   },
   {

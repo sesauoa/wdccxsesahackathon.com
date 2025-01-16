@@ -1,124 +1,119 @@
 'use client';
 
-import Image from 'next/image';
-import { imgs } from '@/data/CarouselImages';
-import React, { useEffect, useState } from 'react';
+import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import { motion, useMotionValue } from 'motion/react';
+import { imgs } from '@/data/CarouselImages';
+
+const ONE_SECOND = 1000;
+const AUTO_DELAY = ONE_SECOND * 10;
+const DRAG_BUFFER = 50;
+
+const SPRING_OPTIONS = {
+  type: 'spring',
+  mass: 3,
+  stiffness: 400,
+  damping: 50,
+};
 
 export default function ImageCarousel() {
-  const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const target = e.currentTarget.getAttribute('href');
-    if (target) {
-      document.querySelector(target)?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'start',
-      });
+  const [imgIndex, setImgIndex] = useState(0);
+
+  const dragX = useMotionValue(0);
+
+  useEffect(() => {
+    const intervalRef = setInterval(() => {
+      const x = dragX.get();
+
+      if (x === 0) {
+        setImgIndex((pv) => {
+          if (pv === imgs.length - 1) {
+            return 0;
+          }
+          return pv + 1;
+        });
+      }
+    }, AUTO_DELAY);
+
+    return () => clearInterval(intervalRef);
+  }, []);
+
+  const onDragEnd = () => {
+    const x = dragX.get();
+
+    if (x <= -DRAG_BUFFER && imgIndex < imgs.length - 1) {
+      setImgIndex((pv) => pv + 1);
+    } else if (x >= DRAG_BUFFER && imgIndex > 0) {
+      setImgIndex((pv) => pv - 1);
     }
   };
 
   return (
-    <div className="h-[20vw] w-full overflow-hidden">
-      <div className="carousel h-full w-full">
-        <div id="slide1" className="carousel-item relative w-full">
-          <Image
-            src={imgs[0]}
-            alt="Slide 1"
-            fill
-            style={{ objectFit: 'cover' }}
-            priority={true}
-          />
-          <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a
-              href="#slide4"
-              className="btn btn-circle"
-              onClick={handleNavigation}
-            >
-              ❮
-            </a>
-            <a
-              href="#slide2"
-              className="btn btn-circle"
-              onClick={handleNavigation}
-            >
-              ❯
-            </a>
-          </div>
-        </div>
-        <div id="slide2" className="carousel-item relative w-full">
-          <Image
-            src={imgs[1]}
-            alt="Slide 2"
-            fill
-            style={{ objectFit: 'cover' }}
-          />
-          <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a
-              href="#slide1"
-              className="btn btn-circle"
-              onClick={handleNavigation}
-            >
-              ❮
-            </a>
-            <a
-              href="#slide3"
-              className="btn btn-circle"
-              onClick={handleNavigation}
-            >
-              ❯
-            </a>
-          </div>
-        </div>
-        <div id="slide3" className="carousel-item relative w-full">
-          <Image
-            src={imgs[2]}
-            alt="Slide 3"
-            fill
-            style={{ objectFit: 'cover' }}
-          />
-          <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a
-              href="#slide2"
-              className="btn btn-circle"
-              onClick={handleNavigation}
-            >
-              ❮
-            </a>
-            <a
-              href="#slide4"
-              className="btn btn-circle"
-              onClick={handleNavigation}
-            >
-              ❯
-            </a>
-          </div>
-        </div>
-        <div id="slide4" className="carousel-item relative w-full">
-          <Image
-            src={imgs[3]}
-            alt="Slide 4"
-            fill
-            style={{ objectFit: 'cover' }}
-          />
-          <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a
-              href="#slide3"
-              className="btn btn-circle"
-              onClick={handleNavigation}
-            >
-              ❮
-            </a>
-            <a
-              href="#slide1"
-              className="btn btn-circle"
-              onClick={handleNavigation}
-            >
-              ❯
-            </a>
-          </div>
-        </div>
-      </div>
+    <div className="relative h-[25vw] overflow-hidden py-8">
+      <motion.div
+        drag="x"
+        dragConstraints={{
+          left: 0,
+          right: 0,
+        }}
+        style={{
+          x: dragX,
+        }}
+        animate={{
+          translateX: `-${imgIndex * 100}%`,
+        }}
+        transition={SPRING_OPTIONS}
+        onDragEnd={onDragEnd}
+        className="flex h-[100%] cursor-grab items-center active:cursor-grabbing"
+      >
+        <Images imgIndex={imgIndex} />
+      </motion.div>
+
+      <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
     </div>
   );
 }
+
+const Images = ({ imgIndex }: { imgIndex: number }) => {
+  return (
+    <>
+      {imgs.map((imgSrc, idx) => {
+        return (
+          <motion.div
+            key={idx}
+            style={{
+              backgroundImage: `url(${imgSrc})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+            transition={SPRING_OPTIONS}
+            className="h-[100%] w-[100%] shrink-0"
+          />
+        );
+      })}
+    </>
+  );
+};
+
+const Dots = ({
+  imgIndex,
+  setImgIndex,
+}: {
+  imgIndex: number;
+  setImgIndex: Dispatch<SetStateAction<number>>;
+}) => {
+  return (
+    <div className="mt-4 flex w-full justify-center gap-2">
+      {imgs.map((_, idx) => {
+        return (
+          <button
+            key={idx}
+            onClick={() => setImgIndex(idx)}
+            className={`h-3 w-3 rounded-full transition-colors ${
+              idx === imgIndex ? 'bg-neutral-50' : 'bg-neutral-500'
+            }`}
+          />
+        );
+      })}
+    </div>
+  );
+};

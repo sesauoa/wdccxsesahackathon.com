@@ -10,7 +10,7 @@ interface TeamCardProps {
 
 function TeamCard({ img, name, title, club }: TeamCardProps) {
   return (
-    <div className="group relative rounded-lg bg-gray-100 shadow-md overflow-hidden">
+    <div className="group relative mx-auto w-48 rounded-lg bg-gray-100 shadow-md overflow-hidden">
       {/* Image */}
       <div className="h-48 w-full overflow-hidden">
         <img
@@ -44,13 +44,13 @@ function TeamCard({ img, name, title, club }: TeamCardProps) {
 function TeamSection() {
   return (
     <section className="min-h-screen py-8 px-8 lg:py-28">
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-screen-sm">
         <div className="mb-16 text-center lg:mb-28">
           <h1 className="my-2 text-2xl font-bold text-white lg:text-4xl">
             Organisers
           </h1>
         </div>
-        <div className="grid grid-cols-1 gap-6 mt-6 md:grid-cols-2 lg:grid-cols-6">
+        <div className="grid grid-cols-1 gap-6 mt-6 justify-center sm:grid-cols-2 lg:grid-cols-3">
           {organisers.map((member, index) => (
             <TeamCard
               key={index}

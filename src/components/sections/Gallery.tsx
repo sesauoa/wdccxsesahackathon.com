@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useCallback, useState } from 'react';
-import { H1 } from '../common/Typography';
 import yearImages from '@/data/GallaryImages';
 import '@/styles/gallery.css';
 import Image from 'next/image';
@@ -11,15 +10,10 @@ type GalleryProps = {
 };
 
 const Gallery: React.FC<GalleryProps> = ({ year }) => {
-  const yearGallery = yearImages.find((collection) => collection.year === year);
-
-  if (!yearGallery) {
-    return <p>No data available for this year.</p>; // Handle cases where the year doesn't match any data
-  }
-
-  const { images } = yearGallery;
+  const yearGallery = yearImages.filter(image => image.year === year);
 
   const [lightBoxImageIndex, setLightBoxImageIndex] = useState<number | null>(null);
+
   const openLightBox = (imageIndex: number) => {
     setLightBoxImageIndex(imageIndex);
   };
@@ -28,26 +22,22 @@ const Gallery: React.FC<GalleryProps> = ({ year }) => {
     setLightBoxImageIndex(null);
   };
 
-  const showNextImage = useCallback(() => {
+  const showNextImage = () => {
     if (lightBoxImageIndex !== null) {
-      setLightBoxImageIndex((lightBoxImageIndex + 1) % images.length);
+      setLightBoxImageIndex((lightBoxImageIndex + 1) % yearGallery.length);
     }
-  }, [lightBoxImageIndex, images.length]);
+  };
 
-
-  const showPreviousImage = useCallback(() => {
+  const showPreviousImage = () => {
     if (lightBoxImageIndex !== null) {
-      setLightBoxImageIndex((lightBoxImageIndex - 1) % images.length);
+      setLightBoxImageIndex((lightBoxImageIndex - 1 + yearGallery.length) % yearGallery.length);
     }
-  }, [lightBoxImageIndex, images.length]);
+  };
 
   return (
     <div className="gallery-component">
-      <div className="year-display">
-        <H1>{year}</H1>
-      </div>
       <div className="img-grid">
-        {images.map((image, index) => (
+        {yearGallery.map((image, index) => (
           <div key={index}
             className="gallery-img-wrapper">
             <Image
@@ -64,14 +54,14 @@ const Gallery: React.FC<GalleryProps> = ({ year }) => {
 
       {lightBoxImageIndex !== null && (
         <div className="lightbox" onClick={closeLightBox}>
-          <div className="lightbox-content">
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
             <button onClick={showPreviousImage} className="prev-button">
               &larr;
             </button>
             <div className="lightbox-image-wrapper">
               <Image
-                src={images[lightBoxImageIndex].image}
-                alt={images[lightBoxImageIndex].alt || `Image for ${year}`}
+                src={yearGallery[lightBoxImageIndex].image}
+                alt={yearGallery[lightBoxImageIndex].alt || `Image for ${year}`}
                 width={1000}
                 height={1000}
                 className='lightbox-image'
@@ -86,8 +76,9 @@ const Gallery: React.FC<GalleryProps> = ({ year }) => {
             </button>
           </div>
         </div>
-      )}
-    </div>
+      )
+      }
+    </div >
   );
 };
 

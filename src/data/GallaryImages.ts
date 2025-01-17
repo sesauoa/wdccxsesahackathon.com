@@ -36,6 +36,31 @@ const galleryImages: ImageCollection[] = [
         image: '/images/2024/IMG_2117.JPG',
         alt: '',
       },
+      //repeating from here:
+      {
+        image: '/images/2024/IMG_1849.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/2024/IMG_2094.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/2024/IMG_2368.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/2024/IMG_2109.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/2024/IMG_2425.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/2024/IMG_2117.JPG',
+        alt: '',
+      },
     ],
   },
   {
@@ -65,8 +90,31 @@ const galleryImages: ImageCollection[] = [
         image: '/images/2023/WDCC_SESA_HACKATHON_2023_IMG0492.jpg',
         alt: '',
       },
-
-
+      //repeating from here:
+      {
+        image: '/images/2024/IMG_1849.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/2024/IMG_2094.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/2024/IMG_2368.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/2024/IMG_2109.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/2024/IMG_2425.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/2024/IMG_2117.JPG',
+        alt: '',
+      },
     ],
   },
   {
@@ -96,7 +144,31 @@ const galleryImages: ImageCollection[] = [
         image: '/images/2022/WDCC_SESA_HACKATHON_2022_IMG0209.jpg',
         alt: '',
       },
-
+      //repeating from here:
+      {
+        image: '/images/2024/IMG_1849.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/2024/IMG_2094.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/2024/IMG_2368.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/2024/IMG_2109.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/2024/IMG_2425.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/2024/IMG_2117.JPG',
+        alt: '',
+      },
     ],
   },
   {
@@ -124,6 +196,31 @@ const galleryImages: ImageCollection[] = [
       },
       {
         image: '/images/2023/WDCC_SESA_HACKATHON_2023_IMG0800.jpg',
+        alt: '',
+      },
+      //repeating from here:
+      {
+        image: '/images/2024/IMG_1849.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/2024/IMG_2094.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/2024/IMG_2368.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/2024/IMG_2109.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/2024/IMG_2425.JPG',
+        alt: '',
+      },
+      {
+        image: '/images/2024/IMG_2117.JPG',
         alt: '',
       },
     ],

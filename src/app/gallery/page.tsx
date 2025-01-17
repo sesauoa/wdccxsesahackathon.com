@@ -1,6 +1,5 @@
 
 import { H1 } from '@/components/common/Typography';
-import yearImages from '@/data/GallaryImages';
 import Gallery from '@/components/sections/Gallery';
 import '@/styles/gallery.css';
 

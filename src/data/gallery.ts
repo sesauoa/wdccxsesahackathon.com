@@ -44,17 +44,13 @@
 // ];
 
 // const photos: Photo[] = galleryImages.map(
-//   ({ asset, alt, width = 1080, height = 720 }) =>
+//   ({ asset, alt, year, width = 1080, height = 720 }) =>
 //     ({
 //       src: assetLink(asset, width),
 //       alt: alt || 'Image description', // Fallback alt text
+//       year: year,
 //       width,
 //       height,
-//       srcSet: breakpoints.map((breakpoint) => ({
-//         src: assetLink(asset, breakpoint),
-//         width: breakpoint,
-//         height: Math.round((height / width) * breakpoint),
-//       })),
 //     }) as Photo
 // );
 

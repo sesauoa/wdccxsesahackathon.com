@@ -1,9 +1,16 @@
 'use client';
 
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import yearImages from '@/data/GallaryImages';
 import '@/styles/gallery.css';
 import Image from 'next/image';
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
+import "yet-another-react-lightbox/plugins/counter.css";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
+
+import { Counter, Fullscreen, Thumbnails, Zoom } from 'yet-another-react-lightbox/plugins';
+
 
 type GalleryProps = {
   year: number;
@@ -13,26 +20,8 @@ const Gallery: React.FC<GalleryProps> = ({ year }) => {
   const yearGallery = yearImages.filter(image => image.year === year);
 
   const [lightBoxImageIndex, setLightBoxImageIndex] = useState<number | null>(null);
-
-  const openLightBox = (imageIndex: number) => {
-    setLightBoxImageIndex(imageIndex);
-  };
-
-  const closeLightBox = () => {
-    setLightBoxImageIndex(null);
-  };
-
-  const showNextImage = () => {
-    if (lightBoxImageIndex !== null) {
-      setLightBoxImageIndex((lightBoxImageIndex + 1) % yearGallery.length);
-    }
-  };
-
-  const showPreviousImage = () => {
-    if (lightBoxImageIndex !== null) {
-      setLightBoxImageIndex((lightBoxImageIndex - 1 + yearGallery.length) % yearGallery.length);
-    }
-  };
+  const fullscreenRef = React.useRef(null);
+  const [openLightBox, setOpenLightBox] = useState<boolean>(false);
 
   return (
     <div className="gallery-component">
@@ -46,38 +35,19 @@ const Gallery: React.FC<GalleryProps> = ({ year }) => {
               width={500}
               height={500}
               className="gallery-image"
-              onClick={() => openLightBox(index)}
+              onClick={() => { setLightBoxImageIndex(index); setOpenLightBox(true); }}
             />
           </div>
         ))}
       </div>
-
-      {lightBoxImageIndex !== null && (
-        <div className="lightbox" onClick={closeLightBox}>
-          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-            <button onClick={showPreviousImage} className="prev-button">
-              &larr;
-            </button>
-            <div className="lightbox-image-wrapper">
-              <Image
-                src={yearGallery[lightBoxImageIndex].image}
-                alt={yearGallery[lightBoxImageIndex].alt || `Image for ${year}`}
-                width={1000}
-                height={1000}
-                className='lightbox-image'
-                loading="lazy"
-              />
-            </div>
-            <button onClick={showNextImage} className="next-button">
-              &rarr;
-            </button>
-            <button onClick={closeLightBox} className="close-button">
-              &times;
-            </button>
-          </div>
-        </div>
-      )
-      }
+      <Lightbox
+        slides={yearImages.filter(image => image.year === year).map(image => ({ src: image.image, alt: image.alt }))}
+        open={openLightBox}
+        close={() => setOpenLightBox(false)}
+        plugins={[Counter, Fullscreen, Zoom, Thumbnails]}
+        counter={{ container: { style: { top: '0px' } } }}
+        fullscreen={{ ref: fullscreenRef }}
+      />
     </div >
   );
 };

@@ -3,14 +3,17 @@
 import React, { useState } from 'react';
 import yearImages from '@/data/gallery';
 import '@/styles/gallery.css';
-import Image from 'next/image';
+
+import { RowsPhotoAlbum } from "react-photo-album";
+import "react-photo-album/rows.css";
+
+import GalleryImages from './GallaryImages';
+
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import "yet-another-react-lightbox/plugins/counter.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
-
 import { Counter, Fullscreen, Thumbnails, Zoom } from 'yet-another-react-lightbox/plugins';
-import GalleryImages from './GallaryImages';
 
 
 type GalleryProps = {
@@ -25,8 +28,11 @@ const Gallery: React.FC<GalleryProps> = ({ year }) => {
 
   return (
     <div className="gallery-component">
-      <GalleryImages data={slides}
-        onClick={(currentIndex) => setLightBoxImageIndex(currentIndex)} />
+      <GalleryImages
+        data={slides}
+        onClick={(currentIndex) => setLightBoxImageIndex(currentIndex)}
+      />
+      {/* <RowsPhotoAlbum photos={yearImages} targetRowHeight={150} /> */}
       <Lightbox
         slides={slides}
         open={lightBoxImageIndex >= 0}

@@ -1,12 +1,12 @@
 'use client';
 
 import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
-import { motion, useMotionValue } from 'motion/react';
+import { motion } from 'motion/react'; // No need for drag
+
 import { imgs } from '@/data/CarouselImages';
 
 const ONE_SECOND = 1000;
 const AUTO_DELAY = ONE_SECOND * 10;
-const DRAG_BUFFER = 50;
 
 const SPRING_OPTIONS = {
   type: 'spring',
@@ -18,57 +18,48 @@ const SPRING_OPTIONS = {
 export default function ImageCarousel() {
   const [imgIndex, setImgIndex] = useState(0);
 
-  const dragX = useMotionValue(0);
-
   useEffect(() => {
     const intervalRef = setInterval(() => {
-      const x = dragX.get();
-
-      if (x === 0) {
-        setImgIndex((pv) => {
-          if (pv === imgs.length - 1) {
-            return 0;
-          }
-          return pv + 1;
-        });
-      }
+      setImgIndex((prev) => (prev === imgs.length - 1 ? 0 : prev + 1));
     }, AUTO_DELAY);
 
     return () => clearInterval(intervalRef);
   }, []);
 
-  const onDragEnd = () => {
-    const x = dragX.get();
+  const handlePrevious = () => {
+    setImgIndex((prev) => (prev === 0 ? imgs.length - 1 : prev - 1));
+  };
 
-    if (x <= -DRAG_BUFFER && imgIndex < imgs.length - 1) {
-      setImgIndex((pv) => pv + 1);
-    } else if (x >= DRAG_BUFFER && imgIndex > 0) {
-      setImgIndex((pv) => pv - 1);
-    }
+  const handleNext = () => {
+    setImgIndex((prev) => (prev === imgs.length - 1 ? 0 : prev + 1));
   };
 
   return (
     <div className="relative h-[25vw] overflow-hidden py-8">
       <motion.div
-        drag="x"
-        dragConstraints={{
-          left: 0,
-          right: 0,
-        }}
-        style={{
-          x: dragX,
-        }}
-        animate={{
-          translateX: `-${imgIndex * 100}%`,
-        }}
+        style={{ translateX: `-${imgIndex * 100}%` }}
+        animate={{ translateX: `-${imgIndex * 100}%` }}
         transition={SPRING_OPTIONS}
-        onDragEnd={onDragEnd}
-        className="flex h-[100%] cursor-grab items-center active:cursor-grabbing"
+        className="flex h-[100%] items-center"
       >
         <Images imgIndex={imgIndex} />
       </motion.div>
 
       <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
+
+      {/* Navigation Arrows */}
+      <button
+        onClick={handlePrevious}
+        className="btn btn-circle absolute left-5 top-1/2 -translate-y-1/2 transform"
+      >
+        ❮
+      </button>
+      <button
+        onClick={handleNext}
+        className="btn btn-circle absolute right-5 top-1/2 -translate-y-1/2 transform"
+      >
+        ❯
+      </button>
     </div>
   );
 }
@@ -76,20 +67,18 @@ export default function ImageCarousel() {
 const Images = ({ imgIndex }: { imgIndex: number }) => {
   return (
     <>
-      {imgs.map((imgSrc, idx) => {
-        return (
-          <motion.div
-            key={idx}
-            style={{
-              backgroundImage: `url(${imgSrc})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-            transition={SPRING_OPTIONS}
-            className="h-[100%] w-[100%] shrink-0"
-          />
-        );
-      })}
+      {imgs.map((imgSrc, idx) => (
+        <motion.div
+          key={idx}
+          style={{
+            backgroundImage: `url(${imgSrc})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+          transition={SPRING_OPTIONS}
+          className="h-[100%] w-[100%] shrink-0"
+        />
+      ))}
     </>
   );
 };
@@ -103,17 +92,15 @@ const Dots = ({
 }) => {
   return (
     <div className="mt-4 flex w-full justify-center gap-2">
-      {imgs.map((_, idx) => {
-        return (
-          <button
-            key={idx}
-            onClick={() => setImgIndex(idx)}
-            className={`h-3 w-3 rounded-full transition-colors ${
-              idx === imgIndex ? 'bg-neutral-50' : 'bg-neutral-500'
-            }`}
-          />
-        );
-      })}
+      {imgs.map((_, idx) => (
+        <button
+          key={idx}
+          onClick={() => setImgIndex(idx)}
+          className={`h-3 w-3 rounded-full transition-colors ${
+            idx === imgIndex ? 'bg-neutral-50' : 'bg-neutral-500'
+          }`}
+        />
+      ))}
     </div>
   );
 };

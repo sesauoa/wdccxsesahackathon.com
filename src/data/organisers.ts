@@ -8,7 +8,7 @@ const organsiers = [
   {
     name: 'Kimberley Zhu',
     role: 'WDCC Co-President',
-    image: null,
+    image: "/images/Organisers/Kimberley.jpg",
     club: 'WDCC',
   },
   {
@@ -32,7 +32,7 @@ const organsiers = [
   {
     name: 'Tony Lim',
     role: 'SESA Industry Lead',
-    image: null,
+    image: "/images/Organisers/Tony.jpg",
     club: 'SESA',
   },
 ];

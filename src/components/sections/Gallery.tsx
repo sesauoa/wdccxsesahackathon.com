@@ -28,14 +28,13 @@ const Gallery: React.FC<GalleryProps> = ({ year }) => {
 
   return (
     <div className="gallery-component">
-      <div className="sticky top-16 z-10 flex w-full justify-center backdrop-blur-sm">
+      <div className="sticky top-16 z-10 flex justify-center items-center backdrop-blur-sm w-screen">
         <h2 className="mb-4 mt-8 text-3xl font-bold">{year}</h2>
       </div>
       <GalleryImages
         data={slides}
         onClick={(currentIndex) => setLightBoxImageIndex(currentIndex)}
       />
-      {/* <RowsPhotoAlbum photos={yearImages} targetRowHeight={150} /> */}
       <Lightbox
         slides={slides}
         open={lightBoxImageIndex >= 0}

@@ -28,6 +28,9 @@ const Gallery: React.FC<GalleryProps> = ({ year }) => {
 
   return (
     <div className="gallery-component">
+      <div className="sticky top-16 z-10 flex w-full justify-center backdrop-blur-sm">
+        <h2 className="mb-4 mt-8 text-3xl font-bold">{year}</h2>
+      </div>
       <GalleryImages
         data={slides}
         onClick={(currentIndex) => setLightBoxImageIndex(currentIndex)}

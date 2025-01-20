@@ -11,8 +11,7 @@
 }
 
 .gallery-component {
-  margin-top: 5px;
-  margin-bottom: 65px;
+  margin-top: 65px;
   display: flex;
   flex-direction: row;
   align-items: center;

@@ -6,8 +6,8 @@ import CountdownTimer from '@/components/common/CountdownTimer';
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <CountdownTimer />
       <Hero />
+      <CountdownTimer />
       <About />
       <Faqs />
       <Sponsors />

@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
+import { motion } from 'motion/react';
 import '@/styles/gallery.css';
 
 interface ImagesProps {
@@ -18,9 +19,9 @@ const GalleryImages: FC<ImagesProps> = (props) => {
   };
 
   return (
-    <div className='img-grid'>
+    <motion.div className='img-grid'>
       {data.map((image, index) => (
-        <div
+        <motion.div
           key={index}
           className="gallery-img-wrapper"
           onClick={() => handleClick(index)}>
@@ -31,9 +32,9 @@ const GalleryImages: FC<ImagesProps> = (props) => {
             width={500} // Explicit size
             height={500}
           />
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

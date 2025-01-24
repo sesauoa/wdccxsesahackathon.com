@@ -12,7 +12,7 @@ const Faqs = () => {
   };
 
   return (
-    <Section id="faqs">
+    <Section id="faqs" className='mb-10'>
       <H1 className="mb-8">FAQs</H1>
       <div className="flex flex-col space-y-4">
         {faqInfo.map((faq, index) => (
@@ -29,7 +29,7 @@ const Faqs = () => {
               {faq.question}
             </div>
             <div className="collapse-content">
-              <p className="text-black text-2xl">{faq.answer}</p>
+              <p className="text-black text-xl">{faq.answer}</p>
             </div>
           </div>
         ))}

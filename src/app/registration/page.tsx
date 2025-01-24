@@ -50,7 +50,7 @@ export default function Registration() {
                     {faq.question}
                   </div>
                   <div className="collapse-content">
-                    <p className="text-black">{faq.answer}</p>
+                    <p className="text-black text-2xl">{faq.answer}</p>
                   </div>
                 </div>
               ))}

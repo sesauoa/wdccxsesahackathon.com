@@ -8,6 +8,27 @@
 .gallery-header {
   margin-left: 6vw;
   margin-top: 2vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.gallery-header h1{
+  margin-right: auto;
+}
+
+.gallery-navigation-buttons button{
+  margin: 0 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.gallery-navigation-buttons button:hover{
+  background-color: aliceblue;
 }
 
 .gallery-component {

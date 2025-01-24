@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import yearImages from '@/data/gallery';
 import '@/styles/gallery.css';
 
-import { RowsPhotoAlbum } from "react-photo-album";
 import "react-photo-album/rows.css";
 
 import GalleryImages from './GallaryImages';
@@ -27,7 +26,7 @@ const Gallery: React.FC<GalleryProps> = ({ year }) => {
   const fullscreenRef = React.useRef(null);
 
   return (
-    <div className="gallery-component">
+    <div className="gallery-component" id={`year-${year}`}>
       <div className="sticky top-16 z-10 flex justify-center items-center backdrop-blur-sm w-screen">
         <h2 className="mb-4 mt-8 text-3xl font-bold">{year}</h2>
       </div>

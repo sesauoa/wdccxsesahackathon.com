@@ -23,13 +23,13 @@ const Faqs = () => {
             } rounded-lg border border-gray-300 bg-white`}
           >
             <div
-              className="collapse-title cursor-pointer text-xl font-medium text-black"
+              className="collapse-title cursor-pointer text-2xl font-medium text-black"
               onClick={() => handleToggle(index)}
             >
               {faq.question}
             </div>
             <div className="collapse-content">
-              <p className="text-black">{faq.answer}</p>
+              <p className="text-black text-2xl">{faq.answer}</p>
             </div>
           </div>
         ))}

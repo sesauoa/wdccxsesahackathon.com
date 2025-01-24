@@ -2,8 +2,9 @@
 
 import React, { useState } from 'react';
 import { FORM_URL } from '../../data/registrationdata';
-import faqInfo from '@/data/faqs';
-import { H1 } from '@/components/common/Typography';
+import { registrationFaqsInfo } from '@/data/registrationFaqs';
+import { H1, H2 } from '@/components/common/Typography';
+import CountdownTimer from '@/components/common/CountdownTimer';
 
 export default function Registration() {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
@@ -17,7 +18,13 @@ export default function Registration() {
       <H1 className="mb-8 ">Registration</H1>
       <div className="flex w-full justify-center">
         <div className="w-full max-w-6xl px-4 sm:px-6">
-          <iframe
+
+          {/* FOR WHEN REGISTRATIONS ARE CLOSED */}
+          <H2 className='text-4xl text-center m-10'>COMING SOON...</H2>
+          <CountdownTimer />
+
+          {/* FOR WHEN REGISTRATIONS ARE OPEN */}
+          {/* <iframe
             src={FORM_URL}
             width="100%"
             height="1000px"
@@ -25,12 +32,12 @@ export default function Registration() {
             title="Registration Form"
           >
             Loading…
-          </iframe>
+          </iframe> */}
 
           {/* FAQ Section */}
           <div className="mt-8" id="faqs">
             <div className="flex flex-col space-y-4">
-              {faqInfo.slice(-3).map((faq, index) => (
+              {registrationFaqsInfo.map((faq, index) => (
                 <div
                   key={index}
                   className={`collapse collapse-arrow ${openAccordion === index ? 'collapse-open' : 'collapse-close'

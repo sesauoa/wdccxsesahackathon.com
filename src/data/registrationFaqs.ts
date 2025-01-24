@@ -1,5 +1,3 @@
-import { q } from 'motion/react-client';
-
 export const registrationFaqsInfo = [
   {
     question: 'Who can sign up?',

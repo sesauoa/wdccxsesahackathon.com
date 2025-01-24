@@ -14,7 +14,7 @@ const About = () => {
         <H1 className="leading-normal tracking-[0.12vw] lg:absolute lg:left-[10vw] lg:top-[8.5vw] xl:top-[10vw]">
           About
         </H1>
-        <p className="w-[80vw] pb-3 text-xl leading-normal lg:absolute lg:left-[10vw] lg:top-[14vw] lg:w-[37vw]">
+        <p className="w-[80vw] pb-3 lg:text-2xl leading-normal lg:absolute lg:left-[10vw] lg:top-[14vw] lg:w-[40vw] mt-4">
           {AboutUs}
         </p>
 

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { FORM_URL } from '../../data/registrationdata';
 import faqInfo from '@/data/faqs';
+import { H1 } from '@/components/common/Typography';
 
 export default function Registration() {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
@@ -13,9 +14,7 @@ export default function Registration() {
 
   return (
     <div className="flex min-h-screen w-full flex-col items-center p-20">
-      <div className="w-full max-w-6xl">
-        <h1 className="mb-8 text-left text-4xl font-bold">Registration</h1>
-      </div>
+        <H1 className="mb-8 ">Registration</H1>
       <div className="flex w-full justify-center">
         <div className="w-full max-w-6xl px-4 sm:px-6">
           <iframe

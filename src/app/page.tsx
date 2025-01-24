@@ -7,8 +7,8 @@ import ImageCarousel from '@/components/sections/ImageCarousel';
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <CountdownTimer />
       <Hero />
+      <CountdownTimer />
       <ImageCarousel />
       <About />
       <Faqs />

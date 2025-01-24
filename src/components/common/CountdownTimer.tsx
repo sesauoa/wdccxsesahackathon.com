@@ -54,7 +54,7 @@ export default function CountdownTimer() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center p-4">
+    <div className="flex flex-col items-center justify-center p-4 mb-20">
       <h1 className="h-0 text-3xl">AUG 2-3, 2025</h1>
 
       <div className="flex h-40 flex-wrap items-center justify-center gap-4">

@@ -55,7 +55,7 @@ export default function CountdownTimer() {
 
   return (
     <div className="flex flex-col items-center justify-center p-4 mb-20">
-      <h1 className="h-0 text-4xl">AUG 2-3, 2025</h1>
+      <h1 className="h-0 text-3xl md:text-4xl">AUG 2-3, 2025</h1>
 
       <div className="flex h-40 flex-wrap items-center justify-center gap-4">
         {timeUnits.map((unit, index) => (
@@ -78,7 +78,7 @@ export default function CountdownTimer() {
       </div>
 
       <button
-        className="mt-10 rounded border bg-white px-4 py-3 font-bold text-black hover:bg-gray-100"
+        className="md:mt-10 rounded border bg-white px-4 py-3 font-bold text-black hover:bg-gray-100"
         onClick={() => window.open(googleUrl, '_blank')}
       >
         Add to Google Calendar

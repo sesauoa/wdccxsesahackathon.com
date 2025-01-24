@@ -14,7 +14,7 @@ export default function Registration() {
   };
 
   return (
-    <div className="flex min-h-screen w-full flex-col items-center p-20">
+    <div className="flex min-h-screen w-full flex-col items-center">
       <H1 className="mb-8 ">Registration</H1>
       <div className="flex w-full justify-center">
         <div className="w-full max-w-6xl px-4 sm:px-6">
@@ -44,13 +44,13 @@ export default function Registration() {
                     } rounded-lg border border-gray-300 bg-white`}
                 >
                   <div
-                    className="collapse-title cursor-pointer text-xl font-medium text-black"
+                    className="collapse-title cursor-pointer text-xl lg:text-2xl font-medium text-black"
                     onClick={() => handleToggle(index)}
                   >
                     {faq.question}
                   </div>
                   <div className="collapse-content">
-                    <p className="text-black text-2xl">{faq.answer}</p>
+                    <p className="text-black text-lg lg:text-xl">{faq.answer}</p>
                   </div>
                 </div>
               ))}

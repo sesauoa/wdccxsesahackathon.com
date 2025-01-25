@@ -6,7 +6,7 @@
 }
 
 .gallery-header {
-  margin-left: 6vw;
+  margin-left: 4vw;
   margin-top: 2vh;
   display: flex;
   flex-direction: row;
@@ -34,6 +34,7 @@
 .gallery-component {
   display: flex;
   flex-direction: column;
+  /* flex-direction: row; */
   align-items: center;
   padding: 10px;
   gap: 20px;

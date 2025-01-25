@@ -15,7 +15,6 @@ export default function GalleryPage() {
           <button onClick={()=> scrollToYearSection(2021)}>2021</button>
         </div>
       </div>
-      
       <div className="gallery">
         <Gallery year={2024} />
         <Gallery year={2023} />

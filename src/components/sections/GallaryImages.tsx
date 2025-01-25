@@ -29,7 +29,7 @@ const GalleryImages: FC<ImagesProps> = (props) => {
             src={image.src}
             alt={`Image for ${image.year}`}
             className="gallery-image"
-            width={500} // Explicit size
+            width={500}
             height={500}
           />
         </motion.div>

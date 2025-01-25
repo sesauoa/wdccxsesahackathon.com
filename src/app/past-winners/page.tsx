@@ -2,13 +2,13 @@
 
 import React from 'react';
 import pastWinners from '@/data/pastWinners';
-import { H1 } from '@/components/common/Typography';
+import { H1, Section } from '@/components/common/Typography';
 import OrderedWinner from '@/components/winner/OrderedWinner';
 import SpecialAward from '@/components/winner/SpecialAward';
 
 export default function PastWinnersPage() {
   return (
-    <div className="mx-auto flex min-h-screen max-w-screen-2xl flex-col p-8 text-white">
+    <Section>
       <header>
         <H1>Past Winners</H1>
       </header>
@@ -41,6 +41,6 @@ export default function PastWinnersPage() {
           ))}
         </div>
       </main>
-    </div>
+    </Section>
   );
 }

@@ -20,7 +20,7 @@ export default function PastWinnersPage() {
   const allFilteredWinners = getAllFilteredWinners(filteredWinners);
 
   const years = [...new Set(pastWinners.map((winner) => winner.year))];
-  const places = ['1st Place', '2nd Place', '3rd Place', 'Other'];
+  const places = ['1st Place', '2nd Place', '3rd Place', 'Special Awards'];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -55,7 +55,7 @@ export default function PastWinnersPage() {
 
       <main className="flex flex-row gap-8">
         <div className="flex-1">
-          {selectedPlace.length > 0 && !selectedPlace.includes('Other') ? (
+          {selectedPlace.length > 0 && !selectedPlace.includes('Special Awards') ? (
             <motion.div
               key={`${selectedYear}-${selectedPlace}`}
               variants={containerVariants}

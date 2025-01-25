@@ -6,13 +6,15 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier --write ."
   },
   "dependencies": {
+    "calendar-link": "^2.7.0",
     "clsx": "^2.1.1",
     "lenis": "^1.1.16",
     "motion": "^11.13.1",
-    "next": "15.0.3",
+    "next": "15.1.2",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "react-feather": "^2.0.10",
@@ -22,12 +24,14 @@
     "yet-another-react-lightbox": "^3.21.7"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.7.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "daisyui": "^4.12.14",
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
+    "gh-pages": "^6.3.0",
     "postcss": "^8",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.9",

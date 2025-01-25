@@ -6,8 +6,8 @@ import '@/styles/gallery.css';
 export default function GalleryPage() {
   return (
     <div className="gallery-page">
+      <H1>Gallery</H1>
       <div className="gallery-header">
-        <H1>Gallery</H1>
         <div className='gallery-navigation-buttons'>
           <button onClick={()=> scrollToYearSection(2024)}>2024</button>
           <button onClick={()=> scrollToYearSection(2023)}>2023</button>

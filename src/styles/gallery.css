@@ -6,14 +6,13 @@
 }
 
 .gallery-header {
-  margin-left: 4vw;
-  margin-top: 2vh;
+  align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
-.gallery-header h1{
-  margin-right: auto;
+.gallery-page h1{
+  margin-left: 4vw;
 }
 
 .gallery-navigation-buttons button{

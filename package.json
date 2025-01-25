@@ -18,7 +18,10 @@
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "react-feather": "^2.0.10",
-    "tailwind-merge": "^2.5.4"
+    "react-image-lightbox": "^5.1.4",
+    "react-photo-album": "^3.0.2",
+    "tailwind-merge": "^2.5.4",
+    "yet-another-react-lightbox": "^3.21.7"
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.7.3",

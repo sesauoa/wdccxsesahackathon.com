@@ -10,7 +10,7 @@ interface TeamCardProps {
 
 function TeamCard({ img, name, title, club }: TeamCardProps) {
   return (
-    <div className="group relative mx-auto w-48 rounded-lg bg-gray-100 shadow-md overflow-hidden">
+    <div className="group relative mx-auto w-48 rounded-lg bg-black shadow-md overflow-hidden">
       {/* Image */}
       <div className="h-48 w-full overflow-hidden">
         <img
@@ -22,20 +22,16 @@ function TeamCard({ img, name, title, club }: TeamCardProps) {
 
       {/* Info */}
       <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-0 bg-opacity-0 text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-        <h5 className="text-lg font-medium text-black">{name}</h5>
-        <p className="mb-2 text-sm font-semibold text-black">{title}</p>
-        <p className="text-sm font-semibold text-black">{club}</p>
-        <div className="mt-4 flex items-center justify-center gap-2">
-          <button className="text-gray-500 hover:text-blue-500">
-            <i className="fa-brands fa-twitter text-lg"></i>
-          </button>
-          <button className="text-gray-500 hover:text-blue-500">
-            <i className="fa-brands fa-linkedin text-lg"></i>
-          </button>
-          <button className="text-gray-500 hover:text-blue-500">
-            <i className="fa-brands fa-dribbble text-lg"></i>
-          </button>
-        </div>
+        <h5 className="text-xl font-semibold text-white">{name}</h5>
+        <p className="mb-2 text-sm font-semibold text-white text-center break-words w-full max-w-[180px]">{title}</p>
+        
+        <img
+          src={club}
+          alt={`${name}'s club`}
+          className="h-8 w-20 mt-2" // Adjust size as needed
+        />
+        
+        {/* <p className="text-sm font-semibold text-white">{club}</p> */}
       </div>
     </div>
   );

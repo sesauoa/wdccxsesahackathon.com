@@ -1,15 +1,16 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { WinnerCard } from './WinnerCard';
+import { Winner } from '@/types/WinnerType';
 
 interface WinnersGroupProps {
   year: number;
-  orderedWinners: any[];
-  specialAwards: any[];
+  orderedWinners: Winner[];
+  specialAwards: Winner[];
   containerVariants: any;
   cardVariants: any;
-  selectedYear: number | null;
-  selectedPlace: string | null;
+  selectedYear: number[] | null;
+  selectedPlace: string[] | null;
 }
 
 export const WinnersGroup: React.FC<WinnersGroupProps> = ({

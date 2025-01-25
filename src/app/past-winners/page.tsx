@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import pastWinners from '@/data/pastWinners';
+import {pastWinners} from '@/data/PastWinners.json';
 import { H1 } from '@/components/common/Typography';
 import { motion } from 'motion/react';
 import { filterWinners, getAllFilteredWinners } from '@/utils/WinnerUtils';
@@ -9,13 +9,13 @@ import { WinnersGroup } from '@/components/winner/WinnersGroup';
 import { WinnerCard } from '@/components/winner/WinnerCard';
 
 export default function PastWinnersPage() {
-  const [selectedYear, setSelectedYear] = useState<number | null>(null);
-  const [selectedPlace, setSelectedPlace] = useState<string | null>(null);
+  const [selectedYear, setSelectedYear] = useState<number[]>([]); // Multiple years can be selected
+  const [selectedPlace, setSelectedPlace] = useState<string[]>([]); // Multiple places can be selected
 
   const filteredWinners = filterWinners(
     pastWinners,
-    selectedYear,
-    selectedPlace
+    selectedYear.length > 0 ? selectedYear : null,
+    selectedPlace.length > 0 ? selectedPlace : null
   );
   const allFilteredWinners = getAllFilteredWinners(filteredWinners);
 
@@ -55,9 +55,9 @@ export default function PastWinnersPage() {
 
       <main className="flex flex-row gap-8">
         <div className="flex-1">
-          {selectedPlace && selectedPlace !== 'Other' ? (
+          {selectedPlace.length > 0 && !selectedPlace.includes('Other') ? (
             <motion.div
-              key={`${selectedYear}-${selectedPlace}`} // Unique key for the flat grid
+              key={`${selectedYear}-${selectedPlace}`}
               variants={containerVariants}
               initial="hidden"
               animate="visible"
@@ -65,7 +65,7 @@ export default function PastWinnersPage() {
             >
               {allFilteredWinners.map((winner, index) => (
                 <motion.div
-                  key={`${winner.year}-${index}-${selectedYear}-${selectedPlace}`} // Unique key for each winner in flat grid
+                  key={`${winner.year}-${index}`}
                   variants={cardVariants}
                 >
                   <WinnerCard {...winner} />

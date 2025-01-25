@@ -1,10 +1,16 @@
-export interface Winner {
+export type Winner = {
   place: string;
   teamName: string;
-  description: string;
+  image: string;
+  description?: string;
   appLink?: string;
   github?: string;
-  image: string;
-  members?: string;
-  year: number;
+  members?: string[];
+  contacts?: string[];
 }
+
+export type YearlyWinners = {
+  year: number;
+  orderedWinners: Winner[]; 
+  specialAwards: Winner[];
+};

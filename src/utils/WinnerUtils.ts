@@ -1,39 +1,26 @@
-import { Winner } from '@/types/WinnerType';
+import { Winner, YearlyWinners } from '@/types/WinnerType';
 
 export const filterWinners = (
-  pastWinners: any[],
-  selectedYear: number | null,
-  selectedPlace: string | null
+  pastWinners: YearlyWinners[],
+  selectedYears: number[] | null,
+  selectedPlaces: string[] | null
 ) => {
-  if (selectedPlace === 'Other') {
-    return pastWinners
-      .filter(({ year }) => (selectedYear ? year === selectedYear : true))
-      .map(({ year, specialAwards }) => ({
-        year,
-        orderedWinners: [],
-        specialAwards,
-      }))
-      .filter(({ specialAwards }) => specialAwards.length > 0);
-  }
-
   return pastWinners
-    .filter(({ year }) => (selectedYear ? year === selectedYear : true))
+    .filter(({ year }) => (selectedYears?.length ? selectedYears.includes(year) : true))
     .map(({ year, orderedWinners, specialAwards }) => ({
       year,
-      orderedWinners: selectedPlace
-        ? orderedWinners.filter(
-            (winner: Winner) => winner.place === selectedPlace
-          )
+      orderedWinners: selectedPlaces?.length
+        ? orderedWinners.filter((winner: Winner) => selectedPlaces.includes(winner.place))
         : orderedWinners,
-      specialAwards: selectedPlace ? [] : specialAwards,
+      specialAwards: selectedPlaces?.length && !selectedPlaces.includes('Other')
+        ? []
+        : specialAwards,
     }))
-    .filter(
-      ({ orderedWinners, specialAwards }) =>
-        orderedWinners.length > 0 || specialAwards.length > 0
-    );
+    .filter(({ orderedWinners, specialAwards }) => orderedWinners.length > 0 || specialAwards.length > 0);
 };
 
-export const getAllFilteredWinners = (filteredWinners: any[]) => {
+
+export const getAllFilteredWinners = (filteredWinners: YearlyWinners[]) => {
   return filteredWinners.flatMap(({ year, orderedWinners, specialAwards }) => [
     ...orderedWinners.map((winner: Winner) => ({ ...winner, year })),
     ...specialAwards.map((award: Winner) => ({ ...award, year })),

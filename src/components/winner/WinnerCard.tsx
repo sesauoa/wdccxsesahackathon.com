@@ -5,11 +5,11 @@ import { CardTag } from './CardTag';
 interface WinnerCardProps {
   place: string;
   teamName: string;
-  description: string;
+  description?: string;
   appLink?: string;
   github?: string;
   image: string;
-  members?: string;
+  members?: string[];
   year: number;
 }
 
@@ -36,13 +36,15 @@ export function WinnerCard({
         />
       </div>
 
-      <div className='text-center py-2'> {members}</div>
+      <div className="py-2 text-center">{members?.join(', ')}</div>
 
       <CardTag year={year} category={place} />
 
       <div className="flex w-full flex-col">
-        <h2 className="mb-4 text-2xl font-bold">{teamName}</h2>
-        <p className="text-md mb-4 font-bold text-white">{description}</p>
+        <h2 className="mb-4 mt-2 text-3xl font-bold">{teamName}</h2>
+        {description && (
+          <p className="text-lg mb-4 font-bold text-white">"{description}"</p>
+        )}
         <div className="flex flex-col space-y-2">
           {appLink == '' && (
             <a

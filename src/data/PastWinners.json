@@ -2,12 +2,12 @@
   "pastWinners": [
     {
       "year": 2024,
-      "awards": [
+      "orderedWinners": [
         {
-          "title": "1st",
+          "place": "1st Place",
           "teamName": "Git Kermit",
-          "photo": "https://drive.google.com/file/d/17wTS8VkDRlayfCAu7yW-uJTFVmJocc5O/view?usp=sharing",
-          "teamMembers": [
+          "image": "/winners/2024/2024-1st.jpg",
+          "members": [
             "Cory Brown",
             "Kevin Cao",
             "Shuhei Yokkaichi",
@@ -22,15 +22,13 @@
             "schu718@aucklanduni.ac.nz",
             "Szen566@aucklanduni.ac.nz",
             "Coli772@aucklanduni.ac.nz"
-          ],
-          "github": "",
-          "deployedProject": ""
+          ]
         },
         {
-          "title": "2nd",
+          "place": "2nd Place",
           "teamName": "Java Skunk",
-          "photo": "https://drive.google.com/file/d/1Xz_kb_48ng3kq-ytXFekiCQzhria9WS-/view?usp=sharing",
-          "teamMembers": [
+          "image": "/winners/2024/2024-2nd.jpg",
+          "members": [
             "Jason Huang",
             "Chris Valenzuela",
             "Kinzi Ceolin",
@@ -45,15 +43,13 @@
             "skim411@aucklanduni.ac.nz",
             "xyue918@aucklanduni.ac.nz",
             "ssol696@aucklanduni.ac.nz"
-          ],
-          "github": "",
-          "deployedProject": ""
+          ]
         },
         {
-          "title": "3rd",
+          "place": "3rd Place",
           "teamName": "Kappachungus",
-          "photo": "https://drive.google.com/drive/u/0/folders/1wxWjkKRM-Da83XMXYS6RjyVDHZLY0uCD",
-          "teamMembers": [
+          "image": "https://drive.google.com/drive/u/0/folders/1wxWjkKRM-Da83XMXYS6RjyVDHZLY0uCD",
+          "members": [
             "Ryan Yoon",
             "Joshua Morley",
             "Ray Xiao",
@@ -68,15 +64,15 @@
             "kzho904@aucklanduni.ac.nz",
             "cwil915@aucklanduni.ac.nz",
             "jski306@aucklanduni.ac.nz"
-          ],
-          "github": "",
-          "deployedProject": ""
-        },
+          ]
+        }
+      ],
+      "specialAwards": [
         {
-          "title": "Most Overengineered",
+          "place": "Most Overengineered",
           "teamName": "Exception Handlers",
-          "photo": "https://drive.google.com/file/d/1qnTZhm1SA0YtJAWOPVjAD7w7knD4R3Tl/view?usp=sharing",
-          "teamMembers": [
+          "image": "/winners/2024/2024-4th.jpg",
+          "members": [
             "Aref Osman",
             "Alex Brown",
             "Brandon Seng Han Chan",
@@ -91,15 +87,13 @@
             "dmun793@aucklanduni.ac.nz",
             "hly852@aucklanduni.ac.nz",
             "jtas575@aucklanduni.ac.nz"
-          ],
-          "github": "",
-          "deployedProject": ""
+          ]
         },
         {
-          "title": "Best Design",
+          "place": "Best Design",
           "teamName": "Git Kermit",
-          "photo": "https://drive.google.com/file/d/1JZ3q3rcBanW4miQBIO7hgzcLxWv78oN7/view?usp=sharing",
-          "teamMembers": [
+          "image": "/winners/2024/2024-5th.jpg",
+          "members": [
             "Cory Brown",
             "Kevin Cao",
             "Shuhei Yokkaichi",
@@ -114,15 +108,13 @@
             "schu718@aucklanduni.ac.nz",
             "Szen566@aucklanduni.ac.nz",
             "Coli772@aucklanduni.ac.nz"
-          ],
-          "github": "",
-          "deployedProject": ""
+          ]
         },
         {
-          "title": "Most Entertaining",
+          "place": "Most Entertaining",
           "teamName": "print(“hello world”)",
-          "photo": "https://drive.google.com/file/d/1De7XEsQujk_3farFEHBuUcTVDuptUA7d/view?usp=sharing",
-          "teamMembers": [
+          "image": "/winners/2024/2024-6th.jpg",
+          "members": [
             "Andre Camerino",
             "Evan Au",
             "Luase Fontaine",
@@ -137,20 +129,18 @@
             "ashlee@shum.co.nz",
             "esguerra.gabrielle12@gmail.com",
             "jtnew.king@gmail.com"
-          ],
-          "github": "",
-          "deployedProject": ""
+          ]
         }
       ]
     },
     {
       "year": 2023,
-      "awards": [
+      "orderedWinners": [
         {
-          "title": "1st",
+          "place": "1st Place",
           "teamName": ":)",
-          "photo": "https://drive.google.com/file/d/1Mp0397oYXP_euKEHlHrW_7qwUf4StQSw/view",
-          "teamMembers": [
+          "image": "/winners/2023/2023-1st.jpg",
+          "members": [
             "Raymond Luo",
             "Tony Lu",
             "Ashin Alex",
@@ -158,7 +148,7 @@
             "Selin Akkaya",
             "Arnav Shekaran"
           ],
-          "projectDescription": "The Art Thief” where the user uses stable diffusion to create replicas of famous art.",
+          "description": "The Art Thief” where the user uses stable diffusion to create replicas of famous art.",
           "contacts": [
             "rluo154@aucklanduni.ac.nz",
             "tlu467@aucklanduni.ac.nz",
@@ -166,37 +156,33 @@
             "rshe412@aucklanduni.ac.nz",
             "Selinakkaya345@gmail.com",
             "arnard76@gmail.com"
-          ],
-          "github": "",
-          "deployedProject": ""
+          ]
         },
         {
-          "title": "2nd",
+          "place": "2nd Place",
           "teamName": "Hackathon Smashers",
-          "photo": "https://drive.google.com/file/d/1P9NFAqoaHkKzV1MQ-t6t1pDNItS4Kjrh/view",
-          "teamMembers": [
+          "image": "/winners/2023/2023-2nd.jpg",
+          "members": [
             "Kian Merchant",
             "Vadim Berezin",
             "Woo Jin Lee",
             "Sebastian Thomas",
             "Don Sheng Qiang Lin"
           ],
-          "projectDescription": "Text to grunt translator",
+          "description": "Text to grunt translator.",
           "contacts": [
             "supesu.dev@gmail.com",
             "vdaberezin@gmail.com",
             "wlee447@aucklanduni.ac.nz",
             "stho382@aucklanduni.ac.nz",
             "dlin419@aucklanduni.ac.nz"
-          ],
-          "github": "",
-          "deployedProject": ""
+          ]
         },
         {
-          "title": "3rd",
+          "place": "3rd Place",
           "teamName": "Hackathon Smackathon",
-          "photo": "https://drive.google.com/file/d/1WfdIv4wfYoggTKrcakgWaM17o-_UjtMM/view",
-          "teamMembers": [
+          "image": "/winners/2023/2023-3rd.jpg",
+          "members": [
             "Matthew Tao",
             "Jack Freeth",
             "Matthew Taylor",
@@ -204,7 +190,7 @@
             "Varshini KP Bhat",
             "Henry Wang"
           ],
-          "projectDescription": "LinkedIn with families and classes and marriages",
+          "description": "LinkedIn with families and classes and marriages.",
           "contacts": [
             "ytao543@aucklanduni.ac.nz",
             "jfre479@aucklanduni.ac.nz",
@@ -212,86 +198,80 @@
             "amcl287@aucklanduni.ac.nz",
             "vbha515@aucklanduni.ac.nz",
             "hwan513@aucklanduni.ac.nz"
-          ],
-          "github": "",
-          "deployedProject": ""
-        },
+          ]
+        }
+      ],
+      "specialAwards": [
         {
-          "title": "Most Overengineered",
+          "place": "Most Overengineered",
           "teamName": "Tron",
-          "photo": "https://drive.google.com/file/d/1XgympL1QyAkspp3-snyG9iSRj2lau_dn/view",
-          "teamMembers": [
+          "image": "/winners/2023/2023-4th.jpg",
+          "members": [
             "James Zeng",
             "Celine Bui",
             "Caleb Wedgwood",
             "Caleb Mackle",
             "Ronak Lal"
           ],
-          "projectDescription": "Chariot horse parking simulator.",
+          "description": "Chariot horse parking simulator.",
           "contacts": [
             "jzen379@aucklanduni.ac.nz",
             "gbui042@aucklanduni.ac.nz",
             "cwed105@aucklanduni.ac.nz",
             "cmac558@aucklanduni.ac.nz",
             "ronak.lal@outlook.com"
-          ],
-          "github": "",
-          "deployedProject": ""
+          ]
         },
         {
-          "title": "Best Design",
+          "place": "Best Design",
           "teamName": "Pro (?) Hackers",
-          "photo": "https://drive.google.com/file/d/1fi036IjEDxlSeDXo8aFCmPuXKJ43DJoF/view",
-          "teamMembers": [
+          "image": "/winners/2023/2023-5th.jpg",
+          "members": [
             "Arvindh Kumar",
             "Enrique Jugo",
             "Peter Cheong",
             "Deven Ranchhod",
             "Lachlan Chan"
           ],
-          "projectDescription": "Graphic novel game thing - pick a path story",
+          "description": "Graphic novel game thing - pick a path story.",
           "contacts": [
             "aram190@aucklanduni.ac.nz",
             "juanenriquejugo@gmail.com",
             "pche314@aucklanduni.ac.nz",
             "dran794@aucklanduni.ac.nz",
             "lcha691@aucklanduni.ac.nz"
-          ],
-          "github": "",
-          "deployedProject": ""
+          ]
         },
         {
-          "title": "Most Entertaining",
+          "place": "Most Entertaining",
           "teamName": "Compsisters",
-          "photo": "https://drive.google.com/file/d/1Y6an5xY2io8ST6ebRCIY2dYEzXePP-jE/view",
-          "teamMembers": [
+          "image": "/winners/2023/2023-6th.jpg",
+          "members": [
             "Cheryl Yu",
             "Puja Nory",
             "Hira Saleem",
             "Kimberly Zhu",
             "Arisa Mori"
           ],
-          "projectDescription": "App letting kings pick out their wives for each night",
+          "description": "App letting kings pick out their wives for each night.",
           "contacts": [
             "cyu880@aucklanduni.ac.nz",
             "pnor067@aucklanduni.ac.nz",
             "hsal869@aucklanduni.ac.nz",
             "kzhu796@aucklanduni.ac.nz",
             "amor401@aucklanduni.ac.nz"
-          ],
-          "github": "",
-          "deployedProject": ""
+          ]
         }
       ]
     },
     {
       "year": 2022,
-      "awards": [
+      "orderedWinners": [
         {
-          "title": "1st",
+          "place": "1st Place",
           "teamName": "Lubricated Ducks",
-          "photo": "https://drive.google.com/file/d/1GAFMTG1bbFspFGEHfj-0uHNIwl2r2sKm/view?usp=drive_link",
-          "teamMembers": [
+          "image": "/winners/2022/2022-1st.jpg",
+          "members": [
             "Ron Bansal",
             "Grant Liu",
             "Jimmy Wang",
@@ -306,15 +286,13 @@
             "Jayprasad770@gmail.com",
             "vdav604@aucklanduni.ac.nz",
             "Harryqu666@gmail.com"
-          ],
-          "github": "",
-          "deployedProject": ""
+          ]
         },
         {
-          "title": "2nd",
+          "place": "2nd Place",
           "teamName": "Jade Jaguars",
-          "photo": "https://drive.google.com/drive/u/0/folders/1gOBOPrkT1J_Sbo3BND6_kIaTCVvCWvcR",
-          "teamMembers": [
+          "image": "/winners/2022/2022-2nd.jpg",
+          "members": [
             "Danielle Print",
             "Andreas Knapp",
             "Samuel Chen",
@@ -329,15 +307,13 @@
             "enau831@aucklanduni.ac.nz",
             "yson590@aucklanduni.ac.nz",
             "jvil373@aucklanduni.ac.nz"
-          ],
-          "github": "",
-          "deployedProject": ""
+          ]
         },
         {
-          "title": "3rd",
+          "place": "3rd Place",
           "teamName": "Team X",
-          "photo": "https://drive.google.com/drive/u/0/folders/1gOBOPrkT1J_Sbo3BND6_kIaTCVvCWvcR",
-          "teamMembers": [
+          "image": "/winners/2022/2022-3rd.jpg",
+          "members": [
             "Jared Daniel Recomenable",
             "Zoe Niu",
             "Avikash Naidu",
@@ -352,15 +328,15 @@
             "cale.ying@gmail.com",
             "aing810@aucklanduni.ac.nz",
             "djdhruvmj@gmail.com"
-          ],
-          "github": "",
-          "deployedProject": ""
-        },
+          ]
+        }
+      ],
+      "specialAwards": [
         {
-          "title": "Most Overengineered",
+          "place": "Most Overengineered",
           "teamName": "Andrew's Angular Team",
-          "photo": "https://drive.google.com/drive/u/0/folders/1gOBOPrkT1J_Sbo3BND6_kIaTCVvCWvcR",
-          "teamMembers": [
+          "image": "/winners/2022/2022-4th.jpg",
+          "members": [
             "Jiaru Lin",
             "Cheng-Zhen Yang",
             "Flynn Fromont",
@@ -373,15 +349,13 @@
             "flynn.fromont@gmail.com",
             "hjay473@aucklanduni.ac.nz",
             "bob7689@gmail.com"
-          ],
-          "github": "",
-          "deployedProject": ""
+          ]
         },
         {
-          "title": "Best Design",
+          "place": "Best Design",
           "teamName": "Infinity^2",
-          "photo": "https://drive.google.com/drive/u/0/folders/1gOBOPrkT1J_Sbo3BND6_kIaTCVvCWvcR",
-          "teamMembers": [
+          "image": "/winners/2022/2022-5th.jpg",
+          "members": [
             "Lia Arroyo",
             "Eugene Chua",
             "Amisha Singh",
@@ -396,20 +370,18 @@
             "cpil393@aucklanduni.ac.nz",
             "vraj752@aucklanduni.ac.nz",
             "tche206@aucklanduni.ac.nz"
-          ],
-          "github": "",
-          "deployedProject": ""
+          ]
         }
       ]
     },
     {
       "year": 2021,
-      "awards": [
+      "orderedWinners": [
         {
-          "title": "1st",
+          "place": "1st Place",
           "teamName": "Dumboss",
-          "photo": "https://drive.google.com/file/d/1djdzavHLnwkj-A-jhHk5oQx8P6C3WHVI/view",
-          "teamMembers": [
+          "image": "/winners/2021/2021-1st.jpg",
+          "members": [
             "Beverley Sun",
             "Matt Moran",
             "Maggie Pedersen",
@@ -420,15 +392,13 @@
             "mmor330@aucklanduni.ac.nz",
             "mped822@aucklanduni.ac.nz",
             "yson590@aucklanduni.ac.nz"
-          ],
-          "github": "",
-          "deployedProject": ""
+          ]
         },
         {
-          "title": "2nd",
+          "place": "2nd Place",
           "teamName": "BitGud",
-          "photo": "https://drive.google.com/file/d/1-JNhgbDjxwr9CWxFI18ddGbj018QRB9s/view",
-          "teamMembers": [
+          "image": "/winners/2021/2021-2nd.jpg",
+          "members": [
             "Bob Liou",
             "Taylor Tran",
             "Cheng-Zhen Yang",
@@ -443,15 +413,13 @@
             "patriciavirgenaguilar@hotmail.com",
             "elizabeth.cammell88@gmail.com",
             "abai250@aucklanduni.ac.nz"
-          ],
-          "github": "",
-          "deployedProject": ""
+          ]
         },
         {
-          "title": "3rd",
+          "place": "3rd Place",
           "teamName": "Krayon",
-          "photo": "https://drive.google.com/file/d/1vuCuTf-t3Ns6Lo4r_B0eNbu6hX767Efl/view",
-          "teamMembers": [
+          "image": "/winners/2021/2021-3rd.jpg",
+          "members": [
             "Ryan Tan",
             "Sunny Feng",
             "Kimberley Evans-Parker",
@@ -463,15 +431,15 @@
             "sfen917@aucklanduni.ac.nz",
             "keva419@aucklanduni.ac.nz",
             "jhil955@aucklanduni.ac.nz"
-          ],
-          "github": "",
-          "deployedProject": ""
-        },
+          ]
+        }
+      ],
+      "specialAwards": [
         {
-          "title": "Most Overengineered",
+          "place": "Most Overengineered",
           "teamName": "Diskordo",
-          "photo": "https://drive.google.com/file/d/1Gt1rx9rCMxZ7RQzEX3wK6r5_hSp93PdX/view",
-          "teamMembers": [
+          "image": "/winners/2021/2021-4th.jpg",
+          "members": [
             "Jennifer Lowe",
             "Hiruna Jayamanne",
             "Tianren Shen",
@@ -484,15 +452,13 @@
             "tshe695@aucklanduni.ac.nz",
             "eyan868@aucklanduni.ac.nz",
             "clin802@aucklanduni.ac.nz"
-          ],
-          "github": "",
-          "deployedProject": ""
+          ]
         },
         {
-          "title": "Best Design",
+          "place": "Best Design",
           "teamName": "MeowMeowMeow",
-          "photo": "https://drive.google.com/file/d/1JOuoZf-R44fYKJgxmo8cGxAF_ubrvVqs/view",
-          "teamMembers": [
+          "image": "/winners/2021/2021-5th.jpg",
+          "members": [
             "Jack Ma",
             "Rhys Heaven-Smith",
             "Feras Albaroudi",
@@ -509,9 +475,7 @@
             "jche580@aucklanduni.ac.nz",
             "Xinning.gong@gmail.com",
             "hyshao615@gmail.com"
-          ],
-          "github": "",
-          "deployedProject": ""
+          ]
         }
       ]
     }

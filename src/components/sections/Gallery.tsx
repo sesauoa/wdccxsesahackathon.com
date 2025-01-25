@@ -3,17 +3,12 @@
 import React, { useState } from 'react';
 import yearImages from '@/data/gallery';
 import '@/styles/gallery.css';
-
-import "react-photo-album/rows.css";
-
 import GalleryImages from './GallaryImages';
-
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import "yet-another-react-lightbox/plugins/counter.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import { Counter, Fullscreen, Thumbnails, Zoom } from 'yet-another-react-lightbox/plugins';
-
 
 type GalleryProps = {
   year: number;

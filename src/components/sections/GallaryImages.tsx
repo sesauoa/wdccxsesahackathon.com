@@ -18,13 +18,34 @@ const GalleryImages: FC<ImagesProps> = (props) => {
     onClick(index);
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
-    <motion.div className='img-grid'>
+    <motion.div className='img-grid'
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible">
       {data.map((image, index) => (
         <motion.div
           key={index}
           className="gallery-img-wrapper"
-          onClick={() => handleClick(index)}>
+          onClick={() => handleClick(index)}
+          variants={cardVariants}
+          initial="hidden"
+          animate="visible">
           <Image
             src={image.src}
             alt={`Image for ${image.year}`}

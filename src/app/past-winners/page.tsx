@@ -1,44 +1,92 @@
 'use client';
 
-import React from 'react';
-import pastWinners from '@/data/pastWinners';
+import React, { useState } from 'react';
+import {pastWinners} from '@/data/PastWinners.json';
 import { H1, Section } from '@/components/common/Typography';
-import OrderedWinner from '@/components/winner/OrderedWinner';
-import SpecialAward from '@/components/winner/SpecialAward';
+import { motion } from 'motion/react';
+import { filterWinners, getAllFilteredWinners } from '@/utils/WinnerUtils';
+import { FilterButtons } from '@/components/winner/FilterButtons';
+import { WinnersGroup } from '@/components/winner/WinnersGroup';
+import { WinnerCard } from '@/components/winner/WinnerCard';
 
 export default function PastWinnersPage() {
+  const [selectedYear, setSelectedYear] = useState<number[]>([]); // Multiple years can be selected
+  const [selectedPlace, setSelectedPlace] = useState<string[]>([]); // Multiple places can be selected
+
+  const filteredWinners = filterWinners(
+    pastWinners,
+    selectedYear.length > 0 ? selectedYear : null,
+    selectedPlace.length > 0 ? selectedPlace : null
+  );
+  const allFilteredWinners = getAllFilteredWinners(filteredWinners);
+
+  const years = [...new Set(pastWinners.map((winner) => winner.year))];
+  const places = ['1st Place', '2nd Place', '3rd Place', 'Special Awards'];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
     <Section>
       <header>
-        <H1>Past Winners</H1>
-      </header>
-      <main className="flex flex-row gap-8">
-        {/* Sidebar Section */}
-        <div className="hidden w-1/6 lg:block">
-          {/* Placeholder for sidebar content */}
+        <H1 className="text-4xl font-bold">Past Winners</H1>
+        <div className="mt-8">
+          <FilterButtons
+            years={years}
+            places={places}
+            selectedYear={selectedYear}
+            selectedPlace={selectedPlace}
+            setSelectedYear={setSelectedYear}
+            setSelectedPlace={setSelectedPlace}
+          />
         </div>
+      </header>
 
-        {/* Main Content Section */}
+      <main className="flex flex-row gap-8">
         <div className="flex-1">
-          {pastWinners.map(({ year, orderedWinners, specialAwards }) => (
-            <div key={year} className="mb-12">
-              <div className="sticky top-16 block w-full backdrop-blur-sm lg:hidden">
-                <h2 className="mt-8 text-4xl font-bold">{year}</h2>
-              </div>
-              {orderedWinners.map((winner, index) => (
-                <OrderedWinner key={index} {...winner} />
+          {selectedPlace.length > 0 && !selectedPlace.includes('Special Awards') ? (
+            <motion.div
+              key={`${selectedYear}-${selectedPlace}`}
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+            >
+              {allFilteredWinners.map((winner, index) => (
+                <motion.div
+                  key={`${winner.year}-${index}`}
+                  variants={cardVariants}
+                >
+                  <WinnerCard {...winner} />
+                </motion.div>
               ))}
-              {specialAwards.length > 0 && (
-                <div className="flex h-fit justify-center lg:h-screen lg:flex-col">
-                  <div className="flex flex-col gap-8 py-4 lg:flex-row lg:py-0">
-                    {specialAwards.map((winner, index) => (
-                      <SpecialAward key={index} {...winner} />
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
+            </motion.div>
+          ) : (
+            filteredWinners.map(({ year, orderedWinners, specialAwards }) => (
+              <WinnersGroup
+                key={year}
+                year={year}
+                orderedWinners={orderedWinners}
+                specialAwards={specialAwards}
+                containerVariants={containerVariants}
+                cardVariants={cardVariants}
+                selectedYear={selectedYear}
+                selectedPlace={selectedPlace}
+              />
+            ))
+          )}
         </div>
       </main>
     </Section>

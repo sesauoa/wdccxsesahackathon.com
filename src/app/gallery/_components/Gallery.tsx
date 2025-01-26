@@ -6,23 +6,30 @@ import '@/styles/gallery.css';
 import GalleryImages from './GallaryImages';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
-import "yet-another-react-lightbox/plugins/counter.css";
-import "yet-another-react-lightbox/plugins/thumbnails.css";
-import { Counter, Fullscreen, Thumbnails, Zoom } from 'yet-another-react-lightbox/plugins';
+import 'yet-another-react-lightbox/plugins/counter.css';
+import 'yet-another-react-lightbox/plugins/thumbnails.css';
+import {
+  Counter,
+  Fullscreen,
+  Thumbnails,
+  Zoom,
+} from 'yet-another-react-lightbox/plugins';
 
 type GalleryProps = {
   year: number;
 };
 
 const Gallery: React.FC<GalleryProps> = ({ year }) => {
-  const slides = yearImages.filter(image => image.year === year).map(image => ({ src: image.image, alt: image.alt, year: image.year }));
+  const slides = yearImages
+    .filter((image) => image.year === year)
+    .map((image) => ({ src: image.image, alt: image.alt, year: image.year }));
 
   const [lightBoxImageIndex, setLightBoxImageIndex] = useState<number>(-1);
   const fullscreenRef = React.useRef(null);
 
   return (
     <div className="gallery-component" id={`year-${year}`}>
-      <div className="sticky top-16 z-10 flex justify-center items-center backdrop-blur-sm w-screen">
+      <div className="sticky top-16 z-10 flex w-screen items-center justify-center backdrop-blur-sm">
         <h2 className="mb-4 mt-8 text-3xl font-bold">{year}</h2>
       </div>
       <GalleryImages
@@ -38,7 +45,7 @@ const Gallery: React.FC<GalleryProps> = ({ year }) => {
         fullscreen={{ ref: fullscreenRef }}
         index={lightBoxImageIndex}
       />
-    </div >
+    </div>
   );
 };
 

@@ -1,13 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
-import {pastWinners} from '@/data/PastWinners.json';
+import { pastWinners } from './_data/PastWinners.json';
 import { H1, Section } from '@/components/common/Typography';
 import { motion } from 'motion/react';
 import { filterWinners, getAllFilteredWinners } from '@/utils/WinnerUtils';
-import { FilterButtons } from '@/components/winner/FilterButtons';
-import { WinnersGroup } from '@/components/winner/WinnersGroup';
-import { WinnerCard } from '@/components/winner/WinnerCard';
+import { FilterButtons } from '@/app/past-winners/_components/FilterButtons';
+import { WinnersGroup } from '@/app/past-winners/_components/WinnersGroup';
+import { WinnerCard } from '@/app/past-winners/_components/WinnerCard';
 
 export default function PastWinnersPage() {
   const [selectedYear, setSelectedYear] = useState<number[]>([]); // Multiple years can be selected
@@ -56,7 +56,8 @@ export default function PastWinnersPage() {
 
       <main className="flex flex-row gap-8">
         <div className="flex-1">
-          {selectedPlace.length > 0 && !selectedPlace.includes('Special Awards') ? (
+          {selectedPlace.length > 0 &&
+          !selectedPlace.includes('Special Awards') ? (
             <motion.div
               key={`${selectedYear}-${selectedPlace}`}
               variants={containerVariants}

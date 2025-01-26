@@ -50,7 +50,7 @@ export function WinnerCard({
         <CardTag year={year} category={place} />
 
         {description && (
-          <div className='flex flex-col w-full'>
+          <div className="flex w-full flex-col">
             {isExpanded && (
               <p className="mb-4 text-lg font-bold text-white">
                 "{description}"

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Section } from '../common/Typography';
-import CombinedLogos from '../common/CombinedLogos';
-import { CountdownTimer } from '../common/CountdownTimer';
+import { Section } from '../../../components/common/Typography';
+import CombinedLogos from '../../../components/common/CombinedLogos';
+import { CountdownTimer } from '../../../components/common/CountdownTimer';
 const Hero = () => {
   return (
     <div

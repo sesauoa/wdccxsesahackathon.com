@@ -1,8 +1,12 @@
 'use client';
 
 import React from 'react';
-import { H1, Section, StatHeading } from '../common/Typography';
-import { AboutUs, EventStats } from '@/data/about';
+import {
+  H1,
+  Section,
+  StatHeading,
+} from '../../../components/common/Typography';
+import { AboutUs, EventStats } from '@/app/(home)/_data/about';
 import { motion } from 'motion/react';
 
 const About = () => {

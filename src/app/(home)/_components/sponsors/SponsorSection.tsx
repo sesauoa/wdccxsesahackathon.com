@@ -1,7 +1,7 @@
 import React from 'react';
-import { H1, Section } from '../../common/Typography';
+import { H1, Section } from '@/components/common/Typography';
 
-import { TechSponsors } from '@/data/Sponsors';
+import { TechSponsors } from '@/app/(home)/_data/Sponsors';
 
 import SponsorCard from './SponsorCard';
 const Sponsors = () => {

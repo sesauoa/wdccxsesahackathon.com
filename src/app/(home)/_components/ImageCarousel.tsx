@@ -3,7 +3,7 @@
 import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import { motion } from 'motion/react'; // No need for drag
 
-import { imgs } from '@/data/CarouselImages';
+import { imgs } from '@/app/(home)/_data/CarouselImages';
 
 const ONE_SECOND = 1000;
 const AUTO_DELAY = ONE_SECOND * 10;

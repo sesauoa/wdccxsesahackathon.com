@@ -1,6 +1,6 @@
 'use client';
 import { H1 } from '@/components/common/Typography';
-import Gallery from '@/components/sections/Gallery';
+import Gallery from '@/app/gallery/_components/Gallery';
 import '@/styles/gallery.css';
 
 export default function GalleryPage() {

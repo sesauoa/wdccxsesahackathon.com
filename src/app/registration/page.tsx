@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { FORM_URL } from './_data/registrationdata';
-import { registrationFaqsInfo } from '@/data/registrationFaqs';
+import { registrationFaqsInfo } from '@/app/registration/_data/registrationFaqs';
 import { H1, H2 } from '@/components/common/Typography';
 import { CountdownTimer } from '@/components/common/CountdownTimer';
 

@@ -1,15 +1,15 @@
-import About from '@/components/sections/About';
-import Faqs from '@/components/sections/Faqs';
-import Hero from '@/components/sections/Hero';
-import Sponsors from '@/components/sections/sponsors/SponsorSection';
+import About from '@/app/(home)/_components/About';
+import Faqs from '@/app/(home)/_components/Faqs';
+import Hero from '@/app/(home)/_components/Hero';
+import Sponsors from './_components/sponsors/SponsorSection';
 
-import ImageCarousel from '@/components/sections/ImageCarousel';
+import ImageCarousel from '@/app/(home)/_components/ImageCarousel';
 export default function Home() {
   return (
     <div className="flex flex-col">
       <Hero />
-      <ImageCarousel />
       <About />
+      <ImageCarousel />
       <Faqs />
       <Sponsors />
     </div>

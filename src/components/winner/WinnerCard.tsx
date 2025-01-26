@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { CardTag } from './CardTag';
 
@@ -23,6 +23,12 @@ export function WinnerCard({
   members,
   year,
 }: WinnerCardProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleDescription = () => {
+    setIsExpanded((prev) => !prev);
+  };
+
   return (
     <div className="flex w-full flex-col rounded-xl bg-black bg-opacity-20 p-8">
       <div className="flex w-full">
@@ -38,32 +44,46 @@ export function WinnerCard({
 
       <div className="py-2 text-center">{members?.join(', ')}</div>
 
-      <CardTag year={year} category={place} />
-
       <div className="flex w-full flex-col">
         <h2 className="mb-4 mt-2 text-3xl font-bold">{teamName}</h2>
+
+        <CardTag year={year} category={place} />
+
         {description && (
-          <p className="text-lg mb-4 font-bold text-white">"{description}"</p>
+          <div className='flex flex-col w-full'>
+            {isExpanded && (
+              <p className="mb-4 text-lg font-bold text-white">
+                "{description}"
+              </p>
+            )}
+            <button
+              onClick={toggleDescription}
+              className="self-end text-gray-100 hover:text-gray-200"
+            >
+              {isExpanded ? 'Show less' : 'See more'}
+            </button>
+          </div>
         )}
-        <div className="flex flex-col space-y-2">
-          {appLink == '' && (
+
+        <div className="mt-4 flex flex-col space-y-2">
+          {appLink && (
             <a
               href={appLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-300 underline hover:text-blue-400"
+              className="text-gray-100 hover:text-gray-200"
             >
-              🔗 GitHub Repo
+              🔗 Deployed Application
             </a>
           )}
-          {github == '' && (
+          {github && (
             <a
               href={github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-300 underline hover:text-blue-400"
+              className="text-gray-100 hover:text-gray-200"
             >
-              🔗 Deployed Application
+              🔗 GitHub Repo
             </a>
           )}
         </div>

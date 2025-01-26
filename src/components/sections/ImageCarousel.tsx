@@ -35,7 +35,7 @@ export default function ImageCarousel() {
   };
 
   return (
-    <div className="relative h-[25vw] overflow-hidden py-8 mb-10">
+    <div className="relative h-[50vw] w-[100%] overflow-hidden py-8 lg:h-[25vw]">
       <motion.div
         style={{ translateX: `-${imgIndex * 100}%` }}
         animate={{ translateX: `-${imgIndex * 100}%` }}

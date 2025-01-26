@@ -8,6 +8,12 @@ export default {
   ],
   theme: {
     extend: {
+      width: {
+        content: 'max-content',
+      },
+      maxWidth: {
+        content: 'max-content',
+      },
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',

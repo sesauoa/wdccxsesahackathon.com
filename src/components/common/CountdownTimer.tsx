@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import { target } from '@/data/TargetDate';
+import { target } from '@/data/Calendar';
 import { google } from 'calendar-link';
 import { event } from '@/data/Calendar';
 import React from 'react';
@@ -48,14 +48,21 @@ export default function CountdownTimer() {
       const s = Math.floor((difference % (1000 * 60)) / 1000);
 
       setTimeLeft({ days: d, hours: h, minutes: m, seconds: s });
+
+      if(difference < 0){
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        clearInterval(interval);
+      }
+
     }, 1000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center p-4 mb-20">
-      <h1 className="h-0 text-3xl md:text-4xl">AUG 2-3, 2025</h1>
+    <div className="flex min-h-0 flex-col items-center justify-center p-4">
+      <h1 className="h-0 text-3xl">AUG 2-3, 2025</h1>
+
 
       <div className="flex h-40 flex-wrap items-center justify-center gap-4">
         {timeUnits.map((unit, index) => (

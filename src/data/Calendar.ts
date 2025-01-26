@@ -8,3 +8,5 @@ export const event: CalendarEvent = {
   duration: [36, 'hour'],
   location: 'Online',
 };
+
+export const target = new Date("08/01/2025 23:59:59");

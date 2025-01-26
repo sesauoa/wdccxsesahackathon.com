@@ -7,22 +7,27 @@ const faqInfo = [
   {
     question: 'What is SESA?',
     answer:
-      'SESA is the Software Engineering Students Association for students and alumni of the Software Engineering programme at the University of Auckland. We organise and run social and career-focused events for our 500+ members, connecting them with each other as well as industry professionals.',
+      'SESA is the Software Engineering Students Association for students and alumni of the Software Engineering programme at the University of Auckland. We organise and run social and career-focused events for our 550+ members, connecting them with each other as well as industry professionals.',
   },
   {
     question: 'What is a hackathon?',
     answer:
-      'A hackathon is an event where individuals or teams come together to collaboratively develop innovative solutions to specific problems within a limited time, usually ranging from 24 to 48 hours. Participants, often developers, designers, and entrepreneurs, brainstorm ideas, prototype software or hardware, and present their solutions to judges or stakeholders. Hackathons foster creativity, teamwork, and problem-solving, often focusing on themes like sustainability, healthcare, or technology innovation.',
+      "An engaging competition where you turn crazy ideas into real projects! At the WDCC x SESA Hackathon, hackers work in teams over 48 hours to design and implement their solutions related to the hackathon theme, then present their solutions in front of a panel of judges and the other competitors. We go ALL OUT, ensuring this event is fully catered and decorated and have industry sponsor representatives present to mentor and advise you. Additionally, we have cash prizes up for grabs and run fun activities throughout the hackathon. Basically, you take care of hacking and we'll take care of you!",
   },
   {
-    question: 'Can I sign up individually?',
+    question: 'Who can sign up?',
     answer:
-      'Yes, you can definitely sign up individually for this hackathon! We welcome solo participants and will provide opportunities to join a team at the event or work independently on your own project.',
+      'We are open to all enrolled tertiary students who are members of WDCC and SESA (membership is free for both clubs!). Due to venue space and capacity restrictions, registration does not guarantee acceptance. You will be notified via email after the deadline.',
   },
   {
-    question: 'How many people in a team?',
+    question: "What if I don't know how to code?",
     answer:
-      'Teams can have up to 6 members for this hackathon. You can form a team beforehand or join one during the event.',
+      'Hackathons are the perfect place and time to learn in the collaborative and energetic environment a hackathon creates. We provide industry mentors, workshops and starter hack packs on our GitHub all to help you build something you can be proud of.',
+  },
+  {
+    question: 'What can I build?',
+    answer:
+      'Anything! You can build a website, app, game, or anything else you can think of related to the annual hackathon theme. We encourage you to think outside the box and also take a look at past hackathon winners for some inspiration and examples.',
   },
 ];
 

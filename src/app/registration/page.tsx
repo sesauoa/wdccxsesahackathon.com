@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { FORM_URL } from './_data/registrationdata';
 import { registrationFaqsInfo } from '@/data/registrationFaqs';
 import { H1, H2 } from '@/components/common/Typography';
-import CountdownTimer from '@/components/common/CountdownTimer';
+import { CountdownTimer } from '@/components/common/CountdownTimer';
 
 export default function Registration() {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);

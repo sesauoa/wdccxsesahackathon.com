@@ -17,20 +17,8 @@ const SponsorCard = ({ color, name, ...image }: SponsorCardProps) => {
     <motion.div
       initial="hide"
       whileHover="show"
-      className="relative cursor-pointer overflow-hidden rounded-xl bg-sesa-navy p-4 px-8 shadow-lg"
+      className="relative cursor-pointer overflow-hidden rounded-xl p-4 px-8"
     >
-      <div
-        className={clsx(
-          'bg-yellow-brand absolute left-0 top-0 h-1 w-full',
-          color
-        )}
-      />
-      <div
-        className={clsx(
-          'bg-yellow-brand absolute bottom-0 left-0 h-1 w-full',
-          color
-        )}
-      />
       <motion.p
         variants={textvariants}
         className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-center font-bold drop-shadow-[0px_0px_4px_white]"

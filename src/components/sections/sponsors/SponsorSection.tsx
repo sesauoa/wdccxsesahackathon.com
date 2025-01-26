@@ -7,8 +7,8 @@ import SponsorCard from './SponsorCard';
 const Sponsors = () => {
   return (
     <Section id="sponsors" className="relative">
-      <H1>Sponsors</H1>
-      <div>
+      <H1 className="mb-4">Sponsors</H1>
+      <div className="flex flex-wrap gap-12">
         {TechSponsors.map((sponsor, index) => (
           <SponsorCard
             color="bg-wdcc-blue"

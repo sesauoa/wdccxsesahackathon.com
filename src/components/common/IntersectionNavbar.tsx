@@ -16,6 +16,7 @@ export default function IntersectionNavbar() {
     { href: '/#sponsors', label: 'Sponsors' },
     { href: '/past-winners', label: 'Past Winners' },
     { href: '/gallery', label: 'Gallery' },
+    { href: '/organisers', label: 'Organisers' },
     { href: '/registration', label: 'Registration' },
   ];
 

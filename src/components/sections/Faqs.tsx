@@ -12,7 +12,7 @@ const Faqs = () => {
   };
 
   return (
-    <Section id="faqs">
+    <Section id="faqs" className='mb-10'>
       <H1 className="mb-8">FAQs</H1>
       <div className="flex flex-col space-y-4">
         {faqInfo.map((faq, index) => (
@@ -23,13 +23,13 @@ const Faqs = () => {
             } rounded-lg border border-gray-300 bg-white`}
           >
             <div
-              className="collapse-title cursor-pointer text-xl font-medium text-black"
+              className="collapse-title cursor-pointer text-xl lg:text-2xl font-medium text-black"
               onClick={() => handleToggle(index)}
             >
               {faq.question}
             </div>
             <div className="collapse-content">
-              <p className="text-black">{faq.answer}</p>
+              <p className="text-black text-lg lg:text-xl">{faq.answer}</p>
             </div>
           </div>
         ))}

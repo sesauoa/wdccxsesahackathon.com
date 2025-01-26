@@ -2,7 +2,9 @@
 
 import React, { useState } from 'react';
 import { FORM_URL } from '../../data/registrationdata';
-import faqInfo from '@/data/faqs';
+import { registrationFaqsInfo } from '@/data/registrationFaqs';
+import { H1, H2 } from '@/components/common/Typography';
+import CountdownTimer from '@/components/common/CountdownTimer';
 
 export default function Registration() {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
@@ -12,13 +14,17 @@ export default function Registration() {
   };
 
   return (
-    <div className="flex min-h-screen w-full flex-col items-center p-20">
-      <div className="w-full max-w-6xl">
-        <h1 className="mb-8 text-left text-4xl font-bold">Registration</h1>
-      </div>
+    <div className="flex min-h-screen w-full flex-col items-center">
+      <H1 className="mb-8 ">Registration</H1>
       <div className="flex w-full justify-center">
         <div className="w-full max-w-6xl px-4 sm:px-6">
-          <iframe
+
+          {/* FOR WHEN REGISTRATIONS ARE CLOSED */}
+          <H2 className='text-4xl text-center m-10'>COMING SOON...</H2>
+          <CountdownTimer />
+
+          {/* FOR WHEN REGISTRATIONS ARE OPEN */}
+          {/* <iframe
             src={FORM_URL}
             width="100%"
             height="1000px"
@@ -26,25 +32,25 @@ export default function Registration() {
             title="Registration Form"
           >
             Loading…
-          </iframe>
+          </iframe> */}
+
           {/* FAQ Section */}
           <div className="mt-8" id="faqs">
             <div className="flex flex-col space-y-4">
-              {faqInfo.slice(-3).map((faq, index) => (
+              {registrationFaqsInfo.map((faq, index) => (
                 <div
                   key={index}
-                  className={`collapse collapse-arrow ${
-                    openAccordion === index ? 'collapse-open' : 'collapse-close'
-                  } rounded-lg border border-gray-300 bg-white`}
+                  className={`collapse collapse-arrow ${openAccordion === index ? 'collapse-open' : 'collapse-close'
+                    } rounded-lg border border-gray-300 bg-white`}
                 >
                   <div
-                    className="collapse-title cursor-pointer text-xl font-medium text-black"
+                    className="collapse-title cursor-pointer text-xl lg:text-2xl font-medium text-black"
                     onClick={() => handleToggle(index)}
                   >
                     {faq.question}
                   </div>
                   <div className="collapse-content">
-                    <p className="text-black">{faq.answer}</p>
+                    <p className="text-black text-lg lg:text-xl">{faq.answer}</p>
                   </div>
                 </div>
               ))}

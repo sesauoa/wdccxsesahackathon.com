@@ -41,19 +41,3 @@ export const StatHeading: React.FC<ReactProps> = ({
     </h1>
   );
 };
-
-// Section Component
-export const Section: React.FC<ReactProps> = ({
-  children,
-  className,
-  ...props
-}) => {
-  return (
-    <section
-      className={cn('h-full w-full px-8 py-20 md:p-20', className)}
-      {...props}
-    >
-      {children}
-    </section>
-  );
-};

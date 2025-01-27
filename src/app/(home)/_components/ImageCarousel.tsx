@@ -1,18 +1,16 @@
 'use client';
 
 import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
-import { motion } from 'motion/react'; // No need for drag
-
+import { motion } from 'motion/react';
 import { imgs } from '@/app/(home)/_data/CarouselImages';
 
 const ONE_SECOND = 1000;
 const AUTO_DELAY = ONE_SECOND * 10;
 
-const SPRING_OPTIONS = {
-  type: 'spring',
-  mass: 3,
-  stiffness: 400,
-  damping: 50,
+const SMOOTH_TRANSITION = {
+  type: 'tween',
+  duration: 0.5,
+  ease: 'easeInOut',
 };
 
 export default function ImageCarousel() {
@@ -35,12 +33,12 @@ export default function ImageCarousel() {
   };
 
   return (
-    <div className="relative h-[50vw] w-[100%] overflow-hidden py-8 lg:h-[25vw]">
+    <div className="relative aspect-[16/9] max-h-[600px] w-full overflow-hidden py-8 lg:aspect-[21/9]">
       <motion.div
         style={{ translateX: `-${imgIndex * 100}%` }}
         animate={{ translateX: `-${imgIndex * 100}%` }}
-        transition={SPRING_OPTIONS}
-        className="flex h-[100%] items-center"
+        transition={SMOOTH_TRANSITION}
+        className="flex h-full items-center"
       >
         <Images imgIndex={imgIndex} />
       </motion.div>
@@ -75,8 +73,8 @@ const Images = ({ imgIndex }: { imgIndex: number }) => {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
-          transition={SPRING_OPTIONS}
-          className="h-[100%] w-[100%] shrink-0"
+          transition={SMOOTH_TRANSITION}
+          className="h-full w-full shrink-0"
         />
       ))}
     </>

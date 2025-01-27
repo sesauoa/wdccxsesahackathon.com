@@ -1,19 +1,16 @@
 'use client';
 
 import React from 'react';
-import {
-  H1,
-  Section,
-  StatHeading,
-} from '../../../components/common/Typography';
+import { H1, StatHeading } from '../../../components/Layout/Typography';
 import { AboutUs, EventStats } from '@/app/(home)/_data/about';
 import { motion } from 'motion/react';
+import { SectionLayout } from '@/components/Layout/SectionLayout';
 
 const About = () => {
   return (
-    <Section
+    <SectionLayout
       id="about"
-      className="relative flex min-h-screen flex-col items-center justify-center gap-12 px-4 lg:flex-row lg:px-20"
+      className="relative flex min-h-screen flex-col items-center justify-center gap-12 lg:flex-row"
     >
       <div className="flex flex-col space-y-6 lg:w-1/2">
         <H1 className="leading-normal tracking-[0.12vw]">About</H1>
@@ -59,7 +56,7 @@ const About = () => {
           </motion.div>
         ))}
       </motion.div>
-    </Section>
+    </SectionLayout>
   );
 };
 

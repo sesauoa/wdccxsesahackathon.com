@@ -1,12 +1,13 @@
 import React from 'react';
-import { H1, Section } from '@/components/common/Typography';
+import { H1 } from '@/components/Layout/Typography';
+import { SectionLayout } from '@/components/Layout/SectionLayout';
 
 import { TechSponsors } from '@/app/(home)/_data/Sponsors';
 
 import SponsorCard from './SponsorCard';
 const Sponsors = () => {
   return (
-    <Section id="sponsors" className="relative">
+    <SectionLayout id="sponsors" className="relative">
       <H1 className="mb-4">Sponsors</H1>
       <div className="flex flex-wrap gap-12">
         {TechSponsors.map((sponsor, index) => (
@@ -19,7 +20,7 @@ const Sponsors = () => {
           />
         ))}
       </div>
-    </Section>
+    </SectionLayout>
   );
 };
 

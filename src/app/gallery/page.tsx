@@ -1,5 +1,5 @@
 'use client';
-import { H1 } from '@/components/common/Typography';
+import { H1 } from '@/components/Layout/Typography';
 import Gallery from '@/app/gallery/_components/Gallery';
 import '@/styles/gallery.css';
 

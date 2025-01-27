@@ -1,5 +1,5 @@
 import React from 'react';
-import { Section } from '../../../components/common/Typography';
+import { SectionLayout } from '@/components/Layout/SectionLayout';
 import CombinedLogos from '../../../components/common/CombinedLogos';
 import { CountdownTimer } from '../../../components/common/CountdownTimer';
 const Hero = () => {
@@ -10,7 +10,7 @@ const Hero = () => {
     >
       <div className="absolute inset-0 z-0 backdrop-blur-sm"></div>
       <div className="relative z-10 flex h-full w-full">
-        <Section
+        <SectionLayout
           id="home"
           className="flex flex-col items-center justify-center"
         >
@@ -24,7 +24,7 @@ const Hero = () => {
           <div className="pt-40">
             <CountdownTimer className="" />
           </div>
-        </Section>
+        </SectionLayout>
       </div>
     </div>
   );

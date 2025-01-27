@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import { pastWinners } from './_data/PastWinners.json';
-import { H1, Section } from '@/components/common/Typography';
+import { H1 } from '@/components/Layout/Typography';
+import { SectionLayout } from '@/components/Layout/SectionLayout';
 import { motion } from 'motion/react';
 import { filterWinners, getAllFilteredWinners } from '@/utils/WinnerUtils';
 import { FilterButtons } from '@/app/past-winners/_components/FilterButtons';
@@ -39,7 +40,7 @@ export default function PastWinnersPage() {
   };
 
   return (
-    <Section>
+    <SectionLayout>
       <header>
         <H1 className="text-4xl font-bold">Past Winners</H1>
         <div className="mt-8">
@@ -90,6 +91,6 @@ export default function PastWinnersPage() {
           )}
         </div>
       </main>
-    </Section>
+    </SectionLayout>
   );
 }

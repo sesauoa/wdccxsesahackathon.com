@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import yearImages from '@/data/gallery';
-import '@/styles/gallery.css';
 import GalleryImages from './GallaryImages';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
@@ -28,7 +27,10 @@ const Gallery: React.FC<GalleryProps> = ({ year }) => {
   const fullscreenRef = React.useRef(null);
 
   return (
-    <div className="gallery-component" id={`year-${year}`}>
+    <div
+      className="flex h-full w-full flex-col items-center gap-5 p-2.5"
+      id={`year-${year}`}
+    >
       <div className="sticky top-16 z-10 flex w-screen items-center justify-center backdrop-blur-sm">
         <h2 className="mb-4 mt-8 text-3xl font-bold">{year}</h2>
       </div>

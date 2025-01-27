@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import organisers from '@/app/organisers/_data/organisers';
+import { SectionLayout } from '@/components/Layout/SectionLayout';
 
 interface TeamCardProps {
   img: string | null;
@@ -35,11 +36,7 @@ function TeamCard({ img, name, title, club }: TeamCardProps) {
         <p className="mb-2 w-full max-w-[180px] break-words text-center text-sm font-semibold text-white">
           {title}
         </p>
-        <img
-          src={club}
-          alt={`${name}'s club`}
-          className="mt-2 h-8 w-20" // Adjust size as needed
-        />
+        <img src={club} alt={`${name}'s club`} className="mt-2 h-8 w-20" />
       </div>
     </motion.div>
   );
@@ -57,7 +54,7 @@ function TeamSection() {
   };
 
   return (
-    <section className="min-h-screen px-8 py-8 lg:py-28">
+    <SectionLayout>
       <div className="container mx-auto max-w-screen-sm">
         <div className="mb-16 text-center lg:mb-28">
           <h1 className="my-2 text-2xl font-bold text-white lg:text-4xl">
@@ -81,7 +78,7 @@ function TeamSection() {
           ))}
         </motion.div>
       </div>
-    </section>
+    </SectionLayout>
   );
 }
 

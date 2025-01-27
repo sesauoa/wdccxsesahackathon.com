@@ -1,13 +1,12 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import { motion } from 'motion/react';
-import '@/styles/gallery.css';
 
 interface ImagesProps {
   data: {
     src: string;
     year: number;
-  }[],
+  }[];
   onClick: (index: number) => void;
 }
 
@@ -34,22 +33,25 @@ const GalleryImages: FC<ImagesProps> = (props) => {
   };
 
   return (
-    <motion.div className='img-grid'
+    <motion.div
+      className="box-border flex w-full flex-1 flex-wrap justify-center"
       variants={containerVariants}
       initial="hidden"
-      animate="visible">
+      animate="visible"
+    >
       {data.map((image, index) => (
         <motion.div
           key={index}
-          className="gallery-img-wrapper"
+          className="flex h-[300px] w-[400px] items-center justify-center overflow-hidden p-2.5"
           onClick={() => handleClick(index)}
           variants={cardVariants}
           initial="hidden"
-          animate="visible">
+          animate="visible"
+        >
           <Image
             src={image.src}
             alt={`Image for ${image.year}`}
-            className="gallery-image"
+            className="h-full w-full cursor-pointer rounded object-cover"
             width={500}
             height={500}
           />

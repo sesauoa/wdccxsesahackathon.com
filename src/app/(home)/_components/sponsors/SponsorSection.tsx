@@ -1,25 +1,28 @@
 import React from 'react';
 import { H1 } from '@/components/Layout/Typography';
 import { SectionLayout } from '@/components/Layout/SectionLayout';
-
+import { SponsorRow } from './SponsorRow';
 import { TechSponsors } from '@/app/(home)/_data/Sponsors';
 
-import SponsorCard from './SponsorCard';
 const Sponsors = () => {
   return (
-    <SectionLayout id="sponsors" className="relative">
+    <SectionLayout id="sponsors" className="relative flex flex-col gap-8">
       <H1 className="mb-4">Sponsors</H1>
-      <div className="flex flex-wrap gap-12">
-        {TechSponsors.map((sponsor, index) => (
-          <SponsorCard
-            color="bg-wdcc-blue"
-            name={sponsor.name}
-            src={sponsor.src}
-            alt={sponsor.name}
-            key={index}
-          />
-        ))}
-      </div>
+      <SponsorRow
+        title="Gold Sponsors"
+        titleColor="text-yellow-400"
+        sponsors={TechSponsors.GoldSponsors}
+      />
+      <SponsorRow
+        title="Silver Sponsors"
+        titleColor="text-slate-200"
+        sponsors={TechSponsors.SilverSponsors}
+      />
+      <SponsorRow
+        title="Bronze Sponsors"
+        titleColor="text-yellow-700"
+        sponsors={TechSponsors.BronzeSponsors}
+      />
     </SectionLayout>
   );
 };

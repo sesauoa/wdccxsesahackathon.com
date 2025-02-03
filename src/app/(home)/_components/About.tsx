@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { H1, StatHeading } from '../../../components/Layout/Typography';
-import { AboutUs, EventStats } from '@/app/(home)/_data/about';
+import { AboutUs, EventStats } from '../_data/About';
 import { motion } from 'motion/react';
 import { SectionLayout } from '@/components/Layout/SectionLayout';
 

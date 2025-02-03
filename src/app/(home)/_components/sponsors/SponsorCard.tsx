@@ -5,7 +5,6 @@ import { motion, Variants } from 'motion/react';
 
 import ImageFit, { ImageFitProps } from '@/lib/ImageFit';
 import { easeOutExpo } from '@/lib/ease';
-import { clsx } from 'clsx';
 
 interface SponsorCardProps extends ImageFitProps {
   color: string;

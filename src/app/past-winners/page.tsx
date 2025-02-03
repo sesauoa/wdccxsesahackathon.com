@@ -11,8 +11,8 @@ import { WinnersGroup } from '@/app/past-winners/_components/WinnersGroup';
 import { WinnerCard } from '@/app/past-winners/_components/WinnerCard';
 
 export default function PastWinnersPage() {
-  const [selectedYear, setSelectedYear] = useState<number[]>([]); // Multiple years can be selected
-  const [selectedPlace, setSelectedPlace] = useState<string[]>([]); // Multiple places can be selected
+  const [selectedYear, setSelectedYear] = useState<number[]>([]);
+  const [selectedPlace, setSelectedPlace] = useState<string[]>([]);
 
   const filteredWinners = filterWinners(
     pastWinners,

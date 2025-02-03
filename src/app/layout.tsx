@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import '@/styles/globals.css';
-import Navbar from '@/components/common/Navbar';
+import Navbar from '@/components/Layout/Navbar';
 import Footer from '@/components/common/Footer';
 import { CursorAnimation } from '@/utils/CursorAnimation';
-import { Blobs } from '@/components/common/Blobs';
+import { Blobs } from '@/components/Layout/Blobs';
 import LenisScroll from '@/lib/LenisScroll';
 
 const geistSans = localFont({

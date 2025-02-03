@@ -11,7 +11,7 @@ export const SectionLayout: React.FC<ReactProps> = ({
 }) => {
   return (
     <section
-      className={cn('h-full w-full p-20 lg:px-72 lg:py-20', className)}
+      className={cn('h-full w-full p-20 xl:px-80 xl:py-20', className)}
       {...props}
     >
       {children}

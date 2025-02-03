@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import faqInfo from '@/app/(home)/_data/faqs';
+import faqInfo from '../_data/Faqs';
 import { H1 } from '../../../components/Layout/Typography';
 import { SectionLayout } from '@/components/Layout/SectionLayout';
 

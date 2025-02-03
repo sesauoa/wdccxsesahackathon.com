@@ -17,18 +17,6 @@ export const FilterButtons: React.FC<FilterButtonsProps> = ({
   setSelectedYear,
   setSelectedPlace,
 }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const handleWheel = (event: React.WheelEvent<HTMLDivElement>) => {
-    if (event.shiftKey) {
-      event.preventDefault(); // Prevent the default scroll behavior
-      event.stopPropagation(); // Stop Lenis from handling the event
-      if (containerRef.current) {
-        containerRef.current.scrollLeft += event.deltaY; // Scroll horizontally
-      }
-    }
-  };
-
   const toggleYear = (year: number) => {
     setSelectedYear(
       selectedYear.includes(year)
@@ -47,9 +35,7 @@ export const FilterButtons: React.FC<FilterButtonsProps> = ({
 
   return (
     <div
-      ref={containerRef}
-      onWheel={handleWheel}
-      className="no-scrollbar flex w-full space-x-4 overflow-x-scroll lg:grid lg:grid-cols-8 lg:gap-4 lg:overflow-visible"
+      className="flex w-full gap-4 justify-center flex-wrap"
     >
       {years.map((year) => (
         <button

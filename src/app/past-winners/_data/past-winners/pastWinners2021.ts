@@ -1,84 +1,88 @@
-export const pastWinners2021 = [
-  {
-    award: '1st',
-    teamName: 'Dumboss',
-    photo:
-      'https://drive.google.com/file/d/1djdzavHLnwkj-A-jhHk5oQx8P6C3WHVI/view',
-    teamMembers: [
-      'Beverley Sun',
-      'Matt Moran',
-      'Maggie Pedersen',
-      'Raina Song',
-    ],
-    projectDescription: '',
-    github: '',
-    deployedProject: '',
-  },
-  {
-    award: '2nd',
-    teamName: 'BitGud',
-    photo:
-      'https://drive.google.com/file/d/1-JNhgbDjxwr9CWxFI18ddGbj018QRB9s/view',
-    teamMembers: [
-      'Bob Liou',
-      'Taylor Tran',
-      'Cheng-Zhen Yang',
-      'Patricia Virgen Aguilar',
-      'Libby Cammell',
-      'Alexander Bailey',
-    ],
-    projectDescription: '',
-    github: '',
-    deployedProject: '',
-  },
-  {
-    award: '3rd',
-    teamName: 'Krayon',
-    photo:
-      'https://drive.google.com/file/d/1vuCuTf-t3Ns6Lo4r_B0eNbu6hX767Efl/view',
-    teamMembers: [
-      'Ryan Tan',
-      'Sunny Feng',
-      'Kimberley Evans-Parker',
-      'Josh Hill',
-      'Kelvin Ngor',
-    ],
-    projectDescription: '',
-    github: '',
-    deployedProject: '',
-  },
-  {
-    award: 'Most Overengineered',
-    teamName: 'Diskordo',
-    photo:
-      'https://drive.google.com/file/d/1Gt1rx9rCMxZ7RQzEX3wK6r5_hSp93PdX/view',
-    teamMembers: [
-      'Jennifer Lowe',
-      'Hiruna Jayamanne',
-      'Tianren Shen',
-      'Elisa Yansun',
-      'Linda Lin',
-    ],
-    projectDescription: '',
-    github: '',
-    deployedProject: '',
-  },
-  {
-    award: 'Best Design',
-    teamName: 'MeowMeowMeow',
-    photo:
-      'https://drive.google.com/file/d/1JOuoZf-R44fYKJgxmo8cGxAF_ubrvVqs/view',
-    teamMembers: [
-      'Jack Ma',
-      'Rhys Heaven-Smith',
-      'Feras Albaroudi',
-      'Katherine Luo',
-      'Samuel Chen',
-      'Xinning Gong',
-      'Shirley Shao',
-    ],
-    projectDescription: '',
-    github: '',
-    deployedProject: '',
-  },
-];
+export const pastWinners2021 = {
+  year: 2021,
+  orderedWinners: [
+    {
+      place: "1st Place",
+      teamName: "Dumboss",
+      image: "/winners/2021/2021-1st.jpg",
+      members: ["Beverley Sun", "Matt Moran", "Maggie Pedersen", "Raina Song"],
+      contacts: [
+        "bsun448@aucklanduni.ac.nz",
+        "mmor330@aucklanduni.ac.nz",
+        "mped822@aucklanduni.ac.nz",
+        "yson590@aucklanduni.ac.nz",
+      ],
+    },
+    {
+      place: "2nd Place",
+      teamName: "BitGud",
+      image: "/winners/2021/2021-2nd.jpg",
+      members: [
+        "Bob Liou",
+        "Taylor Tran",
+        "Cheng-Zhen Yang",
+        "Patricia Virgen Aguilar",
+        "Libby Cammell",
+        "Alexander Bailey",
+      ],
+      contacts: [
+        "bob7689@gmail.com",
+        "taylortran.it@gmail.com",
+        "chengzhenyang@gmail.com",
+        "patriciavirgenaguilar@hotmail.com",
+        "elizabeth.cammell88@gmail.com",
+        "abai250@aucklanduni.ac.nz",
+      ],
+    },
+    {
+      place: "3rd Place",
+      teamName: "Krayon",
+      image: "/winners/2021/2021-3rd.jpg",
+      members: ["Ryan Tan", "Sunny Feng", "Kimberley Evans-Parker", "Josh Hill", "Kelvin Ngor"],
+      contacts: [
+        "rtan265@aucklanduni.ac.nz",
+        "sfen917@aucklanduni.ac.nz",
+        "keva419@aucklanduni.ac.nz",
+        "jhil955@aucklanduni.ac.nz",
+      ],
+    },
+  ],
+  specialAwards: [
+    {
+      place: "Most Overengineered",
+      teamName: "Diskordo",
+      image: "/winners/2021/2021-4th.jpg",
+      members: ["Jennifer Lowe", "Hiruna Jayamanne", "Tianren Shen", "Elisa Yansun", "Linda Lin"],
+      contacts: [
+        "jenniferlowe7@LIVE.com",
+        "hjay473@aucklanduni.ac.nz",
+        "tshe695@aucklanduni.ac.nz",
+        "eyan868@aucklanduni.ac.nz",
+        "clin802@aucklanduni.ac.nz",
+      ],
+    },
+    {
+      place: "Best Design",
+      teamName: "MeowMeowMeow",
+      image: "/winners/2021/2021-5th.jpg",
+      members: [
+        "Jack Ma",
+        "Rhys Heaven-Smith",
+        "Feras Albaroudi",
+        "Katherine Luo",
+        "Samuel Chen",
+        "Xinning Gong",
+        "Shirley Shao",
+      ],
+      contacts: [
+        "924756831@qq.com",
+        "rhysheavensmith@gmail.com",
+        "falb418@aucklanduni.ac.nz",
+        "1019luo@gmail.com",
+        "jche580@aucklanduni.ac.nz",
+        "Xinning.gong@gmail.com",
+        "hyshao615@gmail.com",
+      ],
+    },
+  ],
+};

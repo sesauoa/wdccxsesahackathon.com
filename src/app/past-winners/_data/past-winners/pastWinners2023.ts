@@ -1,102 +1,121 @@
-export const pastWinners2023 = [
-  {
-    award: '1st',
-    teamName: ':)',
-    photo:
-      'https://drive.google.com/file/d/1Mp0397oYXP_euKEHlHrW_7qwUf4StQSw/view',
-    teamMembers: [
-      'Raymond Luo',
-      'Tony Lu',
-      'Ashin Alex',
-      'Raymond Yang',
-      'Selin Akkaya',
-      'Arnav Shekaran',
-    ],
-    projectDescription:
-      'The Art Thief” where the user uses stable diffusion to create replicas of famous art.',
-    github: '',
-    deployedProject: '',
-  },
-  {
-    award: '2nd',
-    teamName: 'Hackathon Smashers',
-    photo:
-      'https://drive.google.com/file/d/1P9NFAqoaHkKzV1MQ-t6t1pDNItS4Kjrh/view',
-    teamMembers: [
-      'Kian Merchant',
-      'Vadim Berezin',
-      'Woo Jin Lee',
-      'Sebastian Thomas',
-      'Don Sheng Qiang Lin',
-    ],
-    projectDescription: 'Text to grunt translator',
-    github: '',
-    deployedProject: '',
-  },
-  {
-    award: '3rd',
-    teamName: 'Hackathon Smackathon',
-    photo:
-      'https://drive.google.com/file/d/1WfdIv4wfYoggTKrcakgWaM17o-_UjtMM/view',
-    teamMembers: [
-      'Matthew Tao',
-      'Jack Freeth',
-      'Matthew Taylor',
-      'Alex McLeod',
-      'Varshini KP Bhat',
-      'Henry Wang',
-    ],
-    projectDescription: 'LinkedIn with families and classes and marriages',
-    github: '',
-    deployedProject: '',
-  },
-  {
-    award: 'Most Overengineered',
-    teamName: 'Tron',
-    photo:
-      'https://drive.google.com/file/d/1XgympL1QyAkspp3-snyG9iSRj2lau_dn/view',
-    teamMembers: [
-      'James Zeng',
-      'Celine Bui',
-      'Caleb Wedgwood',
-      'Caleb Mackle',
-      'Ronak Lal',
-    ],
-    projectDescription: 'Chariot horse parking simulator.',
-    github: '',
-    deployedProject: '',
-  },
-  {
-    award: 'Best Design',
-    teamName: 'Pro (?) Hackers',
-    photo:
-      'https://drive.google.com/file/d/1fi036IjEDxlSeDXo8aFCmPuXKJ43DJoF/view',
-    teamMembers: [
-      'Arvindh Kumar',
-      'Enrique Jugo',
-      'Peter Cheong',
-      'Deven Ranchhod',
-      'Lachlan Chan',
-    ],
-    projectDescription:
-      'Changing History is a visual novel story hastily made using the Ren\'py engine with original art and music. Players, guided by an all-knowing narrator, travel through time, making "interesting" decisions to discover their ancestors\' lives and motivations. The game explores corny themes of hope and the power of understanding the past to find a reason to live.',
-    github: '',
-    deployedProject: '',
-  },
-  {
-    award: 'Most Entertaining',
-    teamName: 'Compsisters',
-    photo:
-      'https://drive.google.com/file/d/1Y6an5xY2io8ST6ebRCIY2dYEzXePP-jE/view',
-    teamMembers: [
-      'Cheryl Yu',
-      'Puja Nory',
-      'Hira Saleem',
-      'Kimberly Zhu',
-      'Arisa Mori',
-    ],
-    projectDescription: 'App letting kings pick out their wives for each night',
-    github: '',
-    deployedProject: '',
-  },
-];
+export const pastWinners2023 = {
+  year: 2023,
+  orderedWinners: [
+    {
+      place: "1st Place",
+      teamName: ":)",
+      image: "/winners/2023/2023-1st.jpg",
+      members: [
+        "Raymond Luo",
+        "Tony Lu",
+        "Ashin Alex",
+        "Raymond Yang",
+        "Selin Akkaya",
+        "Arnav Shekaran",
+      ],
+      description:
+        '"The Art Thief” where the user uses stable diffusion to create replicas of famous art.',
+      contacts: [
+        "rluo154@aucklanduni.ac.nz",
+        "tlu467@aucklanduni.ac.nz",
+        "ashinalex1@gmail.com",
+        "rshe412@aucklanduni.ac.nz",
+        "Selinakkaya345@gmail.com",
+        "arnard76@gmail.com",
+      ],
+    },
+    {
+      place: "2nd Place",
+      teamName: "Hackathon Smashers",
+      image: "/winners/2023/2023-2nd.jpg",
+      members: [
+        "Kian Merchant",
+        "Vadim Berezin",
+        "Woo Jin Lee",
+        "Sebastian Thomas",
+        "Don Sheng Qiang Lin",
+      ],
+      description: "Text to grunt translator.",
+      contacts: [
+        "supesu.dev@gmail.com",
+        "vdaberezin@gmail.com",
+        "wlee447@aucklanduni.ac.nz",
+        "stho382@aucklanduni.ac.nz",
+        "dlin419@aucklanduni.ac.nz",
+      ],
+    },
+    {
+      place: "3rd Place",
+      teamName: "Hackathon Smackathon",
+      image: "/winners/2023/2023-3rd.jpg",
+      members: [
+        "Matthew Tao",
+        "Jack Freeth",
+        "Matthew Taylor",
+        "Alex McLeod",
+        "Varshini KP Bhat",
+        "Henry Wang",
+      ],
+      description: "LinkedIn with families and classes and marriages.",
+      contacts: [
+        "ytao543@aucklanduni.ac.nz",
+        "jfre479@aucklanduni.ac.nz",
+        "matthew.taylor@auckland.ac.nz",
+        "amcl287@aucklanduni.ac.nz",
+        "vbha515@aucklanduni.ac.nz",
+        "hwan513@aucklanduni.ac.nz",
+      ],
+    },
+  ],
+  specialAwards: [
+    {
+      place: "Most Overengineered",
+      teamName: "Tron",
+      image: "/winners/2023/2023-4th.jpg",
+      members: ["James Zeng", "Celine Bui", "Caleb Wedgwood", "Caleb Mackle", "Ronak Lal"],
+      description: "Chariot horse parking simulator.",
+      contacts: [
+        "jzen379@aucklanduni.ac.nz",
+        "gbui042@aucklanduni.ac.nz",
+        "cwed105@aucklanduni.ac.nz",
+        "cmac558@aucklanduni.ac.nz",
+        "ronak.lal@outlook.com",
+      ],
+    },
+    {
+      place: "Best Design",
+      teamName: "Pro (?) Hackers",
+      image: "/winners/2023/2023-5th.jpg",
+      members: [
+        "Arvindh Kumar",
+        "Enrique Jugo",
+        "Peter Cheong",
+        "Deven Ranchhod",
+        "Lachlan Chan",
+      ],
+      description:
+        '"Changing History is a visual novel story hastily made using the Ren\'py engine with original art and music. Players, guided by an all-knowing narrator, travel through time, making "interesting" decisions to discover their ancestors\' lives and motivations. The game explores corny themes of hope and the power of understanding the past to find a reason to live."',
+      contacts: [
+        "aram190@aucklanduni.ac.nz",
+        "juanenriquejugo@gmail.com",
+        "pche314@aucklanduni.ac.nz",
+        "dran794@aucklanduni.ac.nz",
+        "lcha691@aucklanduni.ac.nz",
+      ],
+    },
+    {
+      place: "Most Entertaining",
+      teamName: "Compsisters",
+      image: "/winners/2023/2023-6th.jpg",
+      members: ["Cheryl Yu", "Puja Nory", "Hira Saleem", "Kimberly Zhu", "Arisa Mori"],
+      description: "App letting kings pick out their wives for each night.",
+      contacts: [
+        "cyu880@aucklanduni.ac.nz",
+        "pnor067@aucklanduni.ac.nz",
+        "hsal869@aucklanduni.ac.nz",
+        "kzhu796@aucklanduni.ac.nz",
+        "amor401@aucklanduni.ac.nz",
+      ],
+    },
+  ],
+};

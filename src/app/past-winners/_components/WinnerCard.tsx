@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { CardTag } from './CardTag';
+import { H2 } from '@/components/Layout/Typography';
 
 interface WinnerCardProps {
   place: string;
@@ -23,70 +24,79 @@ export function WinnerCard({
   members,
   year,
 }: WinnerCardProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(false);
 
-  const toggleDescription = () => {
-    setIsExpanded((prev) => !prev);
+  const handleFlip = () => {
+    if (description) {
+      setIsFlipped(!isFlipped);
+    }
   };
 
   return (
-    <div className="flex w-full flex-col rounded-xl bg-black bg-opacity-20 p-8">
-      <div className="flex w-full">
-        <Image
-          src={image}
-          alt={teamName}
-          layout="responsive"
-          width={16}
-          height={9}
-          className="shadow-lg"
-        />
-      </div>
+    <div className="main-container" onClick={handleFlip}>
+      <div className={`card ${isFlipped ? 'flipped' : ''}`}>
+        <div className="front-card flex flex-col justify-between rounded-xl bg-black bg-opacity-20 p-4">
+          <div>
+            <h2 className="mb-4 mt-2 w-full break-words text-center text-3xl font-bold">
+              {teamName}
+            </h2>
+            <div className="flex w-full">
+              <Image
+                src={image}
+                alt={teamName}
+                layout="responsive"
+                width={16}
+                height={9}
+                className="shadow-lg"
+              />
+            </div>
+            <div className="py-2 text-center text-sm">
+              {members?.join(', ')}
+            </div>
+            <CardTag year={year} category={place} />
+          </div>
 
-      <div className="py-2 text-center">{members?.join(', ')}</div>
+          {/*Links*/}
+          <div className="flex w-full justify-between space-x-4">
+            <div className="flex flex-col gap-1">
+              {github && (
+                <a
+                  href={github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-100 hover:text-gray-200"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  🔗 GitHub
+                </a>
+              )}
 
-      <div className="flex w-full flex-col">
-        <h2 className="mb-4 mt-2 text-3xl font-bold">{teamName}</h2>
+              {appLink && (
+                <a
+                  href={appLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-100 hover:text-gray-200"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  🔗 Application
+                </a>
+              )}
+            </div>
 
-        <CardTag year={year} category={place} />
+            {description && (
+              <div className="self-end">
+                <button className="text-sm font-bold">SEE MORE</button>
+              </div>
+            )}
+          </div>
+        </div>
 
         {description && (
-          <div className="flex w-full flex-col">
-            {isExpanded && (
-              <p className="mb-4 text-lg font-bold text-white">
-                "{description}"
-              </p>
-            )}
-            <button
-              onClick={toggleDescription}
-              className="self-end text-gray-100 hover:text-gray-200"
-            >
-              {isExpanded ? 'Show less' : 'See more'}
-            </button>
+          <div className="back-card rounded-xl leading-relaxed bg-black bg-opacity-40 p-4">
+            <div className="h-full w-full">{description}</div>
           </div>
         )}
-
-        <div className="mt-4 flex flex-col space-y-2">
-          {appLink && (
-            <a
-              href={appLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-100 hover:text-gray-200"
-            >
-              🔗 Deployed Application
-            </a>
-          )}
-          {github && (
-            <a
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-100 hover:text-gray-200"
-            >
-              🔗 GitHub Repo
-            </a>
-          )}
-        </div>
       </div>
     </div>
   );

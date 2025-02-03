@@ -7,7 +7,7 @@ interface CardTagProps {
 
 export function CardTag({ year, category }: CardTagProps) {
   return (
-    <div className="flex w-full gap-4 py-2">
+    <div className="flex w-full flex-wrap gap-2 py-2">
       <div className="rounded-lg bg-teal-500 px-2 py-1 font-bold text-white drop-shadow-xl">
         {year}
       </div>

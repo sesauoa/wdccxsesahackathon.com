@@ -148,7 +148,7 @@
             "Selin Akkaya",
             "Arnav Shekaran"
           ],
-          "description": "The Art Thief” where the user uses stable diffusion to create replicas of famous art.",
+          "description": "\"The Art Thief” where the user uses stable diffusion to create replicas of famous art.",
           "contacts": [
             "rluo154@aucklanduni.ac.nz",
             "tlu467@aucklanduni.ac.nz",
@@ -233,7 +233,7 @@
             "Deven Ranchhod",
             "Lachlan Chan"
           ],
-          "description": "Graphic novel game thing - pick a path story.",
+          "description": "\"Changing History is a visual novel story hastily made using the Ren'py engine with original art and music. Players, guided by an all-knowing narrator, travel through time, making \"interesting\" decisions to discover their ancestors' lives and motivations. The game explores corny themes of hope and the power of understanding the past to find a reason to live.\"",
           "contacts": [
             "aram190@aucklanduni.ac.nz",
             "juanenriquejugo@gmail.com",
@@ -271,6 +271,7 @@
           "place": "1st Place",
           "teamName": "Lubricated Ducks",
           "image": "/winners/2022/2022-1st.jpg",
+          "description": "\"Zapp - A realtime quiz game designed to run alongside a lecture offering various questions and puzzles to solve. Aiming to help with student engagement and participation, potentially with a small amount of grade points attached. Inspired by the game “Keep Talking and Nobody Explodes\"\".",
           "members": [
             "Ron Bansal",
             "Grant Liu",
@@ -313,6 +314,7 @@
           "place": "3rd Place",
           "teamName": "Team X",
           "image": "/winners/2022/2022-3rd.jpg",
+          "description": "\"ProdKiller is a productivity game where team members compete against each other, with points awarded or deducted based on visited websites as detected by a Chrome extension. Players can use their accumulated points to send distractions and attacks to their teammates, while also defending themselves from similar disruptions. The game syncs data to a MongoDB database via a Flask server, allowing players to track progress and compete for top spot in their group.\"",
           "members": [
             "Jared Daniel Recomenable",
             "Zoe Niu",
@@ -355,6 +357,7 @@
           "place": "Best Design",
           "teamName": "Infinity^2",
           "image": "/winners/2022/2022-5th.jpg",
+          "description": "\"Task Fighter is a web-based app built on React, utilising custom Framer Motion animations, ParticlesJS, styled Material UI components, developed collaboratively using the GitHub workflow in under 48 hours! In it, you are presented with 3 different monsters to fight! Just create your to-do-list; set your timer; get to monster fighting!\"",
           "members": [
             "Lia Arroyo",
             "Eugene Chua",

@@ -31,7 +31,7 @@ function TeamCard({ img, name, title, club }: TeamCardProps) {
       </div>
 
       {/* Info */}
-      <div className="bg-gray-0 absolute inset-0 flex flex-col items-center justify-center bg-opacity-0 text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+      <div className="bg-gray-0 absolute inset-0 flex flex-col items-center justify-center bg-opacity-0 text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 select-none">
         <h5 className="text-xl font-semibold text-white">{name}</h5>
         <p className="mb-2 w-full max-w-[180px] break-words text-center text-sm font-semibold text-white">
           {title}
@@ -56,7 +56,7 @@ function TeamSection() {
   return (
     <SectionLayout>
       <div className="container mx-auto max-w-screen-sm">
-        <div className="mb-16 text-center lg:mb-28">
+        <div className="mb-16 text-center lg:mb-20">
           <h1 className="my-2 text-2xl font-bold text-white lg:text-4xl">
             Organisers
           </h1>

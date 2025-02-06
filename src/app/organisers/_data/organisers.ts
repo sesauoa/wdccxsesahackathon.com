@@ -14,13 +14,13 @@ const organsiers = [
   {
     name: 'Oorja Gandhi',
     role: 'SESA President',
-    image: null,
+    image: '/images/Organisers/Oorja.jpg',
     club: "/logos/clubs/sesa.svg",
   },
   {
     name: 'Varshil Patel',
     role: 'SESA Vice President',
-    image: null,
+    image: '/images/Organisers/Varshil.png',
     club: "/logos/clubs/sesa.svg",
   },
   {

@@ -15,6 +15,7 @@ const Sponsors = () => {
             color="bg-wdcc-blue"
             name={sponsor.name}
             src={sponsor.src}
+            link={sponsor.link}
             alt={sponsor.name}
             key={index}
           />

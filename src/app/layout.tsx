@@ -1,4 +1,4 @@
-import Metadata from 'next';
+import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import '@/styles/globals.css';
 import Navbar from '@/components/common/Navbar';

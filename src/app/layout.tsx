@@ -6,6 +6,7 @@ import Footer from '@/components/common/Footer';
 import { CursorAnimation } from '@/utils/CursorAnimation';
 import { Blobs } from '@/components/common/Blobs';
 import LenisScroll from '@/lib/LenisScroll';
+import favicon from '../../public/svgs/favicon.svg';
 
 const geistSans = localFont({
   src: '../fonts/GeistVF.woff',
@@ -33,6 +34,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <link
+          rel="icon"
+          href={favicon.src}
+          type="image/<generated>"
+          sizes="<generated>"
+        />
         <LenisScroll>
           <Blobs />
           <div className="relative z-10">

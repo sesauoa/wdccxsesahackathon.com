@@ -1,15 +1,25 @@
 'use client';
 
 import React, { useState } from 'react';
-import {pastWinners} from '@/data/PastWinners.json';
-import { H1, Section } from '@/components/common/Typography';
+import { pastWinners2021 } from './_data/past-winners/pastWinners2021';
+import { pastWinners2022 } from './_data/past-winners/pastWinners2022';
+import { pastWinners2023 } from './_data/past-winners/pastWinners2023';
+import { pastWinners2024 } from './_data/past-winners/pastWinners2024';
+import { H1 } from '@/components/Layout/Typography';
+import { SectionLayout } from '@/components/Layout/SectionLayout';
 import { motion } from 'motion/react';
 import { filterWinners, getAllFilteredWinners } from '@/utils/WinnerUtils';
-import { FilterButtons } from '@/components/winner/FilterButtons';
-import { WinnersGroup } from '@/components/winner/WinnersGroup';
-import { WinnerCard } from '@/components/winner/WinnerCard';
+import { FilterButtons } from '@/app/past-winners/_components/FilterButtons';
+import { WinnersGroup } from '@/app/past-winners/_components/WinnersGroup';
+import { WinnerCard } from '@/app/past-winners/_components/WinnerCard';
 
 export default function PastWinnersPage() {
+  const pastWinners = [
+    pastWinners2024,
+    pastWinners2023,
+    pastWinners2022,
+    pastWinners2021,
+  ];
   const [selectedYear, setSelectedYear] = useState<number[]>([]); // Multiple years can be selected
   const [selectedPlace, setSelectedPlace] = useState<string[]>([]); // Multiple places can be selected
 
@@ -39,7 +49,7 @@ export default function PastWinnersPage() {
   };
 
   return (
-    <Section>
+    <SectionLayout className='2xl:px-60 xl:px-24 lg:px-20 md:px-24 px-10'>
       <header>
         <H1 className="text-4xl font-bold">Past Winners</H1>
         <div className="mt-8">
@@ -56,7 +66,8 @@ export default function PastWinnersPage() {
 
       <main className="flex flex-row gap-8">
         <div className="flex-1">
-          {selectedPlace.length > 0 && !selectedPlace.includes('Special Awards') ? (
+          {selectedPlace.length > 0 &&
+            !selectedPlace.includes('Special Awards') ? (
             <motion.div
               key={`${selectedYear}-${selectedPlace}`}
               variants={containerVariants}
@@ -89,6 +100,6 @@ export default function PastWinnersPage() {
           )}
         </div>
       </main>
-    </Section>
+    </SectionLayout>
   );
 }

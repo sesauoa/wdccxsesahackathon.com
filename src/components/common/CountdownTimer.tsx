@@ -77,7 +77,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({
         {timeUnits.map((unit, index) => (
           <React.Fragment key={unit.label}>
             <div className="flex h-16 flex-col items-center">
-              <span className="text-5xl font-bold leading-none md:text-8xl">
+              <span className="text-5xl font-bold leading-none md:text-7xl">
                 {unit.value}
               </span>
               <span className="text-base leading-tight md:text-xl">

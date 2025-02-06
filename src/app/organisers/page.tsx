@@ -36,7 +36,7 @@ function TeamCard({ img, name, title, club }: TeamCardProps) {
         <p className="mb-2 w-full max-w-[180px] break-words text-center text-sm font-semibold text-white">
           {title}
         </p>
-        <img src={club} alt={`${name}'s club`} className="mt-2 h-8 w-20" />
+        <img src={club} alt={name} className="mt-2 w-20" />
       </div>
     </motion.div>
   );

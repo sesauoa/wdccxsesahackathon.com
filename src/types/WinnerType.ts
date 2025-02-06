@@ -3,10 +3,9 @@ export type Winner = {
   teamName: string;
   image: string;
   description?: string;
-  appLink?: string;
+  deployedLink?: string;
   github?: string;
   members?: string[];
-  contacts?: string[];
 }
 
 export type YearlyWinners = {

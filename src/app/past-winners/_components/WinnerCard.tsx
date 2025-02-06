@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { CardTag } from './CardTag';
-import { H2 } from '@/components/Layout/Typography';
 
 interface WinnerCardProps {
   place: string;
   teamName: string;
   description?: string;
-  appLink?: string;
+  deployedLink?: string;
   github?: string;
   image: string;
   members?: string[];
@@ -18,7 +17,7 @@ export function WinnerCard({
   place,
   teamName,
   description,
-  appLink,
+  deployedLink,
   github,
   image,
   members,
@@ -64,22 +63,22 @@ export function WinnerCard({
                   href={github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-100 hover:text-gray-200"
+                  className="text-gray-100 hover:text-gray-200 hover:underline"
                   onClick={(e) => e.stopPropagation()}
                 >
                   🔗 GitHub
                 </a>
               )}
 
-              {appLink && (
+              {deployedLink && (
                 <a
-                  href={appLink}
+                  href={deployedLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-100 hover:text-gray-200"
+                  className="text-gray-100 hover:text-gray-200 hover:underline"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  🔗 Application
+                  🔗 Deployed Project
                 </a>
               )}
             </div>

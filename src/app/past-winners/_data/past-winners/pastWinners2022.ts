@@ -5,8 +5,6 @@ export const pastWinners2022 = {
       place: '1st Place',
       teamName: 'Lubricated Ducks',
       image: '/winners/2022/2022-1st.jpg',
-      description:
-        '"Zapp - A realtime quiz game designed to run alongside a lecture offering various questions and puzzles to solve. Aiming to help with student engagement and participation, potentially with a small amount of grade points attached. Inspired by the game “Keep Talking and Nobody Explodes".',
       members: [
         'Ron Bansal',
         'Grant Liu',
@@ -15,14 +13,9 @@ export const pastWinners2022 = {
         'Vishva Dave',
         'Harry Qu',
       ],
-      contacts: [
-        'raunaqbansal@hotmail.com',
-        'gliu871@aucklanduni.ac.nz',
-        'jimwang6012@gmail.com',
-        'Jayprasad770@gmail.com',
-        'vdav604@aucklanduni.ac.nz',
-        'Harryqu666@gmail.com',
-      ],
+      description:
+        '"Zapp - A realtime quiz game designed to run alongside a lecture offering various questions and puzzles to solve. Aiming to help with student engagement and participation, potentially with a small amount of grade points attached. Inspired by the game “Keep Talking and Nobody Explodes".',
+      github: 'https://github.com/tmacsmee/zapp',
     },
     {
       place: '2nd Place',
@@ -36,21 +29,11 @@ export const pastWinners2022 = {
         'Raina Song',
         'Jessica Villegas',
       ],
-      contacts: [
-        'dpri537@aucklanduni.ac.nz',
-        'akna890@aucklanduni.ac.nz',
-        'jche580@aucklanduni.ac.nz',
-        'enau831@aucklanduni.ac.nz',
-        'yson590@aucklanduni.ac.nz',
-        'jvil373@aucklanduni.ac.nz',
-      ],
     },
     {
       place: '3rd Place',
       teamName: 'Team X',
       image: '/winners/2022/2022-3rd.jpg',
-      description:
-        '"ProdKiller is a productivity game where team members compete against each other, with points awarded or deducted based on visited websites as detected by a Chrome extension. Players can use their accumulated points to send distractions and attacks to their teammates, while also defending themselves from similar disruptions. The game syncs data to a MongoDB database via a Flask server, allowing players to track progress and compete for top spot in their group."',
       members: [
         'Jared Daniel Recomenable',
         'Zoe Niu',
@@ -59,14 +42,9 @@ export const pastWinners2022 = {
         'Aden Ing',
         'Dhruv Joshi',
       ],
-      contacts: [
-        'jrec291@aucklanduni.ac.nz',
-        'zniu202@aucklanduni.ac.nz',
-        'anai393@aucklanduni.ac.nz',
-        'cale.ying@gmail.com',
-        'aing810@aucklanduni.ac.nz',
-        'djdhruvmj@gmail.com',
-      ],
+      description:
+        '"ProdKiller is a productivity game where team members compete against each other, with points awarded or deducted based on visited websites as detected by a Chrome extension. Players can use their accumulated points to send distractions and attacks to their teammates, while also defending themselves from similar disruptions. The game syncs data to a MongoDB database via a Flask server, allowing players to track progress and compete for top spot in their group."',
+      github: 'https://github.com/JDCRecomendable/wdcc-x-sesa-hackathon-2022',
     },
   ],
   specialAwards: [
@@ -81,20 +59,11 @@ export const pastWinners2022 = {
         'Hiruna Jayamanne',
         'Bob Liou',
       ],
-      contacts: [
-        'jlin296@aucklanduni.ac.nz',
-        'cyan562@aucklanduni.ac.nz',
-        'flynn.fromont@gmail.com',
-        'hjay473@aucklanduni.ac.nz',
-        'bob7689@gmail.com',
-      ],
     },
     {
       place: 'Best Design',
       teamName: 'Infinity^2',
       image: '/winners/2022/2022-5th.jpg',
-      description:
-        '"Task Fighter is a web-based app built on React, utilising custom Framer Motion animations, ParticlesJS, styled Material UI components, developed collaboratively using the GitHub workflow in under 48 hours! In it, you are presented with 3 different monsters to fight! Just create your to-do-list; set your timer; get to monster fighting!"',
       members: [
         'Lia Arroyo',
         'Eugene Chua',
@@ -103,14 +72,9 @@ export const pastWinners2022 = {
         'Vanisha Rajan',
         'Bun Thong Chea',
       ],
-      contacts: [
-        'marr341@aucklanduni.ac.nz',
-        'echu192@aucklanduni.ac.nz',
-        'asin448@aucklanduni.ac.nz',
-        'cpil393@aucklanduni.ac.nz',
-        'vraj752@aucklanduni.ac.nz',
-        'tche206@aucklanduni.ac.nz',
-      ],
+      description:
+        '"Task Fighter is a web-based app built on React, utilising custom Framer Motion animations, ParticlesJS, styled Material UI components, developed collaboratively using the GitHub workflow in under 48 hours! In it, you are presented with 3 different monsters to fight! Just create your to-do-list; set your timer; get to monster fighting!"',
+      github: 'https://github.com/luorixo/task-fighter',
     },
   ],
 };

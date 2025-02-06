@@ -85,8 +85,8 @@ export function WinnerCard({
             </div>
 
             {description && (
-              <div className="self-end">
-                <button className="text-sm font-bold">SEE MORE</button>
+              <div className="absolute bottom-4 right-4">
+                <button className="text-sm font-bold w-20">SEE MORE</button>
               </div>
             )}
           </div>
@@ -95,6 +95,9 @@ export function WinnerCard({
         {description && (
           <div className="back-card rounded-xl leading-relaxed bg-black bg-opacity-40 p-4">
             <div className="h-full w-full">{description}</div>
+            <div className="absolute bottom-4 right-4">
+              <button className="text-sm font-bold w-20">GO BACK</button>
+            </div>
           </div>
         )}
       </div>

@@ -49,7 +49,7 @@ export default function PastWinnersPage() {
   };
 
   return (
-    <SectionLayout>
+    <SectionLayout className='2xl:px-60 xl:px-24 lg:px-20 md:px-24 px-10'>
       <header>
         <H1 className="text-4xl font-bold">Past Winners</H1>
         <div className="mt-8">
@@ -67,7 +67,7 @@ export default function PastWinnersPage() {
       <main className="flex flex-row gap-8">
         <div className="flex-1">
           {selectedPlace.length > 0 &&
-          !selectedPlace.includes('Special Awards') ? (
+            !selectedPlace.includes('Special Awards') ? (
             <motion.div
               key={`${selectedYear}-${selectedPlace}`}
               variants={containerVariants}

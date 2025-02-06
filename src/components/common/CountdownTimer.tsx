@@ -5,7 +5,7 @@ import { target } from '@/data/Calendar';
 import { google } from 'calendar-link';
 import { event } from '@/data/Calendar';
 import React from 'react';
-
+import { cn } from '@/lib/clsx';
 interface TimeLeft {
   days: number;
   hours: number;
@@ -13,7 +13,12 @@ interface TimeLeft {
   seconds: number;
 }
 
-export default function CountdownTimer() {
+interface CountdownTimerProps extends React.HTMLAttributes<HTMLElement> {}
+
+export const CountdownTimer: React.FC<CountdownTimerProps> = ({
+  className,
+  ...props
+}) => {
   const [hackathonTime, setHackathonTime] = useState(false);
 
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
@@ -49,20 +54,24 @@ export default function CountdownTimer() {
 
       setTimeLeft({ days: d, hours: h, minutes: m, seconds: s });
 
-      if(difference < 0){
+      if (difference < 0) {
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
         clearInterval(interval);
       }
-
     }, 1000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="flex min-h-0 flex-col items-center justify-center p-4">
+    <div
+      {...props}
+      className={cn(
+        'flex min-h-0 flex-col items-center justify-center p-4',
+        className
+      )}
+    >
       <h1 className="h-0 text-3xl">AUG 2-3, 2025</h1>
-
 
       <div className="flex h-40 flex-wrap items-center justify-center gap-4">
         {timeUnits.map((unit, index) => (
@@ -85,11 +94,11 @@ export default function CountdownTimer() {
       </div>
 
       <button
-        className="md:mt-10 rounded border bg-white px-4 py-3 font-bold text-black hover:bg-gray-100"
+        className="rounded border bg-white px-4 py-3 font-bold text-black hover:bg-gray-100 md:mt-10"
         onClick={() => window.open(googleUrl, '_blank')}
       >
         Add to Google Calendar
       </button>
     </div>
   );
-}
+};

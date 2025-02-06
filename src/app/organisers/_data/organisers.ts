@@ -26,7 +26,7 @@ const organsiers = [
   {
     name: 'Joshua Taefu',
     role: 'WDCC Competitions Director',
-    image: null,
+    image: '/images/Organisers/Joshua.jpg',
     club: "/logos/clubs/wdcc.png",
   },
   {

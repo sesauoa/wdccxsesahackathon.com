@@ -4,17 +4,15 @@ interface ReactProps extends React.HTMLAttributes<HTMLElement> {
   children: React.ReactNode;
 }
 
-export const SectionLayout: React.FC<ReactProps> = ({
-  children,
-  className,
-  ...props
-}) => {
+export const SectionLayout: React.FC<ReactProps> = ({ children, ...props }) => {
   return (
     <section
-      className={cn('h-full w-full p-20 lg:px-72 lg:py-20', className)}
+      className={cn('relative flex min-h-dvh flex-col', props.className)}
       {...props}
     >
-      {children}
+      <div className="relative flex min-h-dvh flex-col overflow-x-hidden">
+        <main className="responsive-body z-0 grow">{children}</main>
+      </div>
     </section>
   );
 };

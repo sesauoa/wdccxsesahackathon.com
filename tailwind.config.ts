@@ -28,6 +28,7 @@ export default {
             light: '#70c7b0',
           },
         },
+        navy: 'rgb(0, 17, 82)',
       },
       backgroundImage: {
         'wdcc-blue-to-sesa-teal': 'linear-gradient(to right, #087df1, #49bfaa)',

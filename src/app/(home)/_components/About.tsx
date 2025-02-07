@@ -1,14 +1,13 @@
 'use client';
 
 import React from 'react';
-import { H1, StatHeading } from '../../../components/Layout/Typography';
-import { AboutUs, EventStats } from '@/app/(home)/_data/about';
+import { H1, StatHeading } from '../../../components/layout/Typography';
+import { AboutUs, EventStats } from '../_data/About';
 import { motion } from 'motion/react';
-import { SectionLayout } from '@/components/Layout/SectionLayout';
 
 const About = () => {
   return (
-    <SectionLayout
+    <section
       id="about"
       className="relative flex min-h-screen flex-col items-center justify-center gap-12 lg:flex-row"
     >
@@ -56,7 +55,7 @@ const About = () => {
           </motion.div>
         ))}
       </motion.div>
-    </SectionLayout>
+    </section>
   );
 };
 

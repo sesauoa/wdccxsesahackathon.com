@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import '@/styles/globals.css';
-import Navbar from '@/components/common/Navbar';
+import Navbar from '@/components/layout/navigation/navbar/Navbar';
 import Footer from '@/components/common/Footer';
 import { CursorAnimation } from '@/utils/CursorAnimation';
-import { Blobs } from '@/components/common/Blobs';
+import { Blobs } from '@/components/layout/blobs/Blobs';
 import LenisScroll from '@/lib/LenisScroll';
 import favicon from '../../public/svgs/favicon.svg';
 
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} text-white antialiased`}
       >
         <link
           rel="icon"

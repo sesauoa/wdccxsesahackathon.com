@@ -8,7 +8,7 @@ interface ReactProps extends React.HTMLAttributes<HTMLElement> {
 // Header Components
 export const H1: React.FC<ReactProps> = ({ children, className, ...props }) => {
   return (
-    <h1 className={cn('text-5xl font-bold', className)} {...props}>
+    <h1 className={cn('mt-5 text-5xl font-bold', className)} {...props}>
       {children}
     </h1>
   );

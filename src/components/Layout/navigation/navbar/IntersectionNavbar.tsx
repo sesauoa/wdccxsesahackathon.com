@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-import CombinedLogos from './CombinedLogos';
+import CombinedLogos from '../../../common/CombinedLogos';
 import HamburgerMenu from './HamburgerMenu';
 import { useLenisUtils } from '@/lib/LenisScroll';
 export default function IntersectionNavbar() {

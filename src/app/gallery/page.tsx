@@ -9,8 +9,8 @@ export default function GalleryPage() {
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
 
   return (
-    <SectionLayout className="m-5 flex flex-col p-4">
-      <H1 className="">Gallery</H1>
+    <SectionLayout className="flex flex-col">
+      <H1>Gallery</H1>
       <div className="flex flex-col items-center">
         <div className="flex gap-4">
           {[2024, 2023, 2022, 2021].map((year) => (

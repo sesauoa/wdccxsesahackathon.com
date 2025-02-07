@@ -42,7 +42,7 @@ export default function PastWinnersPage() {
   return (
     <SectionLayout>
       <header>
-        <H1 className="text-4xl font-bold">Past Winners</H1>
+        <H1>Past Winners</H1>
         <div className="mt-8">
           <FilterButtons
             years={years}

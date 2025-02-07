@@ -1,7 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import { pastWinners } from './_data/PastWinners.json';
+import { pastWinners2021 } from './_data/past-winners/pastWinners2021';
+import { pastWinners2022 } from './_data/past-winners/pastWinners2022';
+import { pastWinners2023 } from './_data/past-winners/pastWinners2023';
+import { pastWinners2024 } from './_data/past-winners/pastWinners2024';
 import { H1 } from '@/components/Layout/Typography';
 import { SectionLayout } from '@/components/Layout/SectionLayout';
 import { motion } from 'motion/react';
@@ -11,8 +14,14 @@ import { WinnersGroup } from '@/app/past-winners/_components/WinnersGroup';
 import { WinnerCard } from '@/app/past-winners/_components/WinnerCard';
 
 export default function PastWinnersPage() {
-  const [selectedYear, setSelectedYear] = useState<number[]>([]);
-  const [selectedPlace, setSelectedPlace] = useState<string[]>([]);
+  const pastWinners = [
+    pastWinners2024,
+    pastWinners2023,
+    pastWinners2022,
+    pastWinners2021,
+  ];
+  const [selectedYear, setSelectedYear] = useState<number[]>([]); // Multiple years can be selected
+  const [selectedPlace, setSelectedPlace] = useState<string[]>([]); // Multiple places can be selected
 
   const filteredWinners = filterWinners(
     pastWinners,
@@ -40,7 +49,7 @@ export default function PastWinnersPage() {
   };
 
   return (
-    <SectionLayout>
+    <SectionLayout className="px-10 md:px-24 lg:px-20 xl:px-24 2xl:px-60">
       <header>
         <H1 className="text-4xl font-bold">Past Winners</H1>
         <div className="mt-8">

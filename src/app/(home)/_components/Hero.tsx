@@ -8,11 +8,11 @@ const Hero = () => {
       className="relative h-screen w-full bg-cover bg-center"
       style={{ backgroundImage: 'url(/images/2024/IMG_2366.JPG)' }}
     >
-      <div className="absolute inset-0 z-0 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 z-0 backdrop-blur-sm brightness-75"></div>
       <div className="relative z-10 flex h-full w-full">
         <SectionLayout
           id="home"
-          className="flex flex-col items-center justify-center"
+          className="flex flex-col items-center justify-center lg:p-20 p-0"
         >
           <div className="flex w-full flex-col items-center justify-center">
             <CombinedLogos />
@@ -22,7 +22,7 @@ const Hero = () => {
             </p>
           </div>
           <div className="pt-40">
-            <CountdownTimer className="" />
+            <CountdownTimer />
           </div>
         </SectionLayout>
       </div>

@@ -2,7 +2,7 @@ import About from '@/app/(home)/_components/About';
 import Faqs from '@/app/(home)/_components/Faqs';
 import Hero from '@/app/(home)/_components/Hero';
 import Sponsors from './_components/sponsors/Sponsor';
-import { SectionLayout } from '@/components/layout/SectionLayout';
+import { SectionLayout } from '@/components/pog/SectionLayout';
 
 import ImageCarousel from '@/app/(home)/_components/ImageCarousel';
 export default function Home() {

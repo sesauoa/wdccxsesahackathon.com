@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { H1, StatHeading } from '../../../components/layout/Typography';
+import { H1, StatHeading } from '../../../components/pog/Typography';
 import { AboutUs, EventStats } from '../_data/AboutData';
 import { motion } from 'motion/react';
 

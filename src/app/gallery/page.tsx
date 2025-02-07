@@ -1,7 +1,7 @@
 'use client';
-import { H1 } from '@/components/layout/Typography';
+import { H1 } from '@/components/pog/Typography';
 import Gallery from '@/app/gallery/_components/Gallery';
-import { SectionLayout } from '@/components/layout/SectionLayout';
+import { SectionLayout } from '@/components/pog/SectionLayout';
 import FilterButton from '@/components/common/FilterButton';
 import { useState } from 'react';
 

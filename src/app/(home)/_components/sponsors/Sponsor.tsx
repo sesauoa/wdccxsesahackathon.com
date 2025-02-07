@@ -1,5 +1,5 @@
 import React from 'react';
-import { H1 } from '@/components/layout/Typography';
+import { H1 } from '@/components/pog/Typography';
 
 import { SponsorRow } from './SponsorRow';
 import { TechSponsors } from '@/app/(home)/_data/SponsorData';

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import '@/styles/globals.css';
-import Navbar from '@/components/layout/navigation/navbar/Navbar';
+import Navbar from '@/components/pog/navigation/navbar/Navbar';
 import Footer from '@/components/common/Footer';
 import { CursorAnimation } from '@/utils/CursorAnimation';
-import { Blobs } from '@/components/layout/blobs/Blobs';
+import { Blobs } from '@/components/pog/blobs/Blobs';
 import LenisScroll from '@/lib/LenisScroll';
 import favicon from '../../public/svgs/favicon.svg';
 

@@ -3,8 +3,8 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import organisers from '@/app/organisers/_data/organisers';
-import { SectionLayout } from '@/components/layout/SectionLayout';
-import { H1 } from '@/components/layout/Typography';
+import { SectionLayout } from '@/components/pog/SectionLayout';
+import { H1 } from '@/components/pog/Typography';
 
 interface TeamCardProps {
   img: string | null;

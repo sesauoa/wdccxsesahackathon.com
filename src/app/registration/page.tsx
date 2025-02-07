@@ -3,9 +3,9 @@
 import React, { useState } from 'react';
 import { FORM_URL } from './_data/registrationdata';
 import { registrationFaqsInfo } from '@/app/registration/_data/registrationFaqs';
-import { H1, H2 } from '@/components/layout/Typography';
+import { H1, H2 } from '@/components/pog/Typography';
 import { CountdownTimer } from '@/components/common/CountdownTimer';
-import { SectionLayout } from '@/components/layout/SectionLayout';
+import { SectionLayout } from '@/components/pog/SectionLayout';
 export default function Registration() {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
 

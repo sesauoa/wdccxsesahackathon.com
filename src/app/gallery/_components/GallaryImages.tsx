@@ -34,7 +34,7 @@ const GalleryImages: FC<ImagesProps> = (props) => {
 
   return (
     <motion.div
-      className="box-border flex w-full flex-1 flex-wrap justify-center"
+      className="box-border flex w-full flex-wrap justify-center"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

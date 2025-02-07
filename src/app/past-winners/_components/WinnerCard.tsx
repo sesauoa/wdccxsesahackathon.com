@@ -85,17 +85,17 @@ export function WinnerCard({
 
             {description && (
               <div className="absolute bottom-4 right-4">
-                <button className="text-sm font-bold w-20">SEE MORE</button>
+                <button className="w-20 text-sm font-bold">SEE MORE</button>
               </div>
             )}
           </div>
         </div>
 
         {description && (
-          <div className="back-card rounded-xl leading-relaxed bg-black bg-opacity-40 p-4">
+          <div className="back-card rounded-xl bg-black bg-opacity-40 p-4 leading-relaxed">
             <div className="h-full w-full">{description}</div>
             <div className="absolute bottom-4 right-4">
-              <button className="text-sm font-bold w-20">GO BACK</button>
+              <button className="w-20 text-sm font-bold">GO BACK</button>
             </div>
           </div>
         )}

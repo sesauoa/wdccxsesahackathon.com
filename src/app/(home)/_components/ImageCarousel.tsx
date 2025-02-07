@@ -33,7 +33,7 @@ export default function ImageCarousel() {
   };
 
   return (
-    <div className="relative aspect-[16/9] max-h-[600px] w-full overflow-hidden py-8 lg:aspect-[21/9]">
+    <div className="responsive-fullwidth relative aspect-[16/9] max-h-[600px] w-full overflow-hidden py-8 lg:aspect-[21/9]">
       <motion.div
         style={{ translateX: `-${imgIndex * 100}%` }}
         animate={{ translateX: `-${imgIndex * 100}%` }}

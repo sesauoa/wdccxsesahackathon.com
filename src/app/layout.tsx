@@ -7,6 +7,7 @@ import { CursorAnimation } from '@/utils/CursorAnimation';
 import { Blobs } from '@/components/layout/blobs/Blobs';
 import LenisScroll from '@/lib/LenisScroll';
 import favicon from '../../public/svgs/favicon.svg';
+import ScrollToTop from '@/components/Layout/ScrollToTop';
 
 const geistSans = localFont({
   src: '../fonts/GeistVF.woff',
@@ -45,6 +46,7 @@ export default function RootLayout({
           <div className="relative z-10">
             <Navbar />
             {children}
+            <ScrollToTop/>
             <Footer />
           </div>
           <CursorAnimation />

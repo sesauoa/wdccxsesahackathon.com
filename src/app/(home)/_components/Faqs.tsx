@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import faqInfo from '../_data/Faqs';
+import faqInfo from '../_data/FaqsData';
 import { H1 } from '../../../components/layout/Typography';
 
 const Faqs = () => {

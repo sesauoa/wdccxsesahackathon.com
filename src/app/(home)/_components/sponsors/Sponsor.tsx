@@ -2,7 +2,7 @@ import React from 'react';
 import { H1 } from '@/components/layout/Typography';
 
 import { SponsorRow } from './SponsorRow';
-import { TechSponsors } from '@/app/(home)/_data/Sponsors';
+import { TechSponsors } from '@/app/(home)/_data/SponsorData';
 
 const Sponsors = () => {
   return (

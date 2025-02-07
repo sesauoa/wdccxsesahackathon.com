@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import organisers from '@/app/organisers/_data/organisers';
-import { SectionLayout } from '@/components/Layout/SectionLayout';
+import { SectionLayout } from '@/components/layout/SectionLayout';
 
 interface TeamCardProps {
   img: string | null;
@@ -22,7 +22,11 @@ function TeamCard({ img, name, title, linkedIn, club }: TeamCardProps) {
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
       }}
     >
-      <a href={linkedIn} target="_blank" className="block w-full h-full transition-transform duration-200 hover:scale-110">
+      <a
+        href={linkedIn}
+        target="_blank"
+        className="block h-full w-full transition-transform duration-200 hover:scale-110"
+      >
         {/* Image */}
         <div className="h-48 w-full overflow-hidden">
           <img
@@ -33,7 +37,7 @@ function TeamCard({ img, name, title, linkedIn, club }: TeamCardProps) {
         </div>
 
         {/* Info */}
-        <div className="bg-gray-0 absolute inset-0 flex flex-col items-center justify-center bg-opacity-0 text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 select-none">
+        <div className="bg-gray-0 absolute inset-0 flex select-none flex-col items-center justify-center bg-opacity-0 text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
           <h5 className="text-xl font-semibold text-white">{name}</h5>
           <p className="mb-2 w-full max-w-[180px] break-words text-center text-sm font-semibold text-white">
             {title}

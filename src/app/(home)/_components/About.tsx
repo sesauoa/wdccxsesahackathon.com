@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
-import { H1, StatHeading } from '../../../components/Layout/Typography';
+import { H1, StatHeading } from '../../../components/layout/Typography';
 import { AboutUs, EventStats } from '../_data/About';
 import { motion } from 'motion/react';
-import { SectionLayout } from '@/components/Layout/SectionLayout';
+import { SectionLayout } from '@/components/layout/SectionLayout';
 
 const About = () => {
   return (

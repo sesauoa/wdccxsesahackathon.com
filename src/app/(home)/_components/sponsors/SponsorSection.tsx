@@ -1,6 +1,6 @@
 import React from 'react';
-import { H1 } from '@/components/Layout/Typography';
-import { SectionLayout } from '@/components/Layout/SectionLayout';
+import { H1 } from '@/components/layout/Typography';
+import { SectionLayout } from '@/components/layout/SectionLayout';
 import { SponsorRow } from './SponsorRow';
 import { TechSponsors } from '@/app/(home)/_data/Sponsors';
 

@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react';
 import faqInfo from '../_data/Faqs';
-import { H1 } from '../../../components/Layout/Typography';
-import { SectionLayout } from '@/components/Layout/SectionLayout';
+import { H1 } from '../../../components/layout/Typography';
+import { SectionLayout } from '@/components/layout/SectionLayout';
 
 const Faqs = () => {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);

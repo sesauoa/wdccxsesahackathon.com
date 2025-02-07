@@ -1,18 +1,29 @@
 'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
+import {
+  VerticalBlob,
+  RotatingBlob,
+  OffsetRotatingBlob,
+  HorizontalBlob,
+  InteractiveBlob,
+} from './BlobComponents';
+
+export const colors = {
+  bg1: 'rgb(108, 0, 162)',
+  bg2: 'rgb(0, 17, 82)',
+  color1: 'rgb(8, 125, 241)',
+  color2: 'rgb(73, 191, 170)',
+  interactive: 'rgb(140, 100, 255)',
+};
 
 export const Blobs = () => {
-  const colors = {
-    bg1: 'rgb(108, 0, 162)',
-    bg2: 'rgb(0, 17, 82)',
-    color1: 'rgb(8, 125, 241)',
-    color2: 'rgb(73, 191, 170)',
-    interactive: 'rgb(140, 100, 255)',
-  };
-
-  const commonBlobClasses =
-    'absolute w-[80%] h-[80%] rounded-full mix-blend-hard-light';
+  const blobs = [
+    VerticalBlob,
+    RotatingBlob,
+    OffsetRotatingBlob,
+    HorizontalBlob,
+    InteractiveBlob,
+  ];
 
   return (
     <div className="fixed inset-0 -z-10 h-full w-full overflow-hidden bg-[rgb(0,17,82)]">
@@ -36,98 +47,9 @@ export const Blobs = () => {
       </svg>
 
       <div className="h-full w-full" style={{ filter: 'url(#goo) blur(40px)' }}>
-        {/* Vertical Moving Blob */}
-        <motion.div
-          className={commonBlobClasses}
-          style={{
-            background: `radial-gradient(circle at center, ${colors.color1} 0%, rgba(8,125,241,0) 100%)`,
-            top: '50%',
-            left: '50%',
-            translateX: '-50%',
-          }}
-          animate={{
-            y: ['50%', '-50%', '50%'],
-          }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-        />
-
-        {/* Rotating Blob */}
-        <motion.div
-          className={commonBlobClasses}
-          style={{
-            background: `radial-gradient(circle at center, ${colors.color2} 0%, rgba(73,191,170,0) 100%)`,
-            top: '50%',
-            left: '50%',
-            translateX: '-50%',
-            translateY: '-50%',
-          }}
-          animate={{
-            rotate: 360,
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-        />
-
-        {/* Offset Rotating Blob */}
-        <motion.div
-          className={`${commonBlobClasses} opacity-70`}
-          style={{
-            background: `radial-gradient(circle at center, ${colors.color1} 0%, rgba(8,125,241,0) 100%)`,
-            top: 'calc(50% + 200px)',
-            left: 'calc(50% - 500px)',
-            translateX: '-50%',
-            translateY: '-50%',
-          }}
-          animate={{
-            rotate: 360,
-          }}
-          transition={{
-            duration: 40,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-        />
-
-        {/* Horizontal Moving Blob */}
-        <motion.div
-          className={`${commonBlobClasses} opacity-70`}
-          style={{
-            background: `radial-gradient(circle at center, ${colors.color2} 0%, rgba(73,191,170,0) 100%)`,
-            top: '50%',
-            left: '50%',
-            translateX: '-50%',
-            translateY: '-50%',
-          }}
-          animate={{
-            x: ['-50%', '50%', '-50%'],
-            y: ['-10%', '10%', '-10%'],
-          }}
-          transition={{
-            duration: 40,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-        />
-
-        {/* Interactive Blob */}
-        <motion.div
-          className="interactive absolute h-full w-full rounded-full opacity-70 mix-blend-hard-light"
-          style={{
-            background: `radial-gradient(circle at center, rgba(140,100,255,0.8) 0%, rgba(140,100,255,0) 50%)`,
-            top: '-50%',
-            left: '-50%',
-          }}
-          whileHover={{
-            scale: 1.1,
-          }}
-        />
+        {blobs.map((Blob, index) => (
+          <Blob key={index} />
+        ))}
       </div>
     </div>
   );

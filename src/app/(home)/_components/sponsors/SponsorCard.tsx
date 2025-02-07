@@ -14,7 +14,7 @@ interface SponsorCardProps extends ImageFitProps {
 
 const SponsorCard = ({ color, name, link, ...image }: SponsorCardProps) => {
   return (
-    <Link href={link}>
+    <Link href={link} target="_blank" rel="noopener noreferrer">
       <motion.div
         initial="hide"
         whileHover="show"
@@ -22,7 +22,7 @@ const SponsorCard = ({ color, name, link, ...image }: SponsorCardProps) => {
       >
         <motion.p
           variants={textvariants}
-          className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-center font-bold drop-shadow-[0px_0px_4px_white]"
+          className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-center text-2xl font-bold drop-shadow-[0px_0px_4px_white]"
           transition={{ duration: 1, ease: easeOutExpo }}
         >
           {name}

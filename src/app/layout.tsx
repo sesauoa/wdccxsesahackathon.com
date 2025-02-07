@@ -46,7 +46,7 @@ export default function RootLayout({
           <div className="relative z-10">
             <Navbar />
             {children}
-            <ScrollToTop/>
+            <ScrollToTop />
             <Footer />
           </div>
           <CursorAnimation />

@@ -11,10 +11,12 @@ export const SectionLayout: React.FC<ReactProps> = ({
 }) => {
   return (
     <section
-      className={cn('h-full w-full p-20 xl:px-80 xl:py-20', className)}
+      className={cn('relative flex min-h-dvh flex-col', className)}
       {...props}
     >
-      {children}
+      <div className="relative flex flex-col">
+        <main className="responsive-body z-0 grow">{children}</main>
+      </div>
     </section>
   );
 };

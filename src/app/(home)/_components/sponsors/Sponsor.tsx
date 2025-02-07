@@ -1,12 +1,12 @@
 import React from 'react';
 import { H1 } from '@/components/layout/Typography';
-import { SectionLayout } from '@/components/layout/SectionLayout';
+
 import { SponsorRow } from './SponsorRow';
 import { TechSponsors } from '@/app/(home)/_data/Sponsors';
 
 const Sponsors = () => {
   return (
-    <SectionLayout id="sponsors" className="relative flex flex-col gap-8">
+    <section id="sponsors" className="relative flex flex-col gap-8">
       <H1 className="mb-4">Sponsors</H1>
       <SponsorRow
         title="Gold Sponsors"
@@ -23,7 +23,7 @@ const Sponsors = () => {
         titleColor="text-yellow-700"
         sponsors={TechSponsors.BronzeSponsors}
       />
-    </SectionLayout>
+    </section>
   );
 };
 

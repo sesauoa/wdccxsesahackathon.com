@@ -40,7 +40,7 @@ export default function PastWinnersPage() {
   };
 
   return (
-    <SectionLayout className="px-10 md:px-24 lg:px-20 xl:px-24 2xl:px-60">
+    <SectionLayout>
       <header>
         <H1 className="text-4xl font-bold">Past Winners</H1>
         <div className="mt-8">

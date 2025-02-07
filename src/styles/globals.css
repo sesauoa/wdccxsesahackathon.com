@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply text-white;
-  }
-}
-
-/* Navigation */
 .nav-link,
 .nav-link:focus {
   @apply text-white;
@@ -29,15 +22,6 @@
   &:hover {
     text-decoration: underline;
   }
-}
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 .main-container {
@@ -81,4 +65,20 @@
 
 .flipped {
   transform: rotateY(180deg);
+}
+
+@layer components {
+  .responsive-body {
+    /* 3 cols: empty_content_empty */
+    @apply grid grid-cols-[auto_clamp(300px,80%,1280px)_auto];
+  }
+
+  .responsive-body > * {
+    /* Constrain children of main to middle column */
+    @apply col-start-2 col-end-3;
+  }
+  .responsive-fullwidth {
+    /* Escape hatch to allow full-width 'breaking out' of the responsive-body grid layout */
+    @apply col-start-1 col-end-4;
+  }
 }

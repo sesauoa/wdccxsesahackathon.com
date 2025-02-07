@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import faqInfo from '../_data/Faqs';
 import { H1 } from '../../../components/layout/Typography';
-import { SectionLayout } from '@/components/layout/SectionLayout';
 
 const Faqs = () => {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
@@ -13,7 +12,7 @@ const Faqs = () => {
   };
 
   return (
-    <SectionLayout id="faqs" className="mb-10">
+    <section id="faqs" className="mb-10">
       <H1 className="mb-8">FAQs</H1>
       <div className="flex flex-col space-y-4">
         {faqInfo.map((faq, index) => (
@@ -35,7 +34,7 @@ const Faqs = () => {
           </div>
         ))}
       </div>
-    </SectionLayout>
+    </section>
   );
 };
 

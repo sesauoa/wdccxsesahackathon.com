@@ -2,25 +2,32 @@
 import { H1 } from '@/components/layout/Typography';
 import Gallery from '@/app/gallery/_components/Gallery';
 import { SectionLayout } from '@/components/layout/SectionLayout';
+import FilterButton from '@/components/common/FilterButton';
+import { useState } from 'react';
 
 export default function GalleryPage() {
+  const [selectedYear, setSelectedYear] = useState<number | null>(null);
+
   return (
     <SectionLayout className="m-5 flex flex-col p-4">
-      <H1 className="ml-[7vw]">Gallery</H1>
+      <H1 className="">Gallery</H1>
       <div className="flex flex-col items-center">
         <div className="flex gap-4">
           {[2024, 2023, 2022, 2021].map((year) => (
-            <button
+            <FilterButton
               key={year}
-              onClick={() => scrollToYearSection(year)}
-              className="cursor-pointer rounded bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-100 hover:text-blue-800"
+              onClick={() => {
+                scrollToYearSection(year);
+                setSelectedYear(year);
+              }}
+              isSelected={selectedYear === year}
             >
               {year}
-            </button>
+            </FilterButton>
           ))}
         </div>
       </div>
-      <div>
+      <div className="w-full">
         <Gallery year={2024} />
         <Gallery year={2023} />
         <Gallery year={2022} />

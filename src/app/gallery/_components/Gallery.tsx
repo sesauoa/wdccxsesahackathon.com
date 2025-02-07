@@ -28,10 +28,10 @@ const Gallery: React.FC<GalleryProps> = ({ year }) => {
 
   return (
     <div
-      className="flex h-full w-full flex-col items-center gap-5 p-2.5"
+      className="flex w-full flex-col items-center gap-5"
       id={`year-${year}`}
     >
-      <div className="sticky top-16 z-10 flex w-screen items-center justify-center backdrop-blur-sm">
+      <div className="sticky top-16 z-10 flex w-full items-center justify-center backdrop-blur-sm">
         <h2 className="mb-4 mt-8 text-3xl font-bold">{year}</h2>
       </div>
       <GalleryImages

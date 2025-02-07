@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import React from 'react';
+import FilterButton from '@/components/common/FilterButton';
 
 interface FilterButtonsProps {
   years: number[];
@@ -34,35 +35,25 @@ export const FilterButtons: React.FC<FilterButtonsProps> = ({
   };
 
   return (
-    <div
-      className="flex w-full gap-4 justify-center flex-wrap"
-    >
+    <div className="flex w-full flex-wrap justify-center gap-4">
       {years.map((year) => (
-        <button
+        <FilterButton
           key={year}
-          className={`min-w-fit whitespace-nowrap rounded-lg px-4 py-2 font-bold drop-shadow-lg transition-all duration-200 ease-in-out ${
-            selectedYear.includes(year)
-              ? 'bg-white text-sesa-navy'
-              : 'bg-sesa-navy text-white hover:bg-slate-700'
-          }`}
           onClick={() => toggleYear(year)}
+          isSelected={selectedYear.includes(year)}
         >
           {year}
-        </button>
+        </FilterButton>
       ))}
 
       {places.map((place) => (
-        <button
+        <FilterButton
           key={place}
-          className={`min-w-fit whitespace-nowrap rounded-lg px-4 py-2 font-bold drop-shadow-lg transition-all duration-200 ease-in-out ${
-            selectedPlace.includes(place)
-              ? 'bg-white text-sesa-navy'
-              : 'bg-sesa-navy text-white hover:bg-slate-700'
-          }`}
           onClick={() => togglePlace(place)}
+          isSelected={selectedPlace.includes(place)}
         >
           {place}
-        </button>
+        </FilterButton>
       ))}
     </div>
   );

@@ -10,17 +10,17 @@ const Sponsors = () => {
       <H1 className="mb-4">Sponsors</H1>
       <SponsorRow
         title="Gold Sponsors"
-        titleColor="text-yellow-400"
+        titleColor="text-[#FFD700]"
         sponsors={TechSponsors.GoldSponsors}
       />
       <SponsorRow
         title="Silver Sponsors"
-        titleColor="text-slate-200"
+        titleColor="text-[#C0C0C0]"
         sponsors={TechSponsors.SilverSponsors}
       />
       <SponsorRow
         title="Bronze Sponsors"
-        titleColor="text-yellow-700"
+        titleColor="text-[#CD7F32]"
         sponsors={TechSponsors.BronzeSponsors}
       />
     </section>

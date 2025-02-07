@@ -5,7 +5,7 @@ import SponsorCard from './SponsorCard';
 interface SponsorRowProps {
   title: string;
   titleColor: string;
-  sponsors: { name: string; src: string }[];
+  sponsors: { name: string; src: string; link: string }[];
 }
 
 export const SponsorRow = ({
@@ -15,14 +15,15 @@ export const SponsorRow = ({
 }: SponsorRowProps) => {
   return (
     <>
-      <H2 className={titleColor}>{title}</H2>
-      <div className="flex flex-wrap gap-12">
+      <H2 className={`${titleColor} text-center`}>{title}</H2>
+      <div className="flex flex-wrap justify-center gap-12">
         {sponsors.map((sponsor, index) => (
           <SponsorCard
             color="bg-wdcc-blue"
             name={sponsor.name}
             src={sponsor.src}
             alt={sponsor.name}
+            link={sponsor.link}
             key={index}
           />
         ))}

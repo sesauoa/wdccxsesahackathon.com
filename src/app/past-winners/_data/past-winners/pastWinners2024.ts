@@ -4,7 +4,7 @@ export const pastWinners2024 = {
     {
       place: '1st Place',
       teamName: 'Git Kermit',
-      image: '/winners/2024/2024-1st.jpg',
+      image: '/winners/2024/2024-1st copy.jpg',
       members: [
         'Cory Brown',
         'Kevin Cao',
@@ -17,7 +17,7 @@ export const pastWinners2024 = {
     {
       place: '2nd Place',
       teamName: 'Java Skunk',
-      image: '/winners/2024/2024-2nd.jpg',
+      image: '/winners/2024/2024-2nd copy.jpg',
       members: [
         'Jason Huang',
         'Chris Valenzuela',
@@ -30,7 +30,7 @@ export const pastWinners2024 = {
     {
       place: '3rd Place',
       teamName: 'Kappachungus',
-      image: '/winners/2024/2024-3rd.jpg',
+      image: '/winners/2024/2024-3rd copy.jpg',
       members: [
         'Ryan Yoon',
         'Joshua Morley',
@@ -45,7 +45,7 @@ export const pastWinners2024 = {
     {
       place: 'Most Overengineered',
       teamName: 'Exception Handlers',
-      image: '/winners/2024/2024-4th.jpg',
+      image: '/winners/2024/2024-4th copy.jpg',
       members: [
         'Aref Osman',
         'Alex Brown',
@@ -58,7 +58,7 @@ export const pastWinners2024 = {
     {
       place: 'Best Design',
       teamName: 'Git Kermit',
-      image: '/winners/2024/2024-5th.jpg',
+      image: '/winners/2024/2024-5th copy.jpg',
       members: [
         'Cory Brown',
         'Kevin Cao',
@@ -71,7 +71,7 @@ export const pastWinners2024 = {
     {
       place: 'Most Entertaining',
       teamName: 'print(“hello world”)',
-      image: '/winners/2024/2024-6th.jpg',
+      image: '/winners/2024/2024-6th copy.jpg',
       members: [
         'Andre Camerino',
         'Evan Au',

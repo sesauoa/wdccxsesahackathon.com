@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import { registrationFaqsInfo } from '@/app/registration/_data/registrationFaqs';
-import { H1, H2 } from '@/components/layout/Typography';
+import { H1, H2 } from '@/components/Typography';
 import { CountdownTimer } from '@/components/common/CountdownTimer';
-import { SectionLayout } from '@/components/layout/SectionLayout';
+import { SectionLayout } from '@/components/SectionLayout';
 export default function Registration() {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
 

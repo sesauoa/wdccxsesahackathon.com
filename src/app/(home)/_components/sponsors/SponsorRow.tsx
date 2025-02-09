@@ -1,5 +1,5 @@
 import React from 'react';
-import { H2 } from '@/components/Layout/Typography';
+import { H2 } from '@/components/Typography';
 import SponsorCard from './SponsorCard';
 
 interface SponsorRowProps {

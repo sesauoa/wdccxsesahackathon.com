@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import CombinedLogos from '../../../common/CombinedLogos';
+import CombinedLogos from '../../common/CombinedLogos';
 import HamburgerMenu from './HamburgerMenu';
 
 export default function StaticNavbar() {

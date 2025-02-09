@@ -3,7 +3,7 @@ import CombinedLogos from './CombinedLogos';
 export default function Footer() {
   return (
     <footer className="responsive-fullwidth footer-center p-6 text-base-content">
-      <div className="mb-6 h-[0.1] w-[90%] bg-white"></div>
+      <div className="mb-6 h-[0.1px] w-[90%] bg-white"></div>
       <aside>
         <CombinedLogos />
         <div className="flex space-x-8 *:text-white">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '@/lib/clsx';
 import Navbar from '@/components/layout/navigation/navbar/Navbar';
-import Footer from '@/components/common/Footer';
+import Footer from '@/components/layout/Footer';
 import { CursorAnimation } from '@/utils/CursorAnimation';
 import { Blobs } from '@/components/blobs/Blobs';
 import LenisScroll from '@/lib/LenisScroll';

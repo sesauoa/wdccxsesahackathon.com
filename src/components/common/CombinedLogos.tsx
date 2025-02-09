@@ -3,7 +3,7 @@ import sesaLogo from '../../../public/logos/clubs/sesa.svg';
 
 export default function CombinedLogos() {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center justify-center">
       <a href="https://wdcc.co.nz" target="_blank" className="text-xl">
         <img src={wdccLogo.src} alt="WDCC Logo" className="mr-1 h-6" />
       </a>

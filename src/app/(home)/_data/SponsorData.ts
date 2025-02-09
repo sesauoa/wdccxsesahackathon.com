@@ -1,5 +1,5 @@
 export const TechSponsors = {
-  GoldSponsors: [
+  TechSponsors: [
     {
       name: 'Atlassian',
       src: '/logos/sponsors/atlassian.png',
@@ -15,8 +15,6 @@ export const TechSponsors = {
       src: '/logos/sponsors/sandfield.png',
       link: 'https://www.sandfield.co.nz/',
     },
-  ],
-  SilverSponsors: [
     {
       name: 'Potentia',
       src: '/logos/sponsors/potentia.png',
@@ -33,7 +31,7 @@ export const TechSponsors = {
       link: 'https://www.redbull.com/nz-en',
     },
   ],
-  BronzeSponsors: [
+  FoodSponsors: [
     {
       name: 'indomie',
       src: '/logos/sponsors/indomie.png',

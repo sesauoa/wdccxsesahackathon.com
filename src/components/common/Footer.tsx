@@ -2,11 +2,11 @@ import CombinedLogos from './CombinedLogos';
 
 export default function Footer() {
   return (
-    <footer className="footer-center p-6 text-base-content">
+    <footer className="responsive-fullwidth footer-center p-6 text-base-content">
       <div className="mb-6 h-[0.1] w-[90%] bg-white"></div>
       <aside>
         <CombinedLogos />
-        <div className="flex space-x-8">
+        <div className="flex space-x-8 *:text-white">
           <a
             href="https://wdcc.co.nz"
             target="_blank"
@@ -22,7 +22,9 @@ export default function Footer() {
             sesa.org.nz
           </a>
         </div>
-        <p>Copyright © {new Date().getFullYear()} - All rights reserved.</p>
+        <p className="text-white">
+          Copyright © {new Date().getFullYear()} - All rights reserved.
+        </p>
       </aside>
     </footer>
   );

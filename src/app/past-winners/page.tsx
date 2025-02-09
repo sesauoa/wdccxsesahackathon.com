@@ -43,7 +43,7 @@ export default function PastWinnersPage() {
     <SectionLayout>
       <header>
         <H1>Past Winners</H1>
-        <div className="mt-8">
+        <div>
           <FilterButtons
             years={years}
             places={places}
@@ -55,7 +55,7 @@ export default function PastWinnersPage() {
         </div>
       </header>
 
-      <main className="flex flex-row gap-8">
+      <main className="flex flex-row">
         <div className="flex-1">
           {selectedPlace.length > 0 &&
           !selectedPlace.includes('Special Awards') ? (
@@ -64,7 +64,7 @@ export default function PastWinnersPage() {
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+              className="mt-20 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3"
             >
               {allFilteredWinners.map((winner, index) => (
                 <motion.div

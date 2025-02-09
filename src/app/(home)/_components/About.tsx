@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { H1, StatHeading } from '../../../components/layout/Typography';
+import { H1, StatHeading } from '@/components/Layout/Typography';
 import { AboutUs, EventStats } from '../_data/AboutData';
 import { motion } from 'motion/react';
 
@@ -17,7 +17,7 @@ const About = () => {
       </div>
 
       <motion.div
-        className="flex flex-row flex-wrap items-center justify-center gap-8 lg:w-1/2"
+        className="flex flex-row flex-wrap items-center justify-center gap-8 lg:w-[500px]"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

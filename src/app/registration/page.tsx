@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import { FORM_URL } from './_data/registrationdata';
 import { registrationFaqsInfo } from '@/app/registration/_data/registrationFaqs';
 import { H1, H2 } from '@/components/layout/Typography';
 import { CountdownTimer } from '@/components/common/CountdownTimer';
@@ -14,12 +13,14 @@ export default function Registration() {
   };
 
   return (
-    <SectionLayout className="flex flex-col items-center">
-      <H1 className="mb-8">Registration</H1>
-      <div className="flex w-full justify-center">
-        <div className="w-full max-w-6xl px-4 sm:px-6">
+    <SectionLayout>
+      <H1 className="">Registration</H1>
+      <div className="flex w-full">
+        <div className="w-full">
           {/* FOR WHEN REGISTRATIONS ARE CLOSED */}
-          <H2 className="m-10 text-center text-4xl">COMING SOON...</H2>
+          <H2 className="text-center text-4xl md:text-center">
+            COMING SOON...
+          </H2>
           <CountdownTimer />
 
           {/* FOR WHEN REGISTRATIONS ARE OPEN */}
@@ -41,7 +42,7 @@ export default function Registration() {
                   key={index}
                   className={`collapse collapse-arrow ${
                     openAccordion === index ? 'collapse-open' : 'collapse-close'
-                  } rounded-lg border border-gray-300 bg-white`}
+                  } w-full rounded-lg border border-gray-300 bg-white`}
                 >
                   <div
                     className="collapse-title cursor-pointer text-xl font-medium text-black lg:text-2xl"

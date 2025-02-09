@@ -64,7 +64,7 @@ function TeamSection() {
   return (
     <SectionLayout>
       <div className="container mx-auto max-w-screen-sm">
-        <H1 className="h-min">Organisers</H1>
+        <H1>Organisers</H1>
         <motion.div
           className="mt-6 grid grid-cols-1 justify-center gap-6 sm:grid-cols-2 lg:grid-cols-3"
           variants={containerVariants}

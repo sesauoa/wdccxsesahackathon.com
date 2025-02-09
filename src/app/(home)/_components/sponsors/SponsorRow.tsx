@@ -1,5 +1,5 @@
 import React from 'react';
-import { H2 } from '@/components/layout/Typography';
+import { H2 } from '@/components/Layout/Typography';
 import SponsorCard from './SponsorCard';
 
 interface SponsorRowProps {
@@ -16,7 +16,7 @@ export const SponsorRow = ({
   return (
     <>
       <H2 className={`${titleColor} text-center`}>{title}</H2>
-      <div className="flex flex-wrap justify-center gap-12">
+      <div className="flex flex-wrap justify-center gap-12 md:justify-start">
         {sponsors.map((sponsor, index) => (
           <SponsorCard
             color="bg-wdcc-blue"

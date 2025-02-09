@@ -66,14 +66,11 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({
   return (
     <div
       {...props}
-      className={cn(
-        'flex min-h-0 flex-col items-center justify-center p-4',
-        className
-      )}
+      className={cn('flex flex-col items-center justify-center p-4', className)}
     >
-      <h1 className="h-0 text-3xl">AUG 2-3, 2025</h1>
+      <h1 className="text-3xl">AUG 2-3, 2025</h1>
 
-      <div className="flex h-40 flex-wrap items-center justify-center gap-4">
+      <div className="my-4 flex h-40 flex-wrap items-center justify-center gap-4">
         {timeUnits.map((unit, index) => (
           <React.Fragment key={unit.label}>
             <div className="flex h-16 flex-col items-center">

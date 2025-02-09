@@ -3,8 +3,8 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import organisers from '@/app/organisers/_data/organisers';
-import { SectionLayout } from '@/components/SectionLayout';
-import { H1 } from '@/components/Typography';
+import { StandardLayout } from '@/components/layout/StandardLayout';
+import { H1 } from '@/components/layout/Typography';
 
 interface TeamCardProps {
   img: string | null;
@@ -62,7 +62,7 @@ function TeamSection() {
   };
 
   return (
-    <SectionLayout>
+    <StandardLayout>
       <div className="container mx-auto max-w-screen-sm">
         <H1>Organisers</H1>
         <motion.div
@@ -83,7 +83,7 @@ function TeamSection() {
           ))}
         </motion.div>
       </div>
-    </SectionLayout>
+    </StandardLayout>
   );
 }
 

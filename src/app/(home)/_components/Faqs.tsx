@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import faqInfo from '../_data/FaqsData';
-import { H1 } from '../../../components/Typography';
+import { H1 } from '../../../components/layout/Typography';
 
 const Faqs = () => {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);

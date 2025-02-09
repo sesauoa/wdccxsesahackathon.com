@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import { registrationFaqsInfo } from '@/app/registration/_data/registrationFaqs';
-import { H1, H2 } from '@/components/Typography';
+import { H1, H2 } from '@/components/layout/Typography';
 import { CountdownTimer } from '@/components/common/CountdownTimer';
-import { SectionLayout } from '@/components/SectionLayout';
+import { StandardLayout } from '@/components/layout/StandardLayout';
 export default function Registration() {
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
 
@@ -13,7 +13,7 @@ export default function Registration() {
   };
 
   return (
-    <SectionLayout>
+    <StandardLayout>
       <H1 className="">Registration</H1>
       <div className="flex w-full">
         <div className="w-full">
@@ -61,6 +61,6 @@ export default function Registration() {
           </div>
         </div>
       </div>
-    </SectionLayout>
+    </StandardLayout>
   );
 }

@@ -1,19 +1,14 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import '@/styles/globals.css';
-import Navbar from '@/components/navigation/navbar/Navbar';
-import Footer from '@/components/common/Footer';
-import { CursorAnimation } from '@/utils/CursorAnimation';
-import { Blobs } from '@/components/blobs/Blobs';
-import LenisScroll from '@/lib/LenisScroll';
 import favicon from '../../public/svgs/favicon.svg';
-import ScrollToTop from '@/components/ScrollToTop';
 
 const geistSans = localFont({
   src: '../fonts/GeistVF.woff',
   variable: '--font-geist-sans',
   weight: '100 900',
 });
+
 const geistMono = localFont({
   src: '../fonts/GeistMonoVF.woff',
   variable: '--font-geist-mono',
@@ -41,16 +36,7 @@ export default function RootLayout({
           type="image/<generated>"
           sizes="<generated>"
         />
-        <LenisScroll>
-          <Blobs />
-          <div className="relative z-10">
-            <Navbar />
-            {children}
-            <ScrollToTop />
-            <Footer />
-          </div>
-          <CursorAnimation />
-        </LenisScroll>
+        {children}
       </body>
     </html>
   );

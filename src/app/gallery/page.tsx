@@ -1,6 +1,6 @@
 'use client';
-import { H1 } from '@/components/Typography';
-import { SectionLayout } from '@/components/SectionLayout';
+import { H1 } from '@/components/layout/Typography';
+import { StandardLayout } from '@/components/layout/StandardLayout';
 import FilterButton from '@/components/common/FilterButton';
 import { useState } from 'react';
 import GalleryImages from './_components/GallaryImages';
@@ -75,7 +75,7 @@ export default function GalleryPage() {
   const allFilteredImages = Object.values(groupedImages).flat();
 
   return (
-    <SectionLayout className="flex flex-col">
+    <StandardLayout className="flex flex-col">
       <H1>Gallery</H1>
       <div className="flex flex-col items-center">
         <div className="flex flex-wrap justify-center gap-4">
@@ -128,6 +128,6 @@ export default function GalleryPage() {
           index={lightBoxImageIndex}
         />
       </motion.div>
-    </SectionLayout>
+    </StandardLayout>
   );
 }

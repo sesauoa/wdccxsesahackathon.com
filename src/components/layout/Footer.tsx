@@ -2,7 +2,7 @@ import CombinedLogos from '../common/CombinedLogos';
 
 export default function Footer() {
   return (
-    <footer className="responsive-fullwidth p-6 text-base-content">
+    <footer className="responsive-fullwidth text-base-conten flex flex-col items-center justify-center p-6">
       <div className="mb-6 h-[0.1px] w-[90%] bg-white"></div>
       <aside>
         <CombinedLogos />

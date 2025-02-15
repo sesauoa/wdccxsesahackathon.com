@@ -13,7 +13,9 @@ const Hero = () => {
       <div className="relative z-10 flex h-full w-full flex-col items-center justify-center">
         <div className="flex w-full flex-col items-center justify-center">
           <CombinedLogos />
-          <h1 className="md:7xl text-6xl font-bold lg:text-8xl">HACKATHON</h1>
+          <h1 className="text-4xl font-bold sm:text-7xl lg:text-8xl">
+            HACKATHON
+          </h1>
           <p className="text-center text-2xl md:text-3xl">
             New Zealand's LARGEST tertiary hackathon
           </p>

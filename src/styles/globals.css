@@ -69,13 +69,13 @@
 
 @layer components {
   .responsive-body {
-    @apply grid grid-cols-[auto_clamp(300px,80%,1280px)_auto];
+    @apply grid grid-cols-[100%] sm:grid-cols-[auto_clamp(300px,80%,1280px)_auto];
   }
 
   .responsive-body > * {
-    @apply col-start-2 col-end-3;
+    @apply p-4 sm:col-start-2 sm:col-end-3 sm:p-0; /* Only apply column positioning on `sm` and above */
   }
   .responsive-fullwidth {
-    @apply col-start-1 col-end-4;
+    @apply sm:col-start-1 sm:col-end-4;
   }
 }

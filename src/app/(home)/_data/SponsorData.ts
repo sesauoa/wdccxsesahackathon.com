@@ -25,17 +25,17 @@ export const TechSponsors = {
       src: '/logos/sponsors/serato.png',
       link: 'https://serato.com/',
     },
-    {
-      name: 'Red Bull',
-      src: '/logos/sponsors/red-bull.png',
-      link: 'https://www.redbull.com/nz-en',
-    },
   ],
   FoodSponsors: [
     {
       name: 'indomie',
       src: '/logos/sponsors/indomie.png',
       link: 'https://indomie.co.nz/',
+    },
+    {
+      name: 'SumthinDumpling',
+      src: '/logos/sponsors/Sumthin-Dumplin-Dark-Logo.svg',
+      link: 'https://sumthindumplin.co.nz/',
     },
   ],
 };

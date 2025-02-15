@@ -26,7 +26,7 @@ export const Blobs = () => {
   ];
 
   return (
-    <div className="fixed inset-0 -z-10 h-full w-full overflow-hidden bg-[rgb(0,17,82)]">
+    <div className="fixed inset-0 -z-10 hidden h-full w-full overflow-hidden bg-[rgb(0,17,82)] md:inline">
       <svg xmlns="http://www.w3.org/2000/svg" className="hidden">
         <defs>
           <filter id="goo">

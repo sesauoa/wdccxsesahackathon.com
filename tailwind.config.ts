@@ -32,6 +32,8 @@ export default {
       },
       backgroundImage: {
         'wdcc-blue-to-sesa-teal': 'linear-gradient(to right, #087df1, #49bfaa)',
+        'wdcc-gradient':
+          'linear-gradient(90deg, #087DF1 0%, #289DCE 49%, #49BFAA 100%)',
       },
     },
   },

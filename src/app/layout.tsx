@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-wdcc-gradient">
       <body
         className={`${geistSans.variable} ${geistMono.variable} text-white antialiased`}
       >

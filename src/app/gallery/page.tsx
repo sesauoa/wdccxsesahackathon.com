@@ -17,6 +17,8 @@ import {
 } from 'yet-another-react-lightbox/plugins';
 import React from 'react';
 import { motion } from 'motion/react';
+import containerVariants from '@/styles/containerVariants';
+import cardVariants from '@/styles/cardVariants';
 
 export default function GalleryPage() {
   const [selectedYears, setSelectedYears] = useState<number[]>([]);
@@ -24,21 +26,6 @@ export default function GalleryPage() {
   const fullscreenRef = React.useRef(null);
 
   const years = [2024, 2023, 2022, 2021].sort((a, b) => b - a);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
 
   const toggleYear = (year: number) => {
     setSelectedYears(

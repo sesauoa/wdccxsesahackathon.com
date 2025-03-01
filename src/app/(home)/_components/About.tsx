@@ -9,7 +9,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative flex min-h-screen flex-col items-center justify-center gap-12 lg:flex-row"
+      className="relative flex min-h-screen flex-col items-center justify-center gap-12 lg:flex-row -mt-10"
     >
       <div className="flex flex-col space-y-6 lg:w-1/2">
         <H1 className="leading-normal tracking-[0.12vw]">About</H1>

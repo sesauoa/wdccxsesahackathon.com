@@ -1,12 +1,12 @@
 export const AboutUs = (
   <>
-    Auckland's LARGEST tertiary hackathon is proudly hosted in collaboration
+    New Zealand's LARGEST tertiary hackathon is proudly hosted in collaboration
     between{' '}
     <a
       href="https://wdcc.co.nz/"
       target="_blank"
       rel="noreferrer"
-      className="link"
+      className="link font-bold"
     >
       WDCC
     </a>{' '}
@@ -15,7 +15,7 @@ export const AboutUs = (
       href="https://sesa.org.nz/"
       target="_blank"
       rel="noreferrer"
-      className="link"
+      className="link font-bold"
     >
       SESA
     </a>

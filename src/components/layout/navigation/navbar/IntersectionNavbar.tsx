@@ -52,7 +52,7 @@ export default function IntersectionNavbar() {
       const sectionId = href.split('/#')[1];
       const target = document.getElementById(sectionId);
       if (target) {
-        handleScrollTo(target);
+        handleScrollTo(target.offsetTop);
       }
     }
   };

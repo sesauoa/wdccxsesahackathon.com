@@ -2,7 +2,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 import { motion } from 'motion/react';
 import containerVariants from '@/styles/containerVariants';
-
+import cardVariants from '@/styles/cardVariants';
 
 interface ImagesProps {
   data: {

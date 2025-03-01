@@ -5,20 +5,12 @@ import { useEffect, useRef, useState } from 'react';
 import CombinedLogos from '../../../common/CombinedLogos';
 import HamburgerMenu from './HamburgerMenu';
 import { useLenisUtils } from '@/lib/LenisScroll';
+import links from '@/data/links';
+
 export default function IntersectionNavbar() {
   const [selectedLink, setSelectedLink] = useState('');
   const observerRef = useRef<IntersectionObserver | null>(null);
   const { handleScrollTo } = useLenisUtils();
-  const links = [
-    { href: '/#home', label: 'Home' },
-    { href: '/#about', label: 'About' },
-    { href: '/#faqs', label: 'FAQs' },
-    { href: '/#sponsors', label: 'Sponsors' },
-    { href: '/past-winners', label: 'Past Winners' },
-    { href: '/gallery', label: 'Gallery' },
-    { href: '/organisers', label: 'Organisers' },
-    { href: '/registration', label: 'Registration' },
-  ];
 
   useEffect(() => {
     const sectionIds = links

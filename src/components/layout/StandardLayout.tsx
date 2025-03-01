@@ -25,7 +25,7 @@ export const StandardLayout: React.FC<ReactProps> = ({
           {...props}
         >
           <div className="relative flex min-h-dvh flex-col overflow-x-hidden">
-            <main className="responsive-body z-0 grow">{children}</main>
+            <main className="responsive-body z-0">{children}</main>
           </div>
         </section>
         <ScrollToTop />

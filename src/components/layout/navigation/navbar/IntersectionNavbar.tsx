@@ -5,20 +5,12 @@ import { useEffect, useRef, useState } from 'react';
 import CombinedLogos from '../../../common/CombinedLogos';
 import HamburgerMenu from './HamburgerMenu';
 import { useLenisUtils } from '@/lib/LenisScroll';
+import links from '@/data/links';
+
 export default function IntersectionNavbar() {
   const [selectedLink, setSelectedLink] = useState('');
   const observerRef = useRef<IntersectionObserver | null>(null);
   const { handleScrollTo } = useLenisUtils();
-  const links = [
-    { href: '/#home', label: 'Home' },
-    { href: '/#about', label: 'About' },
-    { href: '/#faqs', label: 'FAQs' },
-    { href: '/#sponsors', label: 'Sponsors' },
-    { href: '/past-winners', label: 'Past Winners' },
-    { href: '/gallery', label: 'Gallery' },
-    { href: '/organisers', label: 'Organisers' },
-    { href: '/registration', label: 'Registration' },
-  ];
 
   useEffect(() => {
     const sectionIds = links
@@ -60,7 +52,7 @@ export default function IntersectionNavbar() {
       const sectionId = href.split('/#')[1];
       const target = document.getElementById(sectionId);
       if (target) {
-        handleScrollTo(target);
+        handleScrollTo(target.offsetTop);
       }
     }
   };
@@ -72,7 +64,7 @@ export default function IntersectionNavbar() {
           <CombinedLogos />
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal hidden space-x-2 text-base lg:flex">
+          <ul className="menu menu-horizontal hidden space-x-2 text-base xl:flex">
             {links.map(({ href, label }) => (
               <li key={href}>
                 <Link

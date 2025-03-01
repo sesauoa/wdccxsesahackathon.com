@@ -19,7 +19,7 @@ export default function HamburgerMenu({
   return (
     <div>
       <button
-        className="nav-link btn btn-square btn-ghost lg:hidden"
+        className="nav-link btn btn-square btn-ghost xl:hidden"
         onClick={() => setIsSideNavOpen(!isSideNavOpen)}
       >
         <svg

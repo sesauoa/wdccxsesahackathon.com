@@ -5,6 +5,7 @@ import { motion } from 'motion/react';
 import organisers from '@/app/organisers/_data/organisers';
 import { StandardLayout } from '@/components/layout/StandardLayout';
 import { H1 } from '@/components/layout/Typography';
+import containerVariants from '@/styles/containerVariants';
 
 interface TeamCardProps {
   img: string | null;
@@ -50,21 +51,12 @@ function TeamCard({ img, name, title, linkedIn, club }: TeamCardProps) {
   );
 }
 
-function TeamSection() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+export default function OrganisersPage() {
 
   return (
     <StandardLayout>
+      <H1>Organisers</H1>
       <div className="container mx-auto max-w-screen-sm">
-        <H1>Organisers</H1>
         <motion.div
           className="mt-6 grid grid-cols-1 justify-center gap-6 sm:grid-cols-2 lg:grid-cols-3"
           variants={containerVariants}
@@ -86,5 +78,3 @@ function TeamSection() {
     </StandardLayout>
   );
 }
-
-export default TeamSection;

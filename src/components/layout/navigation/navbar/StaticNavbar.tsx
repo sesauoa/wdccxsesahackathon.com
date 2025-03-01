@@ -4,20 +4,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import CombinedLogos from '../../../common/CombinedLogos';
 import HamburgerMenu from './HamburgerMenu';
+import links from '@/data/links';
 
 export default function StaticNavbar() {
   const pathname = usePathname();
-
-  const links = [
-    { href: '/', label: 'Home' },
-    { href: '/#about', label: 'About' },
-    { href: '/#faqs', label: 'FAQs' },
-    { href: '/#sponsors', label: 'Sponsors' },
-    { href: '/past-winners', label: 'Past Winners' },
-    { href: '/gallery', label: 'Gallery' },
-    { href: '/organisers', label: 'Organisers' },
-    { href: '/registration', label: 'Registration' },
-  ];
 
   return (
     <div className="sticky top-0 z-50 w-full bg-sesa-navy">
@@ -26,7 +16,7 @@ export default function StaticNavbar() {
           <CombinedLogos />
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal hidden space-x-2 text-base lg:flex">
+          <ul className="menu menu-horizontal hidden space-x-2 text-base xl:flex">
             {links.map(({ href, label }) => (
               <li key={href}>
                 <Link

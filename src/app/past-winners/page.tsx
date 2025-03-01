@@ -9,6 +9,8 @@ import { filterWinners, getAllFilteredWinners } from '@/utils/WinnerUtils';
 import { FilterButtons } from '@/app/past-winners/_components/FilterButtons';
 import { WinnersGroup } from '@/app/past-winners/_components/WinnersGroup';
 import { WinnerCard } from '@/app/past-winners/_components/WinnerCard';
+import containerVariants from '@/styles/containerVariants';
+import cardVariants from '@/styles/cardVariants';
 
 export default function PastWinnersPage() {
   const [selectedYear, setSelectedYear] = useState<number[]>([]); // Multiple years can be selected
@@ -23,21 +25,6 @@ export default function PastWinnersPage() {
 
   const years = [...new Set(pastWinners.map((winner) => winner.year))];
   const places = ['1st Place', '2nd Place', '3rd Place', 'Special Awards'];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
 
   return (
     <StandardLayout>
@@ -58,7 +45,7 @@ export default function PastWinnersPage() {
       <main className="flex flex-row">
         <div className="flex-1">
           {selectedPlace.length > 0 &&
-          !selectedPlace.includes('Special Awards') ? (
+            !selectedPlace.includes('Special Awards') ? (
             <motion.div
               key={`${selectedYear}-${selectedPlace}`}
               variants={containerVariants}

@@ -148,7 +148,7 @@
             "Selin Akkaya",
             "Arnav Shekaran"
           ],
-          "description": "\"The Art Thief” where the user uses stable diffusion to create replicas of famous art.",
+          "description": "\"\"The Art Thief\" where the user uses stable diffusion to create replicas of famous art.",
           "contacts": [
             "rluo154@aucklanduni.ac.nz",
             "tlu467@aucklanduni.ac.nz",
@@ -190,7 +190,7 @@
             "Varshini KP Bhat",
             "Henry Wang"
           ],
-          "description": "LinkedIn with families and classes and marriages.",
+          "description": "LinkedKin: LinkedIn with families and classes and marriages.",
           "contacts": [
             "ytao543@aucklanduni.ac.nz",
             "jfre479@aucklanduni.ac.nz",
@@ -271,7 +271,7 @@
           "place": "1st Place",
           "teamName": "Lubricated Ducks",
           "image": "/winners/2022/2022-1st.jpg",
-          "description": "\"Zapp - A realtime quiz game designed to run alongside a lecture offering various questions and puzzles to solve. Aiming to help with student engagement and participation, potentially with a small amount of grade points attached. Inspired by the game “Keep Talking and Nobody Explodes\"\".",
+          "description": "\"Zapp: A real-time quiz game designed to run alongside a lecture, offering students a range of interactive questions and puzzles to solve. It aims to create a more dynamic lecture experience by encouraging student engagement and participation, with the potential to attach a small amount of grade points to the activity as incentive. The game takes inspiration from the problem-solving elements of “Keep Talking and Nobody Explodes”, and leverages websockets for communication.\".",
           "members": [
             "Ron Bansal",
             "Grant Liu",

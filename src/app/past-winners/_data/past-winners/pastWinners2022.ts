@@ -14,7 +14,7 @@ export const pastWinners2022 = {
         'Harry Qu',
       ],
       description:
-        '"Zapp - A realtime quiz game designed to run alongside a lecture offering various questions and puzzles to solve. Aiming to help with student engagement and participation, potentially with a small amount of grade points attached. Inspired by the game “Keep Talking and Nobody Explodes".',
+        'Zapp: A real-time quiz game designed to run alongside a lecture, offering students a range of interactive questions and puzzles to solve. It aims to create a more dynamic lecture experience by encouraging student engagement and participation, with the potential to attach a small amount of grade points to the activity as incentive. The game takes inspiration from the problem-solving elements of “Keep Talking and Nobody Explodes”, and leverages websockets for communication.',
       github: 'https://github.com/tmacsmee/zapp',
     },
     {
@@ -29,6 +29,9 @@ export const pastWinners2022 = {
         'Raina Song',
         'Jessica Villegas',
       ],
+      description:
+        'We built an app to help facilitate social connections on busses by creating a series of barrier of low entry games/activities which people on the bus can do together such as collaborative drawing together.',
+      github: 'https://github.com/etinaude/sesa-hackathon-2022',
     },
     {
       place: '3rd Place',

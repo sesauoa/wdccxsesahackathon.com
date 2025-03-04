@@ -54,6 +54,10 @@ export const pastWinners2024 = {
         'Henry Ly',
         'James Tasker',
       ],
+      description:
+        "A Jackbox-esque multiplayer spaceship crew simulator game: 3 players take on the roles of a Captain, an Engineer and a Chemist to survive in deep space for as long as they can. Each player must work through a series of mini-games, and must communicate and collaborate with each other to obtain resources essential for the ship's survival. Three mobile web clients and a TV lobby screen connect to a server to seamlessly manage game state and display collective real time updates.",
+      github: 'https://github.com/ExceptionHandlersUOA',
+      deployedLink: 'https://space.feroxfoxxo.com/'
     },
     {
       place: 'Best Design',

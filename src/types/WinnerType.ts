@@ -2,14 +2,14 @@ export type Winner = {
   place: string;
   teamName: string;
   image: string;
-  description?: string;
-  deployedLink?: string;
-  github?: string;
   members?: string[];
-}
+  description?: string;
+  github?: string;
+  deployedLink?: string;
+};
 
-export type YearlyWinners = {
+export type PastWinners = {
   year: number;
-  orderedWinners: Winner[]; 
+  orderedWinners: Winner[];
   specialAwards: Winner[];
 };

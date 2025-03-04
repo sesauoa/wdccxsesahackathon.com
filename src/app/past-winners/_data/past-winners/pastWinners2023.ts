@@ -1,4 +1,6 @@
-export const pastWinners2023 = {
+import { PastWinners } from '@/types/WinnerType';
+
+export const pastWinners2023: PastWinners = {
   year: 2023,
   orderedWinners: [
     {

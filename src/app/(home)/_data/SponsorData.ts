@@ -28,12 +28,12 @@ export const TechSponsors = {
   ],
   FoodSponsors: [
     {
-      name: 'indomie',
+      name: 'Indomie',
       src: '/logos/sponsors/indomie.png',
       link: 'https://indomie.co.nz/',
     },
     {
-      name: 'SumthinDumpling',
+      name: 'Sumthin Dumplin',
       src: '/logos/sponsors/Sumthin-Dumplin-Dark-Logo.svg',
       link: 'https://sumthindumplin.co.nz/',
     },

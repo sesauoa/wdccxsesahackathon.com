@@ -1,7 +1,7 @@
-import { Winner, YearlyWinners } from '@/types/WinnerType';
+import { Winner, PastWinners } from '@/types/WinnerType';
 
 export const filterWinners = (
-  pastWinners: YearlyWinners[],
+  pastWinners: PastWinners[],
   selectedYears: number[] | null,
   selectedPlaces: string[] | null
 ) => {
@@ -27,7 +27,7 @@ export const filterWinners = (
     );
 };
 
-export const getAllFilteredWinners = (filteredWinners: YearlyWinners[]) => {
+export const getAllFilteredWinners = (filteredWinners: PastWinners[]) => {
   return filteredWinners.flatMap(({ year, orderedWinners, specialAwards }) => [
     ...orderedWinners.map((winner: Winner) => ({ ...winner, year })),
     ...specialAwards.map((award: Winner) => ({ ...award, year })),

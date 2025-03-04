@@ -1,4 +1,6 @@
-export const pastWinners2023 = {
+import { PastWinners } from '@/types/WinnerType';
+
+export const pastWinners2023: PastWinners = {
   year: 2023,
   orderedWinners: [
     {
@@ -14,7 +16,7 @@ export const pastWinners2023 = {
         'Arnav Shekaran',
       ],
       description:
-        '"The Art Thief” where the user uses stable diffusion to create replicas of famous art.',
+        "'The Art Thief' where the user uses stable diffusion to create replicas of famous art.",
     },
     {
       place: '2nd Place',
@@ -41,7 +43,8 @@ export const pastWinners2023 = {
         'Varshini KP Bhat',
         'Henry Wang',
       ],
-      description: 'LinkedIn with families and classes and marriages.',
+      description:
+        'LinkedKin: LinkedIn with families and classes and marriages.',
     },
   ],
   specialAwards: [

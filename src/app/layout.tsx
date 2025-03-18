@@ -16,7 +16,10 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'WDCC x SESA Hackathon',
+  title: {
+    default: 'WDCC x SESA Hackathon',
+    template: '%s | WDCC x SESA Hackathon',
+  },
   description: "NZ's LARGEST tertiary hackathon",
   authors: [
     { name: 'WDCC', url: 'https://wdcc.co.nz/' },
@@ -30,19 +33,15 @@ export const metadata: Metadata = {
     siteName: 'WDCC x SESA Hackathon',
   },
   keywords: [
-    'nz hackathon',
-    'WDCCXSESA',
+    'WDCC x SESA',
+    'WDCCxSESA',
     'WDCC x SESA Hackathon',
-    'WDCC Hackathon',
-    'SESA Hackathon',
-    'WDCCSESAHackathon',
-    'WDCC SESA Hackathon',
-    "New Zealand's LARGEST tertiary hackathon",
-    "New Zealand's LARGEST university hackathon",
-    'nz university hackathon',
     'UoA hackathon',
-    '2025 UoA hackathon',
-    'wdccxsesahackathon.com',
+    'University hackathon',
+    'Tertiary hackathon NZ',
+    'University of Auckland hackathon',
+    'WDCC hackathon',
+    'SESA hackathon',
   ],
 };
 

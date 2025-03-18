@@ -18,6 +18,32 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: 'WDCC x SESA Hackathon',
   description: "NZ's LARGEST tertiary hackathon",
+  authors: [
+    { name: 'WDCC', url: 'https://wdcc.co.nz/' },
+    { name: 'SESA', url: 'https://sesa.org.nz/' },
+  ],
+  openGraph: {
+    title: 'WDCC x SESA Hackathon',
+    description: "NZ's LARGEST tertiary hackathon",
+    url: 'https://wdccxsesahackathon.com/',
+    images: 'https://wdccxsesahackathon.com/og-image.png',
+    siteName: 'WDCC x SESA Hackathon',
+  },
+  keywords: [
+    'nz hackathon',
+    'WDCCXSESA',
+    'WDCC x SESA Hackathon',
+    'WDCC Hackathon',
+    'SESA Hackathon',
+    'WDCCSESAHackathon',
+    'WDCC SESA Hackathon',
+    "New Zealand's LARGEST tertiary hackathon",
+    "New Zealand's LARGEST university hackathon",
+    'nz university hackathon',
+    'UoA hackathon',
+    '2025 UoA hackathon',
+    'wdccxsesahackathon.com',
+  ],
 };
 
 export default function RootLayout({

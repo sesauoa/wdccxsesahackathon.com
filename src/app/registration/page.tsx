@@ -7,6 +7,9 @@ export const metadata: Metadata = {
     'WDCC x SESA Hackathon registration',
     'SESA hackathon registration',
     'WDCC hackathon registration',
+    'WDCC x SESA Hackathon sign up',
+    'SESA hackathon sign up',
+    'WDCC hackathon sign up',
   ],
 };
 

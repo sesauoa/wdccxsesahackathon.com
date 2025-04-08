@@ -15,6 +15,9 @@ export const pastWinners2024: PastWinners = {
         'Jessica Zeng',
         'Chris Oliver',
       ],
+      description:
+        "Introducing Lunar Luck! Built using Node.js, Express.js, and enhanced by custom artwork by Jessica, Lunar Luck features slots, alien racing, and chance games. The premise is that a serious divide emerges between the rich and poor after Earth's destruction and oxygen becomes scarce. Our service offers the poor a chance to gamble for more oxygen – with the risk of losing it all.",
+      github: 'https://github.com/cbro223/SESAHackthon2024',
     },
     {
       place: '2nd Place',
@@ -28,6 +31,9 @@ export const pastWinners2024: PastWinners = {
         'Xin Yue',
         'Skyler Solomon-Gavin',
       ],
+      description:
+        'A gamified learning platform to educate the youth about what life was like back on Earth. Players can learn about Earth through exploring various different regions and collect animal cards in the process. Animal cards can be used to battle against other players in a card game format.',
+      github: 'https://github.com/Bobsters6666/SpaceZoo',
     },
     {
       place: '3rd Place',

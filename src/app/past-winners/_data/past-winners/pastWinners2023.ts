@@ -16,7 +16,8 @@ export const pastWinners2023: PastWinners = {
         'Arnav Shekaran',
       ],
       description:
-        "'The Art Thief' where the user uses stable diffusion to create replicas of famous art.",
+        "The Art Thief is a web-based game that involves crafting replicas of renowned historical art pieces from simple line sketches and text prompts utilising Stability.ai's Stable Diffusion API. Some photos of the app can be found here: https://github.com/raymondyangdev/the-art-thief/tree/main/docs",
+      github: 'https://github.com/raymondyangdev/the-art-thief',
     },
     {
       place: '2nd Place',
@@ -87,7 +88,8 @@ export const pastWinners2023: PastWinners = {
         'Kimberly Zhu',
         'Arisa Mori',
       ],
-      description: 'App letting kings pick out their wives for each night.',
+      description:
+        'KingKy is a lighthearted dating app fit for a king, helping royals manage their time and find their perfect match. Built in Android Studio using Java, it features a calendar to schedule dates, a favourites page to keep track of preferred partners, and a browse section to discover new connections, making it quick and easy for a busy king to find the right match.',
     },
   ],
 };

@@ -22,7 +22,7 @@ const faqInfo = [
   {
     question: "What if I don't know how to code?",
     answer:
-      'Hackathons are the perfect place and time to learn in the collaborative and energetic environment a hackathon creates. We provide industry mentors, workshops and starter hack packs on our GitHub all to help you build something you can be proud of.',
+      'Hackathons are the perfect place and time to learn in the collaborative and energetic environment a hackathon creates. We provide industry mentors and workshops all to help you build something you can be proud of.',
   },
   {
     question: 'What can I build?',

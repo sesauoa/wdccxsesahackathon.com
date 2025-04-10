@@ -7,7 +7,7 @@ const faqInfo = [
   {
     question: 'What is SESA?',
     answer:
-      'SESA is the Software Engineering Students Association for students and alumni of the Software Engineering programme at the University of Auckland. We organise and run social and career-focused events for our 550+ members, connecting them with each other as well as industry professionals.',
+      'SESA is the Software Engineering Students Association for students and alumni of the Software Engineering programme at the University of Auckland. We organise and run social and career-focused events for our 600+ members, connecting them with each other as well as industry professionals.',
   },
   {
     question: 'What is a hackathon?',
